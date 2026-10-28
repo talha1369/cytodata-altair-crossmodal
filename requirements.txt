@@ -1,0 +1,12 @@
+anndata
+scanpy
+scikit-learn
+umap-learn
+numpy
+pandas
+matplotlib
+h5py
+jupyterlab
+nbformat
+nbconvert
+ipykernel
