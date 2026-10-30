@@ -16,6 +16,7 @@ and where do they diverge?
   Tim Treis's [`cytodata-hackathon-prep-ops`](https://github.com/timtreis/cytodata-hackathon-prep-ops) phase-guide
   files joined to CROP-seq by guide sequence; guide→gene aggregation; and a test of what the **4i fixed panel
   (OPS0077: γH2AX/p21/p53/pRb/Rb/RPS6)** adds over phase for predicting RNA (answer: phase ≫ 4i; phase+4i ≈ phase).
+- **`element_matching_calibration.ipynb`** + **`element_calibration.py`** — single-cell RNA to imaging-morphology matching calibration on the Element true-pair screen (ground truth for a future pooled screen). Per-cell link is weak but real (R2 ~0.04, ~25x chance); **whole-cell features carry ~2.3x the RNA signal of nuclear-region** (perinuclear crops cost >half); interpretable 26-feature panel recovers ~half the full R2; matching scales smoothly with link strength. Axes: pooling (k=1..400), feature panel, extent, link strength; shuffled null each.
 - **`altair_vs_aconcagua.ipynb`** — cross-screen reproducibility: builds the guide/gene-level **Aconcagua** table
   (a `groupby` on the 323 GB Funk/Brieflow cell table; full DuckDB recipe for the VM + an offline sampled demo) and
   compares its gene-gene structure to Altair phase. Two OPS screens in different cell lines (Altair A549, Aconcagua HeLa) share real gene-function structure
