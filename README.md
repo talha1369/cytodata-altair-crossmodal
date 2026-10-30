@@ -12,6 +12,10 @@ and where do they diverge?
   structure (gene–gene similarity correlation, kNN neighbour overlap, CCA); CORUM protein-complex validation.
 - **`cross_modal_prediction.ipynb`** — held-out morphology↔expression prediction (5-fold out-of-fold ridge,
   per-fold scaling), cross-modal retrieval metrics, cross-validated CCA, and per-gene predictability.
+- **`guide_level_cross_modal.ipynb`** — the same held-out predictor at **single-guide** resolution, built on
+  Tim Treis's [`cytodata-hackathon-prep-ops`](https://github.com/timtreis/cytodata-hackathon-prep-ops) phase-guide
+  files joined to CROP-seq by guide sequence; guide→gene aggregation; and a test of what the **4i fixed panel
+  (OPS0077: γH2AX/p21/p53/pRb/Rb/RPS6)** adds over phase for predicting RNA (answer: phase ≫ 4i; phase+4i ≈ phase).
 
 ## Key results (1,000 shared genes)
 - Gene–gene similarity correlates **ρ ≈ 0.47** across phase morphology and scRNA-seq (z ≈ 100 vs shuffled null).
