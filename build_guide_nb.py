@@ -105,7 +105,7 @@ md("""## 5. Takeaways & next
 
 - **Morphology↔expression is predictable at single-guide resolution** — held-out phase→RNA R² ≈ 0.34 (var-weighted 0.41), RNA→phase R² ≈ 0.61; retrieval puts the true guide at median rank ~240 / 4,000 (chance 2,000), ~20–50× above chance at top-k.
 - **Cross-validated CCA keeps ~5 shared axes at r ≈ 0.8–0.95** — robust, not overfit.
-- **Aggregating guides→genes sharpens it** (top-10 retrieval jumps from guide-level to gene-level) — the cross-modal signal concentrates at the gene level, consistent with single-cell multimodal MoA being hard (Berlin pilot). Pseudobulk/gene is where to work.
+- **Aggregating guides→genes sharpens it** (top-10 retrieval jumps from guide-level to gene-level) — the cross-modal signal concentrates at the gene level, consistent with single-cell multimodal MoA being hard. Pseudobulk/gene is where to work.
 - **The divergence is the payload:** where phase can't predict a guide's RNA (and vice versa) marks modality-specific biology — the argument for keeping label-free imaging alongside transcriptomics.
 
 **Next:** add the **4i markers (OPS0077)** from Tim's `markers_guide.zip` and test what the fluorescent panel adds over phase for predicting RNA and for separating knockouts — i.e. Brian's OPS0077 "4i vs sc-RNA" idea, at the correct (guide) level.

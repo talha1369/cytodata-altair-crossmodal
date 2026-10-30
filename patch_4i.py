@@ -42,7 +42,7 @@ plt.tight_layout(); plt.savefig(FIG/"phase_vs_4i.png",bbox_inches="tight",dpi=15
 
 takeaways="""## 6. Takeaways
 - Morphology↔expression is predictable at single-guide resolution — phase→RNA R²≈0.34, RNA→phase R²≈0.61; cross-validated CCA keeps ~5 shared axes at r≈0.8–0.95.
-- Aggregating guides→genes sharpens the link — the cross-modal signal concentrates at the gene level (single guides are noisy), echoing the Berlin finding that single-cell multimodal MoA is hard.
+- Aggregating guides→genes sharpens the link — the cross-modal signal concentrates at the gene level (single guides are noisy), echoing the known result that single-cell multimodal MoA is hard.
 - **Phase ≫ the 4i stress panel for predicting the transcriptome** (R²≈0.33 vs ≈0.10), and **phase+4i ≈ phase** — this fixed γH2AX / cell-cycle / translation panel is largely redundant with label-free phase for cross-modal prediction. (Panel-specific: a broader marker set could add more.)
 - Where one modality can't predict another marks modality-specific biology — the argument for keeping label-free imaging alongside transcriptomics.
 
