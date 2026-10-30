@@ -16,6 +16,10 @@ and where do they diverge?
   Tim Treis's [`cytodata-hackathon-prep-ops`](https://github.com/timtreis/cytodata-hackathon-prep-ops) phase-guide
   files joined to CROP-seq by guide sequence; guide→gene aggregation; and a test of what the **4i fixed panel
   (OPS0077: γH2AX/p21/p53/pRb/Rb/RPS6)** adds over phase for predicting RNA (answer: phase ≫ 4i; phase+4i ≈ phase).
+- **`altair_vs_aconcagua.ipynb`** — cross-screen reproducibility: builds the guide/gene-level **Aconcagua** table
+  (a `groupby` on the 323 GB Funk/Brieflow cell table; full DuckDB recipe for the VM + an offline sampled demo) and
+  compares its gene-gene structure to Altair phase. Two independent A549 screens share real gene-function structure
+  (significant vs null) across different imaging modalities; modest in the lean demo, expected to strengthen at full scale.
 
 ## Key results (1,000 shared genes)
 - Gene–gene similarity correlates **ρ ≈ 0.47** across phase morphology and scRNA-seq (z ≈ 100 vs shuffled null).
