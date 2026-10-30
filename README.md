@@ -18,7 +18,7 @@ and where do they diverge?
   (OPS0077: γH2AX/p21/p53/pRb/Rb/RPS6)** adds over phase for predicting RNA (answer: phase ≫ 4i; phase+4i ≈ phase).
 - **`altair_vs_aconcagua.ipynb`** — cross-screen reproducibility: builds the guide/gene-level **Aconcagua** table
   (a `groupby` on the 323 GB Funk/Brieflow cell table; full DuckDB recipe for the VM + an offline sampled demo) and
-  compares its gene-gene structure to Altair phase. Two independent A549 screens share real gene-function structure
+  compares its gene-gene structure to Altair phase. Two OPS screens in different cell lines (Altair A549, Aconcagua HeLa) share real gene-function structure
   (significant vs null) across different imaging modalities; modest in the lean demo, expected to strengthen at full scale.
 
 ## Key results (1,000 shared genes)
