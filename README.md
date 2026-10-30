@@ -26,7 +26,8 @@ and where do they diverge?
 - Held-out **morphology→expression R² ≈ 0.37–0.46**; retrieves the true gene into the **top-10 of 1,000 ~36%** of
   the time (chance ~1%). Reverse direction symmetric in R².
 - **Cross-validated** CCA keeps ~4–5 shared axes at r ≈ 0.8–0.95 (honest, not the inflated in-sample value).
-- **Learned Cell-DINO embedding beats hand-crafted OrganelleProfiler phase** for predicting RNA (gene-level held-out R² ≈ 0.45 vs 0.37, top-10 retrieval ≈ 46% vs 36%; Cell-DINO is `atlas/aggregated_data.h5ad`).
+- **Learned Cell-DINO embedding beats hand-crafted OrganelleProfiler phase**
+- **Gene-level representation ranking: Cell-DINO > phase > 4i** (held-out R² ≈ 0.47 / 0.34 / 0.13 → RNA); Cell-DINO subsumes phase and 4i (combinations do not improve). See `guide_level_cross_modal.ipynb` §6. for predicting RNA (gene-level held-out R² ≈ 0.45 vs 0.37, top-10 retrieval ≈ 46% vs 36%; Cell-DINO is `atlas/aggregated_data.h5ad`).
 - Same-CORUM-complex genes are close in **both** modalities → the shared structure reflects real biology.
 - **~80% of each gene's neighbourhood is modality-specific** → imaging and transcriptome are complementary.
   Ribosomal / COPI-secretory genes are best cross-predicted; cytoskeleton/actin, membrane trafficking, and
@@ -48,4 +49,4 @@ cd data && unzip -o altair.zip && cd ..
 jupyter nbconvert --to notebook --execute --inplace \
   --ExecutePreprocessor.kernel_name=altair altair_inspection.ipynb cross_modal_prediction.ipynb
 ```
-`analysis_core.py` / `analysis_prediction.py` are headless versions of the stats. Figures are written to `figures/`.
+`aggregate_aconcagua.py` runs the full Aconcagua gene/guide aggregation on the VM (DuckDB, out-of-core). `analysis_core.py` / `analysis_prediction.py` are headless versions of the stats. Figures are written to `figures/`.
