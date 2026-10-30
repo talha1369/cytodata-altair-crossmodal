@@ -47,7 +47,7 @@ def run(level: str) -> None:
             GROUP BY {key}
         ) TO '{out}' (FORMAT PARQUET)
     """)
-    n = con.sql(f"SELECT count(*) FROM read_parquet('{out}')").fetchone()[0]
+    n = con.sql(f"SELECT count(*) FROM read_parquet('{out}')").fetchall()[0][0]
     print(f"[{level}] wrote {out}: {n} rows", flush=True)
 
 
