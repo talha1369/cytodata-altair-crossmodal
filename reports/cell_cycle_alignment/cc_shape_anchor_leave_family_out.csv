@@ -1,0 +1,10 @@
+warp,train_on,held_out,direction,train_corr,HELD_OUT_corr,null_95th,p_vs_random_shift
+rigid rotation,area+shape,dna,-1,0.272,-0.155,0.833,0.528
+rigid rotation,dna+shape,area,1,0.334,-0.149,0.332,0.639
+rigid rotation,dna+area,shape,-1,0.417,-0.381,0.28,0.972
+"warp, 4 knots",area+shape,dna,-1,0.491,0.659,0.824,0.139
+"warp, 4 knots",dna+shape,area,1,0.427,-0.12,0.268,0.694
+"warp, 4 knots",dna+area,shape,-1,0.738,0.349,0.37,0.139
+"warp, 6 knots",area+shape,dna,-1,0.53,0.087,0.846,0.361
+"warp, 6 knots",dna+shape,area,1,0.473,0.011,0.317,0.667
+"warp, 6 knots",dna+area,shape,-1,0.736,0.363,0.404,0.125

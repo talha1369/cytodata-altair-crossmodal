@@ -33,6 +33,7 @@ not used.
 - `align_cc_warp_cv.py` - leave-one-anchor-out test of rigid and flexible warps against a random-shift null.
 - `phase_predicts_regimes.py` - how well phase-contrast morphology predicts each regime and the cell-cycle readouts.
 - `markers_vs_dna.py` - relation of the markers-only and DNA-based 4i clocks.
+- `align_cc_shape_anchors.py` - adds shared cell-shape anchors and tests them leaving out whole anchor families.
 - `build_alignment_nb.py` - emits the alignment notebook.
 
 Data: CZ Biohub OPS Explorer, public S3 `ops-explorer-public` (Biohub_OPS0077 = ops0144_20260406), region us-west-2.

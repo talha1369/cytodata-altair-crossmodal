@@ -121,8 +121,30 @@ clocks run. Training correlations (0.7 to 0.95) are far above the held-out ones,
 - The **G1 and post-division arc is not alignable with these three anchors.** A defensible per-cell mapping between the two datasets is **not** supported yet.
 - A plausible reason (not tested here): Element's RNA clock resolves division sharply, while the 4i clock spreads the post-peak decline over about 150 degrees,
   because that arc mixes G2/M and just-divided cells ordered by marker levels.
-- To make the alignment identifiable we need **more shared anchors**, for example the many CellProfiler-style cell and nucleus shape
-  features that exist in both tables, or Tim's ranking of which features track the RNA clock (`clock_peak_deg` per feature).""")
+- We tested whether more shared anchors help in the next section.""")
+
+md("""## 3b. Does adding shared cell-shape anchors help?
+
+Both tables contain CellProfiler cell-shape features. Element's `AreaShape_*` features describe the **cell** (checked: EquivalentDiameter equals
+sqrt(4 x Area / pi) with correlation 1.000, and Solidity equals Area / ConvexArea exactly), and OPS0077 has the same features as `cp_cell_*`. Pixel sizes differ (median cell area
+15,594 px vs 3,656 px), so only **scale-free** quantities are used: eccentricity, solidity, extent, form factor, compactness, major/minor axis ratio and max/mean radius ratio,
+each z-scored within well. Shape features are strongly correlated with each other, so the held-out test **leaves out a whole family** (DNA, area, shape) rather than single features.""")
+
+code("""display(Image(filename=find('cc_align_8_shape_anchors.png')))
+print('how much each anchor moves around the clock (profile range, absolute and in units of the cell-to-cell SD):')
+display(pd.read_csv(find('cc_shape_anchor_amplitude.csv'), index_col=0))
+print('rigid rotation fitted on each anchor family alone:')
+display(pd.read_csv(find('cc_shape_anchor_family_rigid.csv')))
+print('leave-one-family-out (fit on two families, scored on the third; p = fraction of random shifts of the held-out Element profile that do as well):')
+pd.read_csv(find('cc_shape_anchor_leave_family_out.csv'))""")
+
+md("""**More anchors do not make the alignment identifiable.**
+- **Shape features barely move around the cell cycle.** Their profile range is only 0.2 to 0.44 of the cell-to-cell standard deviation, against 1.0 to 2.6 for DNA content and area, so they are weak anchors.
+- **Each anchor family prefers its own rotation**: DNA +1 direction at 240 degrees, area reversed at 215 degrees, shape reversed at 155 degrees, with the shape fit only reaching a profile correlation of 0.28.
+- **Nothing generalises to a held-out family.** No rigid or warped map beats the random-shift reference (all p >= 0.125; rigid p >= 0.53).
+- A few individual shape curves do line up under the DNA rotation by eye (compactness and axis ratio both peak near 225 degrees, extent near 135, radius ratio near 100), while form factor, solidity and eccentricity do not.
+  That is mixed evidence which the held-out test cannot confirm.""")
+
 
 md("""## 4. How phase-contrast morphology predicts each regime
 
@@ -165,11 +187,13 @@ md("""## Takeaways and next steps
    rotated (median difference about 40 degrees), but its stored origin is arbitrary (the script's alignment step is rotation-invariant) and over the first part of the DNA clock
    (about 0 to 60 degrees) it runs the other way. The DNA clock angle is also clumpy, which limits angle-based comparisons.
 2. **Across datasets**: the S to G2/M arc aligns by a **+240 degree rotation** (OPS0077 to Element RNA clock), tightly identified from DNA (always the same direction, 235 to 240 degrees over 100 bootstraps).
-   The G1 and post-division arc **cannot be aligned** with DNA, nuclear area and cell area, and no rigid or flexible map beats chance on held-out anchors (all p >= 0.07). We do not recommend a per-cell cross-dataset angle yet.
+   The G1 and post-division arc **cannot be aligned** with DNA, nuclear area, cell area or seven cell-shape features: each anchor family prefers a different rotation and no rigid or flexible map beats chance on a held-out family (all p >= 0.125).
+   We do not recommend a per-cell cross-dataset angle.
 3. **Phase-contrast morphology predicts every regime** (circular r 0.49 to 0.65, median error 29 to 36 degrees; size alone is about 0), as well as pRb, p21 and phospho-Rb
    (R2 0.27 to 0.42) beyond DNA content, so it is a sensible common readout across regimes.
 4. **Regimes are predictable on different arcs and each is best predicted by its own model**, so a model that predicts the DNA-based and markers angles together may cover more of the cycle.
-5. **To align the datasets we need more anchors**: matched CellProfiler-style shape features and the per-feature clock peaks from Tim's ranking.
+5. **A common currency that needs no angle alignment**: DNA content class (2N vs 4N) is measured the same way in both datasets, is what phase-contrast morphology predicts best (G1 vs G2/M AUC 0.94),
+   and is what Tim's morphology clock mainly separates as well. Until there is paired data or better anchors, transfer between datasets through DNA-content classes and not through angles.
 
 **For the scoring script (`ops0077_cell_cycle_score.py`)**: in `circ_corr`, use `np.mean(np.cos(2*np.pi*circ_diff(a, b)))` instead of `np.abs(np.mean(np.exp(2j*np.pi*circ_diff(a, b))))`.
 The `abs` removes the rotation, so the shift search in the markers alignment cannot choose a shift.""")
