@@ -1,0 +1,3 @@
+angles,mean_cos,direction,rotation_deg,median_err_deg
+measured,0.34,1,142,42
+predicted from morphology,0.42,-1,56,49

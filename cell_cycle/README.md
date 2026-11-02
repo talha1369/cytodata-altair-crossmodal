@@ -24,6 +24,15 @@ not used.
 5. `extract_phase_ntc.py` - per-cell phase OrganelleProfiler features (byte-range read of the 870 GB `all_cells_phase.h5ad`).
 6. `combine_frame.py` - the aligned per-cell cell-cycle frame + a DNA x pRb `cycle_stage`.
 7. `build_multimodal.py` - one multimodal AnnData (4i in `.X`, phase in `obsm['X_phase']`, DNA + stage in `obs`, spatial coords).
-8. `build_phase_cycle_nb.py` - emits the analysis notebook.
+8. `build_phase_cycle_nb.py` - emits the analysis notebook (`../phase_to_cell_cycle.ipynb`).
+9. `beyond_binary.py` - can morphology resolve stages beyond G1 vs G2/M (one-vs-rest, restriction point).
+10. `extract_phase_genes.py` - phase features for the knockout cells of a gene list.
+
+## Aligning cell-cycle angular scores across regimes (`../align_cell_cycle_regimes.ipynb`, figures and tables in `../reports/cell_cycle_alignment/`)
+- `align_cc_regimes.py` - agreement among the OPS0077 scoring regimes, and alignment to the Element RNA clock through shared anchors (DNA content, nuclear and cell area).
+- `align_cc_warp_cv.py` - leave-one-anchor-out test of rigid and flexible warps against a random-shift null.
+- `phase_predicts_regimes.py` - how well phase-contrast morphology predicts each regime and the cell-cycle readouts.
+- `markers_vs_dna.py` - relation of the markers-only and DNA-based 4i clocks.
+- `build_alignment_nb.py` - emits the alignment notebook.
 
 Data: CZ Biohub OPS Explorer, public S3 `ops-explorer-public` (Biohub_OPS0077 = ops0144_20260406), region us-west-2.

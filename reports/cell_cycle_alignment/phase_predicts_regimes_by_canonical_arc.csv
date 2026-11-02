@@ -1,0 +1,37 @@
+regime,canonical_arc_deg,median_err_deg,n
+4i DNA,0-30,23.0,4032
+4i DNA,30-60,21.0,6613
+4i DNA,60-90,23.6,6081
+4i DNA,90-120,34.0,1810
+4i DNA,120-150,65.0,1202
+4i DNA,150-180,65.4,967
+4i DNA,180-210,40.4,3073
+4i DNA,210-240,22.7,5163
+4i DNA,240-270,72.8,836
+4i DNA,270-300,73.1,591
+4i DNA,300-330,59.8,558
+4i DNA,330-360,39.3,4707
+4i markers,0-30,50.6,4032
+4i markers,30-60,30.4,6613
+4i markers,60-90,29.9,6081
+4i markers,90-120,26.8,1810
+4i markers,120-150,32.6,1202
+4i markers,150-180,35.1,967
+4i markers,180-210,34.9,3073
+4i markers,210-240,22.3,5163
+4i markers,240-270,23.6,836
+4i markers,270-300,28.0,591
+4i markers,300-330,74.3,558
+4i markers,330-360,85.3,4707
+4i DNA+PCs (final),0-30,22.4,4032
+4i DNA+PCs (final),30-60,19.9,6613
+4i DNA+PCs (final),60-90,24.3,6081
+4i DNA+PCs (final),90-120,34.3,1810
+4i DNA+PCs (final),120-150,63.6,1202
+4i DNA+PCs (final),150-180,60.9,967
+4i DNA+PCs (final),180-210,37.0,3073
+4i DNA+PCs (final),210-240,21.1,5163
+4i DNA+PCs (final),240-270,83.1,836
+4i DNA+PCs (final),270-300,83.4,591
+4i DNA+PCs (final),300-330,65.9,558
+4i DNA+PCs (final),330-360,45.4,4707

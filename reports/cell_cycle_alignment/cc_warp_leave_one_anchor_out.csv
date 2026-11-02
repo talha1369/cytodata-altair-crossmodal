@@ -1,0 +1,17 @@
+knots,warp,train_on,held_out,direction,train_corr,HELD_OUT_corr,null_95th,p_vs_random_shift
+1,rigid rotation,nuc_area+cell_area,dna,-1,0.481,0.106,0.833,0.403
+1,rigid rotation,dna+cell_area,nuc_area,-1,0.474,0.329,0.512,0.194
+1,rigid rotation,dna+nuc_area,cell_area,-1,0.568,0.179,0.518,0.361
+1,rigid rotation,dna,nuc_area+cell_area,1,0.86,-0.015,0.332,0.556
+4,"warp, 4 knots",nuc_area+cell_area,dna,-1,0.727,0.6,0.821,0.194
+4,"warp, 4 knots",dna+cell_area,nuc_area,1,0.8,0.339,0.54,0.264
+4,"warp, 4 knots",dna+nuc_area,cell_area,-1,0.833,0.477,0.505,0.083
+4,"warp, 4 knots",dna,nuc_area+cell_area,-1,0.936,0.416,0.532,0.139
+6,"warp, 6 knots",nuc_area+cell_area,dna,-1,0.726,0.548,0.837,0.222
+6,"warp, 6 knots",dna+cell_area,nuc_area,1,0.806,0.346,0.531,0.25
+6,"warp, 6 knots",dna+nuc_area,cell_area,-1,0.791,0.388,0.413,0.083
+6,"warp, 6 knots",dna,nuc_area+cell_area,-1,0.934,0.363,0.47,0.153
+8,"warp, 8 knots",nuc_area+cell_area,dna,-1,0.743,0.607,0.821,0.181
+8,"warp, 8 knots",dna+cell_area,nuc_area,1,0.804,0.327,0.551,0.292
+8,"warp, 8 knots",dna+nuc_area,cell_area,-1,0.844,0.485,0.497,0.069
+8,"warp, 8 knots",dna,nuc_area+cell_area,-1,0.947,0.407,0.512,0.139

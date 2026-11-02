@@ -1,0 +1,4 @@
+anchors,best_direction,best_offset_deg,best_profile_corr,bootstrap_direction,bootstrap_pct_same_direction,bootstrap_offset_median_deg,bootstrap_offset_90pct_interval
+DNA only,1,240.0,0.859,1,100,240,"[235, 240]"
+area only (nuc + cell),-1,215.0,0.48,-1,100,215,"[210, 215]"
+all three,-1,265.0,0.439,-1,78,265,"[255, 270]"

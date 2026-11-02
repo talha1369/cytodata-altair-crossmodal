@@ -1,6 +1,6 @@
 #!/usr/bin/env python
-"""Emit phase_to_cell_cycle.ipynb: an explained walkthrough of how we connect single-cell morphology to the cell cycle
-on the OPS0077 NTC population, ending in a phase -> cycle predictor. Run: python build_phase_cycle_nb.py OUT.ipynb"""
+"""Emit phase_to_cell_cycle.ipynb: an explained, self-consistent walkthrough that predicts cell-cycle phase from
+label-free phase-contrast morphology on the OPS0077 NTC cells. Run: python build_phase_cycle_nb.py OUT.ipynb"""
 import sys, nbformat as nbf
 from nbformat.v4 import new_notebook, new_markdown_cell, new_code_cell
 
@@ -8,45 +8,40 @@ c = []
 def md(s): c.append(new_markdown_cell(s))
 def code(s): c.append(new_code_cell(s))
 
-md("""# Connecting single-cell morphology to the cell cycle (OPS0077 NTC)
+md("""# Reading cell-cycle phase from label-free morphology (OPS0077 NTC)
 
-**Why.** Cell-cycle position is one of the biggest drivers of single-cell morphological heterogeneity: two otherwise
-identical cells look different just because one is in G1 and the other in G2. If we can read a cell's cycle position
-from imaging, we can regress it out and see what a perturbation actually did, rather than where the cell happened to be
-in the cycle.
+**Why.** Cell-cycle position is one of the biggest drivers of single-cell morphological heterogeneity: two identical
+cells can look different only because one is in G1 and the other in G2. If we can read a cell's cell-cycle position from
+label-free imaging, we can later regress it out and see what a perturbation actually did.
 
-**The idea, in four steps.**
-1. **Ground truth from 4i.** The OPS0077 4i panel measures, on each fixed cell, markers that directly report cell-cycle
-   state (DNA content, pRb, p21). We turn these into a per-cell cycle readout.
-2. **A continuous cycle axis.** We order cells along a cell-cycle *pseudotime* so the readout is a smooth 0-to-1 axis,
-   not just four bins.
-3. **Connect label-free phase to that axis.** Phase imaging is label-free and available for every cell, so we learn
-   phase morphology -> cycle state. If that works, we can place *any* phase image on the cycle without stains.
-4. **(next) Regress the cycle out** to get a cleaner perturbation representation.
+> ### Two meanings of "phase" - keep them apart
+> - **phase-contrast imaging** (label-free phase, QPI): an imaging modality. Here it is the **predictor**, and to avoid
+>   confusion we call its features **morphology** below.
+> - **cell-cycle phase** (G1 / S / G2 / M, or the continuous circular position `cc_phase`): where a cell sits in the
+>   cycle. It is the **target**.
+>
+> So "predict cell-cycle phase from phase-contrast morphology" is two different things that happen to share the word
+> "phase", not circular reasoning. The continuous circular cell-cycle phase is the standard
+> [**tricycle**](https://bioc.r-universe.dev/tricycle) representation (Zheng et al.).
 
-This notebook does steps 1 to 3 on the **non-targeting (NTC)** cells, where the only structured variation is the cell
-cycle (no perturbation). Everything is keyed by `cell_key` = well + 4i segmentation id, so the 4i readout and the phase
-features refer to the same physical cell.""")
+**Plan.** (1) DNA content as the 2N->4N backbone. (2) the circular cell-cycle phase axis (`cc_phase`, tricycle-style).
+(3) define the ground-truth targets from 4i. (4) predict them from morphology, held-out. All on the **non-targeting
+(NTC)** cells, where the only structured variation is the cell cycle. Everything is keyed by `cell_key` = well + 4i
+segmentation id, so each cell's 4i readout and its morphology features are the same physical cell.""")
 
-md("""## The markers, and what each one reads
+md("""## The 4i markers and what each one reads (`cell_cycle_markers.md`)
 
-From the 4i panel (`cell_cycle_markers.md`):
-
-| readout | what it measures | how it moves through the cycle |
+| readout | measures | behaviour through the cycle |
 |---|---|---|
-| **DNA content** (DAPI, integrated) | amount of DNA | 2N in G1, rises through S, 4N in G2/M. The backbone of the cycle. |
-| **pRb** (phospho-Rb) | the restriction point | low in quiescent / early-G1 cells, high once a cell commits to divide |
-| **pRb / Rb ratio** | fraction of Rb phosphorylated | cleaner commitment signal than pRb alone (controls for total Rb) |
-| **nuclear area** | nucleus size | grows into G2; drops sharply at mitosis (condensed chromatin) |
-| **p21** | CDK inhibitor (arrest) | high in arrested / G0 cells. In cycling NTC cells it is near background. |
-
-DNA content gives the 2N->4N progression; pRb and the ratio split the 2N cells into *before* and *after* the
-restriction point (G0/early-G1 vs committed G1). Together they place a cell in the cycle.""")
+| **DNA content** (integrated DAPI) | amount of DNA | 2N in G1, rises through S, 4N in G2/M |
+| **pRb** (phospho-Rb) | the restriction point | low in quiescent / early G1, high once committed |
+| **pRb / Rb ratio** | fraction of Rb phosphorylated | cleaner commitment signal than pRb alone |
+| **nuclear area** | nucleus size | grows into G2 |
+| **p21** | CDK inhibitor | higher in G1, degraded in S/G2M; small absolute range and noisy in cycling cells (shown below) |""")
 
 code("""import os
 import numpy as np, pandas as pd, anndata as ad
 import matplotlib.pyplot as plt
-from scipy.spatial import cKDTree
 from sklearn.decomposition import PCA
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import RobustScaler
@@ -56,236 +51,224 @@ from sklearn.metrics import r2_score, roc_auc_score, roc_curve
 import warnings; warnings.filterwarnings('ignore')
 
 def find(n):
-    for r in ['/srv/team/data/crossmodal/ops0077_ntc', 'data', '.']:
+    # team compute folder, then common repo locations (the team's cc scores live in cell_cycle_4i_DNA/)
+    for r in ['/srv/team/data/crossmodal/ops0077_ntc', 'data', 'cell_cycle_4i_DNA', '.', '..']:
         if os.path.exists(f'{r}/{n}'): return f'{r}/{n}'
     raise FileNotFoundError(n)
 
-# the per-cell cell-cycle frame: one row per NTC cell, 4i cycle readouts aligned on cell_key
+# per-cell cell-cycle frame: one row per NTC cell, 4i cell-cycle readouts aligned on cell_key
 fr = pd.read_parquet(find('OPS0077_NTC_cellcycle_frame.parquet'))
-print(f'{len(fr):,} NTC cells | columns:', [x for x in fr.columns if x in
-      ['dna_content_log2','log2_pRb','prb_rb_ratio','p21','nuclear_area_4i','cycle_stage','dna_reliable']])
-rel = (fr['dna_reliable'].astype(str) == 'True').values     # cells with trustworthy DNA content
-print('cells with reliable DNA content:', int(rel.sum()))""")
+rel = (fr['dna_reliable'].astype(str) == 'True').values
+print(f'{len(fr):,} NTC cells; {int(rel.sum()):,} with reliable DNA content')
+fr.loc[rel, ['cycle_stage','dna_content_log2','log2_pRb','prb_rb_ratio','p21','nuclear_area_4i']].head()""")
 
-md("""## Step 1a - DNA content as the backbone
+md("""## Step 1 - DNA content, the 2N / 4N backbone
 
-DNA content is the integrated DAPI inside each nucleus, measured with `cp_measure`, background-subtracted per cell, and
-averaged over the staining rounds that are not saturated (rounds 2 to 4). We plot it relative to the population median
-(log2), so **0 = 2N (G1)** and **+1 = 4N (G2/M)**. A healthy asynchronous population shows a tall G1 peak, an S-phase
-shoulder, and a smaller G2/M peak exactly one log2 (2x) higher.""")
+DNA content = integrated DAPI inside each 4i nucleus, background-subtracted per cell, averaged over the unsaturated
+staining rounds (2 to 4), log2 relative to the population median. On that scale **0 = 2N (G1)** and **+1 = 4N (G2/M)**.
+An asynchronous population shows a tall G1 peak, an S-phase shoulder, and a G2/M peak one log2 (2x) higher.""")
 
 code("""x = fr.loc[rel, 'dna_content_log2'].astype(float).values
 x = x[(x > -1) & (x < 1.8)]
 fig, ax = plt.subplots(figsize=(7,4))
 ax.hist(x, 200, color='0.3'); ax.axvline(0, color='tab:blue', lw=1, label='2N (G1)'); ax.axvline(1, color='tab:red', lw=1, label='4N (G2/M)')
-ax.set_xlabel('relative DNA content, log2'); ax.set_ylabel('cells'); ax.legend()
-ax.set_title(f'DNA content, NTC cells (n={len(x):,})'); plt.show()
-print('median DNA of cells above +0.7 (log2) vs below +0.3:',
-      round(fr.loc[rel & (fr.dna_content_log2>0.7),'dna_content_log2'].median(),2),
-      round(fr.loc[rel & (fr.dna_content_log2<0.3),'dna_content_log2'].median(),2))""")
+ax.set_xlabel('relative DNA content, log2'); ax.set_ylabel('cells'); ax.legend(); ax.set_title(f'DNA content, NTC cells (n={len(x):,})'); plt.show()""")
 
-md("""## Step 1b - DNA x pRb places a cell in the cycle
+md("""## Step 2 - the cell-cycle phase axis: the team's circular `cc_phase` (tricycle-style)
 
-Plotting DNA content against pRb reproduces the classic cell-cycle layout:
-- **bottom-left** (2N, low pRb) = quiescent / early G1 (G0/G1-early),
-- **top-left** (2N, high pRb) = committed late G1 (past the restriction point),
-- **middle** (rising DNA) = S phase,
-- **right** (4N) = G2/M.
+A cell-cycle axis has to be **circular**: G1 -> S -> G2/M -> M -> back to G1. The team's `cell_cycle_scores.csv` gives
+each cell exactly that: a continuous circular **cell-cycle phase** `cc_phase` in [0, 1], built from the 4i markers and
+DNA in the style of [tricycle](https://bioc.r-universe.dev/tricycle). We adopt it as the canonical cell-cycle phase.
+(We deliberately do **not** build a linear pseudotime: an open G1->G2/M ordering is only half the loop and would
+misrepresent the cycle.)
 
-The `cycle_stage` column is this gating. p21 is shown to stay flat, confirming it adds little in cycling cells.""")
+The signature of a correct clock: **DNA content peaks in the middle** (G2/M, 4N) and returns to 2N at **both** ends
+(G1 before S, and G1 again after mitosis). We confirm that. p21 runs **anti-phase** to DNA (higher in G1, degraded in
+S/G2M), the expected behaviour, though its absolute range is small and noisy.""")
 
-code("""sub = fr[rel].copy()
-fig, ax = plt.subplots(1, 2, figsize=(13,5))
-order = ['G0/G1-early','G1-late','S','G2/M']
-for st, col in zip(order, ['tab:purple','tab:blue','tab:green','tab:red']):
-    m = sub.cycle_stage == st
-    ax[0].scatter(sub.loc[m,'dna_content_log2'], sub.loc[m,'log2_pRb'], s=3, alpha=.3, label=f'{st} (n={int(m.sum()):,})', c=col)
-ax[0].set_xlabel('DNA content (log2)'); ax[0].set_ylabel('log2 pRb'); ax[0].set_xlim(-1,1.8); ax[0].set_ylim(7,10)
-ax[0].legend(markerscale=3); ax[0].set_title('DNA x pRb cell-cycle stages')
-tab = sub.groupby('cycle_stage')[['dna_content_log2','log2_pRb','prb_rb_ratio','p21','nuclear_area_4i']].median().reindex(order)
-tab.plot.bar(ax=ax[1], subplots=False); ax[1].set_title('median marker by stage (p21 is flat)'); ax[1].set_xlabel('')
-plt.tight_layout(); plt.show()
-tab.round(3)""")
+code("""cc_all = pd.read_csv(find('cell_cycle_scores.csv'))
+cc_all = cc_all[(cc_all['dna_reliable']==True) & (cc_all['cc_phase_source']=='dna+pcs')].copy()
+cc_all['bin'] = (cc_all['cc_phase']*20).clip(0,19).astype(int)
+prof = cc_all.groupby('bin')[['z_dna','z_pRb','z_p21']].mean()
+fig, ax = plt.subplots(figsize=(7.5,4))
+for col, lab in [('z_dna','DNA content'),('z_pRb','pRb'),('z_p21','p21')]:
+    ax.plot(prof.index/20, prof[col], 'o-', label=lab)
+ax.set_xlabel('cell-cycle phase  cc_phase  (circular: 0 = 1)'); ax.set_ylabel('z-scored 4i marker'); ax.legend()
+ax.set_title('cc_phase is a proper clock: DNA peaks mid-cycle, 2N at both ends'); plt.show()
+print('DNA z at clock start / middle / end:', prof['z_dna'].iloc[0].round(2), prof['z_dna'].iloc[10].round(2), prof['z_dna'].iloc[19].round(2),
+      '| p21 spread across clock:', round(float(prof['z_p21'].max()-prof['z_p21'].min()),2))""")
 
-md("""## Step 2 - a continuous cell-cycle pseudotime
+md("""## Step 3 - the ground-truth targets (all from 4i, never from morphology)
 
-The four stages are coarse. The cell cycle is really a continuous trajectory, so we fit a **principal curve** through the
-4i cell-cycle vector (DNA content, pRb, pRb/Rb ratio, nuclear area) and read each cell's position along it as a
-pseudotime in [0, 1], oriented so DNA content increases. This is the smooth axis we will regress out later.""")
+We predict three 4i-defined targets. **Morphology is only the predictor; every label is measured on the same cell by
+4i.**
 
-code("""def smooth_sorted(vals, order, win):
-    c = np.cumsum(np.insert(vals[order], 0, 0.0)); n = len(vals); h = win//2; out = np.empty_like(vals)
-    for i in range(n):
-        a, b = max(0,i-h), min(n,i+h+1); out[order[i]] = (c[b]-c[a])/(b-a)
-    return out
-
-def principal_curve(Z, iters=8, win=None):
-    win = win or max(50, len(Z)//50); t = PCA(2, random_state=0).fit_transform(Z)[:,0]
-    for _ in range(iters):
-        o = np.argsort(t); curve = np.column_stack([smooth_sorted(Z[:,j], o, win) for j in range(Z.shape[1])])
-        cs = curve[o]; seg = np.r_[0, np.linalg.norm(np.diff(cs,axis=0),axis=1).cumsum()]
-        arc = np.empty(len(t)); arc[o] = seg; _, idx = cKDTree(curve).query(Z, k=1); t = arc[idx]
-    return t
-
-F = fr.loc[rel].copy()
-Y = np.c_[F.dna_content_log2, F.log2_pRb, F.prb_rb_ratio, np.log2(F.nuclear_area_4i.clip(lower=1))].astype(float)
-Y = np.where(np.isfinite(Y), Y, np.nanmedian(Y,0)); Z = (Y - Y.mean(0))/Y.std(0)
-t = principal_curve(Z)
-if np.corrcoef(t, Y[:,0])[0,1] < 0: t = -t
-t = (t - t.min())/(t.max()-t.min()); F['cycle_pseudotime'] = t
-print('Spearman(pseudotime, marker):', {k: round(pd.Series(t).corr(F[k].astype(float).reset_index(drop=True),method='spearman'),3)
-      for k in ['dna_content_log2','log2_pRb','prb_rb_ratio','nuclear_area_4i']})
-print('mean pseudotime by stage:', F.groupby('cycle_stage')['cycle_pseudotime'].mean().round(3).to_dict())""")
-
-code("""o = np.argsort(t); fig, ax = plt.subplots(1,2, figsize=(13,5))
-for name,lab in [('dna_content_log2','DNA content'),('log2_pRb','pRb'),('prb_rb_ratio','pRb/Rb'),('nuclear_area_4i','nuclear area')]:
-    v = F[name].astype(float).values; v = np.where(np.isfinite(v),v,np.nanmedian(v)); v=(v-v.mean())/v.std()
-    ax[0].plot(np.sort(t), smooth_sorted(v,o,max(50,len(t)//50))[o], label=lab)
-ax[0].set_xlabel('cycle pseudotime'); ax[0].set_ylabel('marker (z-scored)'); ax[0].legend(); ax[0].set_title('markers rise in cycle order')
-sc = ax[1].scatter(F.dna_content_log2, F.log2_pRb, c=t, s=3, cmap='viridis'); plt.colorbar(sc,ax=ax[1],label='pseudotime')
-ax[1].set_xlabel('DNA content (log2)'); ax[1].set_ylabel('log2 pRb'); ax[1].set_xlim(-1,1.8); ax[1].set_ylim(7,10); ax[1].set_title('pseudotime traces the cycle path')
-plt.tight_layout(); plt.show()""")
-
-md("""## Step 3 - connect label-free phase to the cycle
-
-Now the payoff: can **label-free phase morphology** alone recover this cell-cycle state? We load the per-cell phase
-OrganelleProfiler features and predict three 4i targets with held-out validation (5-fold, **folds grouped by imaging
-tile** so no tile leaks between train and test). All preprocessing (median-impute, robust-scale, clip, PCA) is fit
-inside each fold. We compare against a **cell-size-only baseline** and a **shuffled-label null**.""")
-
-md("""### How the G1 vs G2/M label is defined (important)
-
-Phase is only the **predictor**. The **label is the ground truth measured by 4i DNA content (DAPI) on the same cell**,
-and the model is scored on how well phase recovers that label on held-out cells. In the code below:
-
+**(a) G1 vs G2/M**, a clean binary from DNA content:
 ```python
 g = np.full(len(y_dna), -1)
-g[y_dna < 0.25] = 0      # G1
-g[y_dna > 0.65] = 1      # G2/M
+g[y_dna < 0.25] = 0      # G1   (clearly 2N)
+g[y_dna > 0.65] = 1      # G2/M (clearly toward 4N)
+# 0.25 to 0.65 (S phase / ambiguous) -> -1, dropped: mid-replication, not a clean either/or
 ```
+**(b) DNA content** (continuous, the log2 value above).
+**(c) cell-cycle phase `cc_phase`** (continuous, circular).""")
 
-`y_dna` is `dna_content_log2`: integrated DAPI inside each cell's 4i nucleus mask, per-cell background subtracted,
-averaged over rounds 2 to 4, then log2 relative to the population median. On that scale **0 = 2N (G1)** and
-**+1 = 4N (G2/M)**, and the histogram above shows the two peaks one log2 apart. So the three groups are:
-- **G1** = DNA content < 0.25 (clearly 2N),
-- **G2/M** = DNA content > 0.65 (clearly toward 4N),
-- **S phase / ambiguous middle** (0.25 to 0.65) = label -1, **dropped** from the G1-vs-G2/M task, because those cells
-  are mid-replication and not a clean either/or.
-
-The label never touches phase: the phase features are label-free morphology, joined to the DNA label on `cell_key`
-(same physical cell), and the AUC is computed out-of-fold on cells and tiles the model did not train on.""")
-
-code("""ph = ad.read_h5ad(find('OPS0077_NTC_phase_OrganelleProfiler.h5ad'))
+code("""# morphology features (phase-contrast OrganelleProfiler) for the same cells
+ph = ad.read_h5ad(find('OPS0077_NTC_phase_OrganelleProfiler.h5ad'))
 ph.obs_names = ph.obs['cell_key'].astype(str)
-cells = F.index[F.index.isin(ph.obs_names)]
-ph = ph[cells]; F = F.loc[cells]; t = F['cycle_pseudotime'].values
-present = np.isfinite(np.asarray(ph.X)).mean(0) >= 0.85          # drop never-populated feature families
-Xp = np.asarray(ph.X, np.float32)[:, present]
-gr = F['tile_pheno'].astype(str).values
-area = np.c_[F.nuclear_area_4i.astype(float), F.cell_area_4i.astype(float)]
-area = np.where(np.isfinite(area), area, np.nanmedian(area,0))
-print('cells', len(cells), '| phase features kept', int(present.sum()), 'of', present.size)
+cells = fr.index[rel]; cells = cells[cells.isin(ph.obs_names)]
+ph = ph[cells]; Fr = fr.loc[cells]
+present = np.isfinite(np.asarray(ph.X)).mean(0) >= 0.85            # drop never-populated OrganelleProfiler families
+Xm = np.asarray(ph.X, np.float32)[:, present]                      # Xm = morphology (the predictor)
+groups = Fr['tile_pheno'].astype(str).values
+area = np.c_[Fr.nuclear_area_4i.astype(float), Fr.cell_area_4i.astype(float)]
+area = np.where(np.isfinite(area), area, np.nanmedian(area,0))     # cell-size-only baseline
 
-def prep(a, b, pca):
+y_dna = Fr.dna_content_log2.astype(float).values
+g = np.full(len(y_dna), -1); g[y_dna < 0.25] = 0; g[y_dna > 0.65] = 1
+print(f'cells {len(cells):,} | morphology features {int(present.sum())} | tiles {len(set(groups)):,}')
+print(f'G1 n={int((g==0).sum()):,} | G2/M n={int((g==1).sum()):,} | S/ambiguous dropped n={int((g==-1).sum()):,}')""")
+
+md("""## Step 4 - predict cell-cycle phase from morphology (held-out)
+
+5-fold cross-validation, **folds grouped by imaging tile** so no tile is split across train and test. Inside each fold
+we fit median-impute -> robust-scale -> clip -> PCA(100) on the training cells only. Baselines: **cell size only** and a
+**shuffled-label null**. `cc_phase` is circular, so we predict sin and cos of its angle and recover the angle
+(circular regression), scoring with circular correlation and median angular error.""")
+
+code("""def prep(a, b, pca):
     imp = SimpleImputer(strategy='median').fit(a); sc = RobustScaler(quantile_range=(10,90)).fit(imp.transform(a))
-    f = lambda Q: np.clip(sc.transform(imp.transform(Q)), -5, 5); A,B = f(a), f(b)
-    if pca and A.shape[1] > 100: p = PCA(100, random_state=0).fit(A); A,B = p.transform(A), p.transform(B)
+    f = lambda Q: np.clip(sc.transform(imp.transform(Q)), -5, 5); A, B = f(a), f(b)
+    if pca and A.shape[1] > 100: p = PCA(100, random_state=0).fit(A); A, B = p.transform(A), p.transform(B)
     return A, B
+
 def oof_r2(X, y, pca=True):
     pred = np.zeros_like(y)
-    for a,b in GroupKFold(5).split(X,y,gr):
-        A,B = prep(X[a],X[b],pca); pred[b] = RidgeCV(alphas=np.logspace(-2,5,15)).fit(A,y[a]).predict(B)
-    return r2_score(y,pred), pred
-def oof_auc(X, g, pca=True, shuffle=False):
-    m = g>=0; X2,gg,gr2 = X[m],g[m],gr[m]
+    for a, b in GroupKFold(5).split(X, y, groups):
+        A, B = prep(X[a], X[b], pca); pred[b] = RidgeCV(alphas=np.logspace(-2,5,15)).fit(A, y[a]).predict(B)
+    return r2_score(y, pred), pred
+
+def oof_auc(X, gg0, pca=True, shuffle=False):
+    m = gg0 >= 0; X2, gg, gr2 = X[m], gg0[m], groups[m]
     if shuffle: gg = np.random.default_rng(0).permutation(gg)
     pp = np.zeros(len(gg))
-    for a,b in GroupKFold(5).split(X2,gg,gr2):
-        A,B = prep(X2[a],X2[b],pca); pp[b] = LogisticRegression(C=.1,max_iter=3000).fit(A,gg[a]).predict_proba(B)[:,1]
-    return roc_auc_score(gg,pp), gg, pp
+    for a, b in GroupKFold(5).split(X2, gg, gr2):
+        A, B = prep(X2[a], X2[b], pca); pp[b] = LogisticRegression(C=.1, max_iter=3000).fit(A, gg[a]).predict_proba(B)[:,1]
+    return roc_auc_score(gg, pp), gg, pp
 
-y_dna = F.dna_content_log2.astype(float).values
-g = np.full(len(y_dna),-1); g[y_dna<0.25]=0; g[y_dna>0.65]=1
-r_dna,pred_dna = oof_r2(Xp, y_dna); r_pt,_ = oof_r2(Xp, t)
-auc,gg,pp = oof_auc(Xp, g); auc_sz,_,_ = oof_auc(area, g, pca=False); auc_null,_,_ = oof_auc(Xp, g, shuffle=True)
-r_dna_sz,_ = oof_r2(area, y_dna, pca=False)
+r_dna, pred_dna = oof_r2(Xm, y_dna); r_dna_sz, _ = oof_r2(area, y_dna, pca=False)
+auc, gg, pp = oof_auc(Xm, g); auc_sz, _, _ = oof_auc(area, g, pca=False); auc_null, _, _ = oof_auc(Xm, g, shuffle=True)
 pd.DataFrame([
-  {'target':'DNA content','phase':round(r_dna,3),'size baseline':round(r_dna_sz,3),'null':''},
-  {'target':'cycle pseudotime','phase':round(r_pt,3),'size baseline':'','null':''},
-  {'target':'G1 vs G2/M (AUC)','phase':round(auc,3),'size baseline':round(auc_sz,3),'null':round(auc_null,3)}])""")
+  {'target':'G1 vs G2/M (AUC)', 'from morphology':round(auc,3), 'cell-size baseline':round(auc_sz,3), 'shuffled null':round(auc_null,3)},
+  {'target':'DNA content (R2)', 'from morphology':round(r_dna,3), 'cell-size baseline':round(r_dna_sz,3), 'shuffled null':0.0},
+])""")
 
-code("""fig, ax = plt.subplots(1,2, figsize=(12,5))
+code("""# circular cell-cycle phase (cc_phase) from morphology, on the cells that have a defined clock
+cc = pd.read_csv(find('cell_cycle_scores.csv')).set_index('cell_key')
+cc = cc[(cc['dna_reliable']==True) & (cc['cc_phase_source']=='dna+pcs')]
+com = ph.obs_names[ph.obs_names.isin(cc.index)]
+Xc = np.asarray(ph[com].X, np.float32)[:, present]; cc = cc.loc[com]
+th = (cc['cc_phase'].astype(float).values % 1.0) * 2*np.pi
+grc = ph[com].obs['tile_pheno'].astype(str).values
+arc = np.c_[cc['nuc_area_px'].astype(float), cc['dapi_log_area'].astype(float)]; arc = np.where(np.isfinite(arc), arc, np.nanmedian(arc,0))
+
+def predict_angle(X, th, g, pca=True, shuffle=False):
+    if shuffle: th = np.random.default_rng(0).permutation(th)
+    s, co = np.sin(th), np.cos(th); ps = np.zeros(len(th)); pc = np.zeros(len(th))
+    for a, b in GroupKFold(5).split(X, th, g):
+        A, B = prep(X[a], X[b], pca)
+        ps[b] = RidgeCV(alphas=np.logspace(-2,5,15)).fit(A, s[a]).predict(B)
+        pc[b] = RidgeCV(alphas=np.logspace(-2,5,15)).fit(A, co[a]).predict(B)
+    return np.arctan2(ps, pc)
+
+def circ_corr(a, b):
+    a0 = a - np.angle(np.mean(np.exp(1j*a))); b0 = b - np.angle(np.mean(np.exp(1j*b)))
+    return np.sum(np.sin(a0)*np.sin(b0)) / np.sqrt(np.sum(np.sin(a0)**2)*np.sum(np.sin(b0)**2))
+
+pred_ang = predict_angle(Xc, th, grc)
+rows = []
+for nm, p in [('morphology', pred_ang), ('cell-size baseline', predict_angle(arc, th, grc, pca=False)),
+              ('shuffled null', predict_angle(Xc, th, grc, shuffle=True))]:
+    e = np.abs(np.angle(np.exp(1j*(th-p))))*180/np.pi
+    rows.append(dict(predictor=nm, circular_r=round(circ_corr(th,p),3), median_angular_error_deg=round(float(np.median(e)),1), within_45deg=round(float((e<45).mean()),2)))
+pd.DataFrame(rows)""")
+
+md("""### Figures""")
+
+code("""# (1) binary + DNA content from morphology
+fig, ax = plt.subplots(1,2, figsize=(12,5))
 ax[0].hexbin(y_dna, pred_dna, gridsize=70, bins='log', extent=(-1,1.8,-.6,1.4)); ax[0].plot([-1,1.8],[-1,1.8],'r--',lw=1)
-ax[0].set_xlabel('measured DNA content (log2)'); ax[0].set_ylabel('phase-predicted'); ax[0].set_title(f'DNA content from phase (R2={r_dna:.2f})')
-fpr,tpr,_ = roc_curve(gg,pp); ax[1].plot(fpr,tpr,lw=2,label=f'phase (AUC={auc:.2f})'); ax[1].plot([0,1],[0,1],'k--',lw=.8)
-ax[1].set_xlabel('false positive rate'); ax[1].set_ylabel('true positive rate'); ax[1].set_title('G1 vs G2/M from phase'); ax[1].legend()
+ax[0].set_xlabel('measured DNA content (log2)'); ax[0].set_ylabel('DNA content predicted from morphology'); ax[0].set_title(f'DNA content (R2={r_dna:.2f})')
+fpr, tpr, _ = roc_curve(gg, pp); ax[1].plot(fpr, tpr, lw=2, label=f'morphology (AUC={auc:.2f})'); ax[1].plot([0,1],[0,1],'k--',lw=.8)
+ax[1].set_xlabel('false positive rate'); ax[1].set_ylabel('true positive rate'); ax[1].set_title('G1 vs G2/M from morphology'); ax[1].legend(); plt.tight_layout(); plt.show()""")
+
+code("""# (2) the circular clock: it exists in 4i, and morphology recovers its marker dynamics
+err = np.abs(np.angle(np.exp(1j*(th-pred_ang))))*180/np.pi
+pang = np.mod(pred_ang, 2*np.pi)
+marks = {'DNA': cc['z_dna'].astype(float).values, 'pRb': cc['z_pRb'].astype(float).values, 'p21': cc['z_p21'].astype(float).values}
+mcol = {'DNA': 'tab:red', 'pRb': 'tab:blue', 'p21': 'tab:green'}
+
+def profile(angle, v, nb=36):
+    b = np.clip((angle/(2*np.pi)*nb).astype(int), 0, nb-1)
+    s = pd.Series(v).groupby(b).mean().reindex(range(nb)).values
+    return (np.arange(nb)+0.5)/nb, s
+
+fig = plt.figure(figsize=(17, 5))
+# A: cells on the MEASURED clock (polar), coloured by DNA content -> DNA sweeps high at mid-cycle, low at the G1 ends
+axp = fig.add_subplot(1, 3, 1, projection='polar')
+rng = np.random.default_rng(0); samp = rng.choice(len(th), min(12000, len(th)), replace=False)
+r = 0.55 + 0.45*rng.random(len(samp))
+hp = axp.scatter(th[samp], r, c=marks['DNA'][samp], s=4, cmap='coolwarm', vmin=-1.5, vmax=2, rasterized=True)
+axp.set_theta_zero_location('N'); axp.set_theta_direction(-1); axp.set_yticklabels([]); axp.set_ylim(0, 1.05)
+axp.set_title('measured cell-cycle clock\\ncells by cc_phase, colour = DNA'); plt.colorbar(hp, ax=axp, pad=0.1, shrink=0.7, label='z DNA')
+# B: markers around the MEASURED clock
+axb = fig.add_subplot(1, 3, 2)
+for k, v in marks.items():
+    x, s = profile(th, v); axb.plot(x, s, '-', color=mcol[k], lw=2.2, label=k)
+axb.axhline(0, color='.7', lw=.6); axb.set_xlabel('measured cell-cycle phase'); axb.set_ylabel('z-scored 4i marker')
+axb.legend(); axb.set_title('markers around the MEASURED clock')
+# C: the SAME markers around the clock PREDICTED from morphology (solid); measured overlaid (dashed)
+axc = fig.add_subplot(1, 3, 3)
+for k, v in marks.items():
+    x, s = profile(pang, v); axc.plot(x, s, '-', color=mcol[k], lw=2.2, label=k)
+    x2, s2 = profile(th, v); axc.plot(x2, s2, '--', color=mcol[k], lw=1, alpha=.45)
+axc.axhline(0, color='.7', lw=.6); axc.set_xlabel('cell-cycle phase predicted from morphology'); axc.set_ylabel('z-scored 4i marker')
+axc.legend(title='solid: by predicted phase\\ndashed: by measured phase', fontsize=8)
+axc.set_title(f'markers around the RECOVERED clock\\ncirc r={circ_corr(th,pred_ang):.2f}, median error {np.median(err):.0f} deg')
 plt.tight_layout(); plt.show()""")
 
-md("""## Step 3b - overlay phase on the team's cell-cycle clock
+md("""## Write the per-cell morphology prediction back into the dataset
 
-The team's `cell_cycle_scores.csv` gives each cell a **continuous circular clock** `cc_phase` (0 to 1 around
-G1 -> S -> G2 -> M -> G1), built from the 4i markers and DNA. As an independent check, we predict that clock from phase.
-Because it is circular, we do **circular regression**: predict sin and cos of the angle, recover the angle, and score
-with circular correlation and median angular error (a shuffled-label null and a size-only baseline for reference).""")
+Each cell gets an out-of-fold `morph_predicted_dna` (held-out), the morphology-based cell-cycle readout for the
+cycle-regression (correction) step next.""")
 
-code("""try:
-    cc = pd.read_csv(find('cell_cycle_scores.csv')).set_index('cell_key')
-    cc = cc[(cc['dna_reliable'] == True) & (cc['cc_phase_source'] == 'dna+pcs')]
-    com = ph.obs_names[ph.obs_names.isin(cc.index)]
-    Xc = np.asarray(ph[com].X, np.float32)[:, present]; cc = cc.loc[com]
-    th = (cc['cc_phase'].astype(float).values % 1.0) * 2 * np.pi
-    grc = ph[com].obs['tile_pheno'].astype(str).values
+code("""pred_full = pd.Series(np.nan, index=cells); pred_full[:] = pred_dna
+mm = find('OPS0077_NTC_Multimodal_4i_Phase_DNA.h5ad')
+A = ad.read_h5ad(mm)
+A.obs['morph_predicted_dna'] = pred_full.reindex(A.obs_names).values
+try:
+    A.write_h5ad(mm, compression='gzip'); out = mm
+except Exception:
+    out = 'OPS0077_NTC_Multimodal_4i_Phase_DNA_withpred.h5ad'; A.write_h5ad(out, compression='gzip')
+print('wrote', out, '| cells with a prediction', int(np.isfinite(A.obs['morph_predicted_dna'].astype(float)).sum()))""")
 
-    def predict_angle(X, th, g, pca=True, shuffle=False):
-        if shuffle: th = np.random.default_rng(0).permutation(th)
-        s, co = np.sin(th), np.cos(th); ps = np.zeros(len(th)); pc = np.zeros(len(th))
-        for a, b in GroupKFold(5).split(X, th, g):
-            A, B = prep(X[a], X[b], pca)
-            ps[b] = RidgeCV(alphas=np.logspace(-2,5,15)).fit(A, s[a]).predict(B)
-            pc[b] = RidgeCV(alphas=np.logspace(-2,5,15)).fit(A, co[a]).predict(B)
-        return np.arctan2(ps, pc)
+md("""## Takeaways
 
-    def circ_corr(a, b):
-        a0 = a - np.angle(np.mean(np.exp(1j*a))); b0 = b - np.angle(np.mean(np.exp(1j*b)))
-        return np.sum(np.sin(a0)*np.sin(b0)) / np.sqrt(np.sum(np.sin(a0)**2)*np.sum(np.sin(b0)**2))
+- **Morphology (label-free phase-contrast) reads cell-cycle phase.** Held-out, folds grouped by tile:
+  - **G1 vs G2/M: AUC ~0.94** (cell size alone ~0.75; shuffled null ~0.50),
+  - **DNA content: R2 ~0.5**,
+  - **full circular cell-cycle phase `cc_phase`: circular r ~0.49, median angular error ~30 deg** (size ~43 deg, null ~53 deg).
+- **The cell-cycle axis is circular** (the team's tricycle-style `cc_phase`: DNA peaks mid-cycle, 2N at both ends). We do
+  not use a linear pseudotime. Morphology is strongest at the clean 2N-vs-4N split and weakest at the two low-DNA ends of
+  the clock (early-G1 vs post-mitotic G1), which differ mainly in pRb.
+- **p21** runs anti-phase to DNA (higher in G1, degraded in S/G2M) but has a small, noisy absolute range in cycling
+  cells, so it is a weak cell-cycle marker here (consistent with the team finding it weak in PCA).
+- **"phase" is two things:** the predictor is phase-contrast *morphology*; the target is *cell-cycle* phase. They are
+  independent (ground truth is 4i, scored out-of-fold).
+- **Next:** regress the morphology-predicted cell-cycle phase out of the representation and test whether a known
+  cell-cycle-arresting knockout looks cleaner after correction.
 
-    pred_ang = predict_angle(Xc, th, grc)
-    arc = np.c_[cc['nuc_area_px'].astype(float), cc['dapi_log_area'].astype(float)]; arc = np.where(np.isfinite(arc), arc, np.nanmedian(arc,0))
-    rows = []
-    for nm, p in [('phase morphology', pred_ang), ('size-only', predict_angle(arc, th, grc, pca=False)),
-                  ('shuffled null', predict_angle(Xc, th, grc, shuffle=True))]:
-        e = np.abs(np.angle(np.exp(1j*(th-p))))*180/np.pi
-        rows.append(dict(predictor=nm, circular_r=round(circ_corr(th,p),3), median_err_deg=round(float(np.median(e)),1), within_45deg=round(float((e<45).mean()),2)))
-    ccres = pd.DataFrame(rows); print(ccres.to_string(index=False))
-except FileNotFoundError:
-    ccres = None; print('cell_cycle_scores.csv not found; skip the team-clock overlay')""")
-
-code("""if ccres is not None:
-    err = np.abs(np.angle(np.exp(1j*(th-pred_ang))))*180/np.pi
-    fig, ax = plt.subplots(1,2, figsize=(13,5.3))
-    ax[0].hexbin(th, np.mod(pred_ang,2*np.pi), gridsize=70, bins='log', extent=(0,2*np.pi,0,2*np.pi)); ax[0].plot([0,2*np.pi],[0,2*np.pi],'r--',lw=1)
-    ax[0].set_xlabel('team cc_phase angle'); ax[0].set_ylabel('phase-predicted angle'); ax[0].set_title(f'phase recovers the clock (circ r={circ_corr(th,pred_ang):.2f}, med err {np.median(err):.0f} deg)')
-    sc = ax[1].scatter(cc['z_dna'], cc['z_pRb'], c=np.mod(pred_ang,2*np.pi), s=3, cmap='twilight'); plt.colorbar(sc, ax=ax[1], label='phase-predicted clock')
-    ax[1].set_xlabel('z DNA'); ax[1].set_ylabel('z pRb'); ax[1].set_title('DNA x pRb coloured by phase-predicted clock')
-    plt.tight_layout(); plt.show()""")
-
-md("""## What we did, and what it means
-
-- **The cell-cycle connection is built from the 4i markers**: DNA content gives the 2N->4N backbone, pRb (and pRb/Rb)
-  splits 2N cells at the restriction point, and a principal curve through these turns the four stages into a continuous
-  **cycle pseudotime**.
-- **Label-free phase recovers that cell-cycle state**: G1 vs G2/M held-out AUC ~0.94 (0.97 on the cleanest matches),
-  DNA content R2 ~0.5 to 0.6, pseudotime R2 ~0.37, all far above the cell-size baseline and the shuffled null. So the
-  cycle is written in the phase morphology, not just in cell size.
-- **p21 is flat across the cycle in NTC cells** and is not used; pRb and the ratio do the work.
-- **Phase also recovers the team's continuous cell-cycle clock** (`cc_phase`): circular correlation ~0.49, median
-  angular error ~30 deg (vs ~43 deg size-only and ~53 deg shuffled), so the two team contributions agree, their clock
-  as ground truth and our label-free phase as the readout.
-- **Next step:** regress this phase-derived cycle axis out of the morphology to get a cleaner, cycle-controlled
-  representation of what a perturbation does.
-
-Scope: NTC cells of one screen; folds grouped by tile; DNA trusted on 36k cells (sharpest on the 12.7k with a tight
-live-to-fixed match).""")
+Scope: NTC cells of one screen (OPS0077); DNA trusted on ~36k cells; all data public Biohub OPS0077 (ops0144_20260406).""")
 
 nb = new_notebook(); nb['cells'] = c
 nbf.write(nb, sys.argv[1]); print('wrote', sys.argv[1], 'with', len(c), 'cells')
