@@ -1,0 +1,4 @@
+programme,n_genes,split_half_pearson_all,split_half_spearman_all,n_strong_KOs,split_half_pearson_strong
+S,131,0.039,-0.02,1,
+G2M,180,0.225,0.143,4,
+G1,75,0.162,0.146,10,0.947

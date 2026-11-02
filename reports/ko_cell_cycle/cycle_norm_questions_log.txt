@@ -1,0 +1,106 @@
+OPS0077 NTC cells 52,189 | wells 3 | tiles 5615
+                                  dataset                 grouping  n_groups                                   arm  between_share_pct  noise_floor_pct  excess_pct  sd_across_groups_of_late_cycle_share_pct  same_if_random_pct
+       OPS0077 (predicted cycle, all NTC)                     well         3                no cycle normalisation              0.448            0.004       0.444                                      2.76                0.21
+       OPS0077 (predicted cycle, all NTC)                     well         3                     regress out cycle              0.332            0.004       0.328                                      2.76                0.21
+       OPS0077 (predicted cycle, all NTC)                     well         3 reweight to common cycle distribution              0.327            0.004       0.324                                      2.76                0.21
+       OPS0077 (predicted cycle, all NTC)                     well         3  regress out SHUFFLED cycle (control)              0.448            0.004       0.445                                      2.76                0.21
+       OPS0077 (predicted cycle, all NTC) field (tile, >=30 cells)        92                no cycle normalisation             15.187            2.830      12.357                                     13.66                7.61
+       OPS0077 (predicted cycle, all NTC) field (tile, >=30 cells)        92                     regress out cycle             13.529            2.835      10.694                                     13.66                7.61
+       OPS0077 (predicted cycle, all NTC) field (tile, >=30 cells)        92 reweight to common cycle distribution             14.737            3.286      11.451                                     13.66                7.61
+       OPS0077 (predicted cycle, all NTC) field (tile, >=30 cells)        92  regress out SHUFFLED cycle (control)             15.185            2.818      12.368                                     13.66                7.61
+OPS0077 (MEASURED 4i clock, labelled NTC)                     well         3                no cycle normalisation              0.641            0.006       0.635                                      0.34                0.32
+OPS0077 (MEASURED 4i clock, labelled NTC)                     well         3                     regress out cycle              0.639            0.005       0.634                                      0.34                0.32
+OPS0077 (MEASURED 4i clock, labelled NTC)                     well         3 reweight to common cycle distribution              0.597            0.005       0.591                                      0.34                0.32
+OPS0077 (MEASURED 4i clock, labelled NTC)                     well         3  regress out SHUFFLED cycle (control)              0.641            0.005       0.635                                      0.34                0.32
+OPS0077 (MEASURED 4i clock, labelled NTC) field (tile, >=30 cells)        17                no cycle normalisation             10.624            2.722       7.903                                     15.24                8.07
+OPS0077 (MEASURED 4i clock, labelled NTC) field (tile, >=30 cells)        17                     regress out cycle             10.477            2.718       7.759                                     15.24                8.07
+OPS0077 (MEASURED 4i clock, labelled NTC) field (tile, >=30 cells)        17 reweight to common cycle distribution             11.210            3.348       7.861                                     15.24                8.07
+OPS0077 (MEASURED 4i clock, labelled NTC) field (tile, >=30 cells)        17  regress out SHUFFLED cycle (control)             10.618            2.715       7.904                                     15.24                8.07
+
+OPS0077 knockouts (FDR 5%, null = NTC guides pooled to the same cell count):
+cls                                         arrest  control  All
+class                                                           
+both                                             8        0    8
+cells change, cycle distribution unchanged      49       49   98
+neither                                          3       11   14
+All                                             60       60  120
+
+median share of the morphology shift explained by the cycle shift, by class:
+class
+both                                          0.138
+cells change, cycle distribution unchanged   -0.021
+neither                                       0.032
+
+largest cycle-distribution changers:
+  gene     cls   n  cycle_TV  q_cycle  within_vs_null_median  q_within  cycle_share_of_shift                                      class
+ RRM1  arrest 153     0.302    0.012                  5.861     0.001                 0.127                                       both
+CDC45  arrest 364     0.293    0.012                  7.964     0.001                 0.127                                       both
+POLA2  arrest 305     0.183    0.012                  3.205     0.001                 0.187                                       both
+POLA1  arrest 530     0.155    0.012                  2.675     0.001                 0.266                                       both
+ POLE  arrest 441     0.150    0.015                  5.045     0.001                 0.101                                       both
+AURKB  arrest 424     0.149    0.015                  5.321     0.001                 0.102                                       both
+POLE2  arrest 397     0.148    0.015                  3.303     0.001                 0.149                                       both
+PSMB6  arrest 515     0.129    0.071                  4.756     0.001                -0.033 cells change, cycle distribution unchanged
+ MCM7  arrest 622     0.125    0.012                  3.300     0.001                 0.188                                       both
+ FECH control 758     0.092    0.071                  2.077     0.001                -0.088 cells change, cycle distribution unchanged
+
+largest within-cycle changers:
+      gene     cls   n  cycle_TV  q_cycle  within_vs_null_median  q_within  cycle_share_of_shift                                      class
+    CDC45  arrest 364     0.293    0.012                  7.964     0.001                 0.127                                       both
+     RRM1  arrest 153     0.302    0.012                  5.861     0.001                 0.127                                       both
+    AURKB  arrest 424     0.149    0.015                  5.321     0.001                 0.102                                       both
+     POLE  arrest 441     0.150    0.015                  5.045     0.001                 0.101                                       both
+    TUBB8 control 482     0.073    0.633                  4.802     0.001                 0.029 cells change, cycle distribution unchanged
+    PSMB6  arrest 515     0.129    0.071                  4.756     0.001                -0.033 cells change, cycle distribution unchanged
+     NOL6 control 566     0.105    0.080                  4.376     0.001                -0.103 cells change, cycle distribution unchanged
+     CDK7  arrest 482     0.080    0.574                  4.339     0.001                -0.035 cells change, cycle distribution unchanged
+    SF3B3 control 391     0.126    0.090                  4.155     0.001                -0.046 cells change, cycle distribution unchanged
+HIST1H2AI control 302     0.076    0.841                  3.900     0.001                 0.044 cells change, cycle distribution unchanged
+
+Element cells 206,091 (QC pass, clock present) | features 991 | wells x condition:
+ condition   TNFa  baseline
+Well                      
+A1             0     16987
+A2         16709         0
+B1             0     18159
+B2         17266         0
+C1             0     17003
+C2         17625         0
+D1         15843         0
+D2             0     17435
+E1         17177         0
+E2             0     17350
+F1         16850         0
+F2             0     17687
+                                       dataset                 grouping  n_groups                                   arm  between_share_pct  noise_floor_pct  excess_pct  sd_across_groups_of_late_cycle_share_pct  same_if_random_pct
+Element baseline controls (MEASURED RNA clock)                     well         6                no cycle normalisation              1.686            0.010       1.676                                      1.23                0.39
+Element baseline controls (MEASURED RNA clock)                     well         6                     regress out cycle              1.732            0.010       1.722                                      1.23                0.39
+Element baseline controls (MEASURED RNA clock)                     well         6 reweight to common cycle distribution              1.681            0.010       1.672                                      1.23                0.39
+Element baseline controls (MEASURED RNA clock)                     well         6  regress out SHUFFLED cycle (control)              1.686            0.009       1.677                                      1.23                0.39
+Element baseline controls (MEASURED RNA clock) field (tile, >=30 cells)        72                no cycle normalisation              7.358            0.149       7.208                                      3.56                2.31
+Element baseline controls (MEASURED RNA clock) field (tile, >=30 cells)        72                     regress out cycle              7.517            0.146       7.372                                      3.56                2.31
+Element baseline controls (MEASURED RNA clock) field (tile, >=30 cells)        72 reweight to common cycle distribution              7.329            0.146       7.183                                      3.56                2.31
+Element baseline controls (MEASURED RNA clock) field (tile, >=30 cells)        72  regress out SHUFFLED cycle (control)              7.357            0.140       7.216                                      3.56                2.31
+    Element TNFa controls (MEASURED RNA clock)                     well         6                no cycle normalisation              1.123            0.011       1.112                                      1.44                0.52
+    Element TNFa controls (MEASURED RNA clock)                     well         6                     regress out cycle              1.156            0.009       1.146                                      1.44                0.52
+    Element TNFa controls (MEASURED RNA clock)                     well         6 reweight to common cycle distribution              1.137            0.011       1.126                                      1.44                0.52
+    Element TNFa controls (MEASURED RNA clock)                     well         6  regress out SHUFFLED cycle (control)              1.123            0.010       1.113                                      1.44                0.52
+    Element TNFa controls (MEASURED RNA clock) field (tile, >=30 cells)        72                no cycle normalisation             10.872            0.154      10.718                                      3.38                2.30
+    Element TNFa controls (MEASURED RNA clock) field (tile, >=30 cells)        72                     regress out cycle             10.990            0.152      10.839                                      3.38                2.30
+    Element TNFa controls (MEASURED RNA clock) field (tile, >=30 cells)        72 reweight to common cycle distribution             10.828            0.149      10.679                                      3.38                2.30
+    Element TNFa controls (MEASURED RNA clock) field (tile, >=30 cells)        72  regress out SHUFFLED cycle (control)             10.873            0.148      10.724                                      3.38                2.30
+
+Element decomposition (measured RNA clock):
+                          contrast     n  cycle_TV  null_max_cycle_TV  cycle_beyond_null  total_shift  cycle_part  within_cycle_part  null_max_within  within_beyond_null  cycle_share_of_shift
+TNFa vs baseline (control guides) 47130     0.038              0.028               True       17.752       0.111             17.701            2.936                True                 0.003
+  CTNNB1 KO vs controls, baseline 23290     0.087              0.034               True        2.023       0.130              2.064            0.783                True                -0.018
+   GSK3B KO vs controls, baseline 16792     0.026              0.034              False        0.672       0.033              0.674            0.783               False                -0.002
+   IL1R1 KO vs controls, baseline  7109     0.011              0.034              False        0.281       0.022              0.284            0.783               False                -0.008
+   SMAD7 KO vs controls, baseline  5115     0.023              0.034              False        0.529       0.062              0.489            0.783               False                 0.079
+  TGFBR2 KO vs controls, baseline  3577     0.034              0.034               True        3.271       0.059              3.239            0.783                True                 0.010
+      CTNNB1 KO vs controls, TNFa 22058     0.101              0.038               True        2.096       0.284              2.183            0.598                True                -0.033
+       GSK3B KO vs controls, TNFa 17160     0.021              0.038              False        0.915       0.031              0.937            0.598                True                -0.023
+       IL1R1 KO vs controls, TNFa  6618     0.022              0.038              False        0.420       0.035              0.422            0.598               False                -0.001
+       SMAD7 KO vs controls, TNFa  5060     0.032              0.038              False        0.595       0.094              0.567            0.598               False                 0.059
+      TGFBR2 KO vs controls, TNFa  3444     0.044              0.038               True        3.631       0.137              3.577            0.598                True                 0.016
+DONE

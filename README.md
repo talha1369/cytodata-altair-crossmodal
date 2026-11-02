@@ -22,6 +22,7 @@ and where do they diverge?
   (a `groupby` on the 323 GB Funk/Brieflow cell table; full DuckDB recipe for the VM + an offline sampled demo) and
   compares its gene-gene structure to Altair phase. Two OPS screens in different cell lines (Altair A549, Aconcagua HeLa) share real gene-function structure
   (significant vs null) across different imaging modalities; modest in the lean demo, expected to strengthen at full scale.
+- **`ko_cell_cycle_heterogeneity.ipynb`**: knockouts and the cell cycle (OPS0077 phase contrast, all 1,000 knockouts; Element; CROP-seq). 81 knockouts change the predicted cycle distribution (replication/mitosis genes gain 4N cells, ribosome/translation genes lose them; validated by measured pRb). Regressing the cycle out barely reduces heterogeneity (spread -3%, separation unchanged), because the cycle is 3 to 6% of phase-morphology variance. Cycle normalisation does not remove field/well effects. A cycle-mix vs matched-cycle decomposition shows morphology changes happen at a matched cycle state. CROP-seq knockout-level RNA carries little cycle signal that agrees with imaging (rho about 0.1). Scripts in `cell_cycle/`, outputs in `reports/ko_cell_cycle/`.
 
 ## Key results (1,000 shared genes)
 - Gene–gene similarity correlates **ρ ≈ 0.47** across phase morphology and scRNA-seq (z ≈ 100 vs shuffled null).

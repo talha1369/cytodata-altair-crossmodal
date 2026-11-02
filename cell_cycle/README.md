@@ -37,4 +37,14 @@ not used.
 - `align_via_predictions.py` - aligns through predictions: an Element-trained model on shared features applied to OPS0077, and a test of merging the phase-contrast predictions.
 - `build_alignment_nb.py` - emits the alignment notebook.
 
+## Knockouts, the cell cycle and heterogeneity (`../ko_cell_cycle_heterogeneity.ipynb`, outputs in `../reports/ko_cell_cycle/`)
+- `ko_cycle_heterogeneity.py` - cycle shifts of 60 likely-arrest and 60 random library knockouts vs all NTC cells (out of fold, guide-pooled null), validation against measured pRb and DNA, heterogeneity before and after regressing the cycle out.
+- `cycle_var_bound.py` - how much NTC phase-morphology variance the measured cycle explains (upper bound).
+- `cycle_norm_questions.py` - does cycle normalisation reduce field/well heterogeneity, and a cycle-mix vs matched-cycle decomposition (OPS0077 and Element with its measured RNA clock).
+- `extract_phase_all.py` - phase features for all 1,000 OPS0077 knockouts (contiguous block reads).
+- `ko_cycle_library.py` - the library-wide version (cycle shifts, % 4N, decomposition, heterogeneity, pRb validation).
+- `cc_ko_score.py`, `crop_cycle_deconv.py`, `crop_cycle_sets.py`, `crop_diag.py` - cell-cycle representation of the CROP-seq knockouts (programme scores with gene sets from Element single cells; the composition deconvolution is a documented negative).
+- `map_crop_to_phase.py` - maps the CROP-seq representation to phase contrast (per-cell and gene-level routes).
+- `ko_cycle_figures.py`, `build_ko_cycle_nb.py` - figures and the notebook.
+
 Data: CZ Biohub OPS Explorer, public S3 `ops-explorer-public` (Biohub_OPS0077 = ops0144_20260406), region us-west-2.

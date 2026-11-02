@@ -1,0 +1,9 @@
+comparison,n,spearman,p,partial_spearman_given_strength,fraction
+RNA G2M programme z  vs  morphology-predicted d%4N,997,0.108,0.00066,0.124,
+RNA proliferation z (S+G2M)  vs  morphology-predicted d%4N,997,0.096,0.0023,0.115,
+RNA G1 programme z  vs  morphology-predicted d%4N,997,-0.038,0.23,-0.011,
+RNA strongest programme |z|  vs  morphology cycle shift (TV),997,0.014,0.66,-0.038,
+RNA proliferation z  vs  measured pRb (4i),997,0.074,0.019,0.099,
+RNA composition deconvolution d%4N (secondary)  vs  morphology d%4N,997,0.057,0.073,0.067,
+"KOs with a strong RNA programme shift (|z|>4): % also significant in morphology (cycle or 4N, FDR 5%)",14,,,,0.0
+"same, all other KOs",983,,,,0.083

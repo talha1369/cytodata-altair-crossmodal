@@ -1,0 +1,7 @@
+percent of NTC phase-morphology variance (PCA-100) explained by:
+  measured cc_phase, harmonics 1-2                 2.9%
+  measured cc_phase, harmonics 1-4                 3.5%
+  measured DNA content (cubic)                     2.4%
+  measured DNA+pRb+p21+phos (linear+squares)       5.7%
+  shuffled cc_phase                                0.0%
+for scale: PC1 alone explains 12.3 % of the PCA-100 variance

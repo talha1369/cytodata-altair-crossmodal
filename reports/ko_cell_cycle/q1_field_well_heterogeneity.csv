@@ -1,0 +1,33 @@
+dataset,grouping,n_groups,arm,between_share_pct,noise_floor_pct,excess_pct,sd_across_groups_of_late_cycle_share_pct,same_if_random_pct
+"OPS0077 (predicted cycle, all NTC)",well,3,no cycle normalisation,0.448,0.004,0.444,2.76,0.21
+"OPS0077 (predicted cycle, all NTC)",well,3,regress out cycle,0.332,0.004,0.328,2.76,0.21
+"OPS0077 (predicted cycle, all NTC)",well,3,reweight to common cycle distribution,0.327,0.004,0.324,2.76,0.21
+"OPS0077 (predicted cycle, all NTC)",well,3,regress out SHUFFLED cycle (control),0.448,0.004,0.445,2.76,0.21
+"OPS0077 (predicted cycle, all NTC)","field (tile, >=30 cells)",92,no cycle normalisation,15.187,2.83,12.357,13.66,7.61
+"OPS0077 (predicted cycle, all NTC)","field (tile, >=30 cells)",92,regress out cycle,13.529,2.835,10.694,13.66,7.61
+"OPS0077 (predicted cycle, all NTC)","field (tile, >=30 cells)",92,reweight to common cycle distribution,14.737,3.286,11.451,13.66,7.61
+"OPS0077 (predicted cycle, all NTC)","field (tile, >=30 cells)",92,regress out SHUFFLED cycle (control),15.185,2.818,12.368,13.66,7.61
+"OPS0077 (MEASURED 4i clock, labelled NTC)",well,3,no cycle normalisation,0.641,0.006,0.635,0.34,0.32
+"OPS0077 (MEASURED 4i clock, labelled NTC)",well,3,regress out cycle,0.639,0.005,0.634,0.34,0.32
+"OPS0077 (MEASURED 4i clock, labelled NTC)",well,3,reweight to common cycle distribution,0.597,0.005,0.591,0.34,0.32
+"OPS0077 (MEASURED 4i clock, labelled NTC)",well,3,regress out SHUFFLED cycle (control),0.641,0.005,0.635,0.34,0.32
+"OPS0077 (MEASURED 4i clock, labelled NTC)","field (tile, >=30 cells)",17,no cycle normalisation,10.624,2.722,7.903,15.24,8.07
+"OPS0077 (MEASURED 4i clock, labelled NTC)","field (tile, >=30 cells)",17,regress out cycle,10.477,2.718,7.759,15.24,8.07
+"OPS0077 (MEASURED 4i clock, labelled NTC)","field (tile, >=30 cells)",17,reweight to common cycle distribution,11.21,3.348,7.861,15.24,8.07
+"OPS0077 (MEASURED 4i clock, labelled NTC)","field (tile, >=30 cells)",17,regress out SHUFFLED cycle (control),10.618,2.715,7.904,15.24,8.07
+Element baseline controls (MEASURED RNA clock),well,6,no cycle normalisation,1.686,0.01,1.676,1.23,0.39
+Element baseline controls (MEASURED RNA clock),well,6,regress out cycle,1.732,0.01,1.722,1.23,0.39
+Element baseline controls (MEASURED RNA clock),well,6,reweight to common cycle distribution,1.681,0.01,1.672,1.23,0.39
+Element baseline controls (MEASURED RNA clock),well,6,regress out SHUFFLED cycle (control),1.686,0.009,1.677,1.23,0.39
+Element baseline controls (MEASURED RNA clock),"field (tile, >=30 cells)",72,no cycle normalisation,7.358,0.149,7.208,3.56,2.31
+Element baseline controls (MEASURED RNA clock),"field (tile, >=30 cells)",72,regress out cycle,7.517,0.146,7.372,3.56,2.31
+Element baseline controls (MEASURED RNA clock),"field (tile, >=30 cells)",72,reweight to common cycle distribution,7.329,0.146,7.183,3.56,2.31
+Element baseline controls (MEASURED RNA clock),"field (tile, >=30 cells)",72,regress out SHUFFLED cycle (control),7.357,0.14,7.216,3.56,2.31
+Element TNFa controls (MEASURED RNA clock),well,6,no cycle normalisation,1.123,0.011,1.112,1.44,0.52
+Element TNFa controls (MEASURED RNA clock),well,6,regress out cycle,1.156,0.009,1.146,1.44,0.52
+Element TNFa controls (MEASURED RNA clock),well,6,reweight to common cycle distribution,1.137,0.011,1.126,1.44,0.52
+Element TNFa controls (MEASURED RNA clock),well,6,regress out SHUFFLED cycle (control),1.123,0.01,1.113,1.44,0.52
+Element TNFa controls (MEASURED RNA clock),"field (tile, >=30 cells)",72,no cycle normalisation,10.872,0.154,10.718,3.38,2.3
+Element TNFa controls (MEASURED RNA clock),"field (tile, >=30 cells)",72,regress out cycle,10.99,0.152,10.839,3.38,2.3
+Element TNFa controls (MEASURED RNA clock),"field (tile, >=30 cells)",72,reweight to common cycle distribution,10.828,0.149,10.679,3.38,2.3
+Element TNFa controls (MEASURED RNA clock),"field (tile, >=30 cells)",72,regress out SHUFFLED cycle (control),10.873,0.148,10.724,3.38,2.3

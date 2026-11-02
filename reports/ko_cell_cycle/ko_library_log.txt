@@ -1,0 +1,74 @@
+[    74s] NTC 52,189 cells (35,633 labelled) | out-of-fold 4N AUC 0.921 | NTC % 4N measured 19.5, predicted (all NTC, out-of-fold) 18.0
+[    90s] knockout cells 591,136 | genes 1000
+[    99s] AUC of NTC-vs-NTC guide pools (n=600): before median 0.546 (95th 0.583) | after 0.540 (95th 0.580)
+[   142s]   null for n=800 ready
+[   142s]   0 genes done
+[   185s]   null for n=700 ready
+[   227s]   null for n=600 ready
+[   270s]   null for n=300 ready
+[   313s]   null for n=900 ready
+[   357s]   null for n=500 ready
+[   400s]   null for n=1100 ready
+[   444s]   null for n=1000 ready
+[   490s]   null for n=400 ready
+[   533s]   null for n=200 ready
+[   581s]   null for n=1300 ready
+[   593s]   100 genes done
+[   613s]   200 genes done
+[   633s]   300 genes done
+[   652s]   400 genes done
+[   703s]   null for n=100 ready
+[   715s]   500 genes done
+[   735s]   600 genes done
+[   755s]   700 genes done
+[   774s]   800 genes done
+[   823s]   null for n=1200 ready
+[   837s]   900 genes done
+[   859s] 
+classes (FDR 5%):
+class
+cells change, cycle distribution unchanged    790
+neither                                       129
+both                                           80
+cycle distribution only                         1
+[   859s] KOs with a significant predicted %4N change: 10 (up 4)
+[   859s] median share of the morphology shift explained by the cycle shift, by class:
+class
+both                                          0.005
+cells change, cycle distribution unchanged   -0.016
+cycle distribution only                       0.157
+neither                                       0.021
+[   859s] heterogeneity: median spread change -3.05% (shuffled +0.004%) | median AUC change -0.0008 | KOs separating from NTC before 595, after 610
+[   859s] validation: predicted d%4N vs measured pRb shift across 1000 KOs, rho +0.37
+[   859s] 
+largest cycle-distribution changers:
+    gene   n  cycle_TV  q_cycle  d_pct_4N_pred  within_vs_null_median  q_within  cycle_share_of_shift  auc_before  auc_after
+    RRM1 153     0.302    0.011          5.320                  5.806     0.001                 0.127       0.751      0.726
+  POLR1B 321     0.293    0.011         -8.510                  4.780     0.001                -0.040       0.867      0.846
+   CDC45 364     0.293    0.011         10.502                  7.998     0.001                 0.127       0.836      0.801
+   RPL26 182     0.264    0.011          2.391                  6.136     0.001                 0.038       0.851      0.815
+   RPS10 151     0.260    0.011         -4.497                  4.389     0.001                -0.019       0.796      0.753
+  RPL27A 158     0.257    0.011         -6.041                  3.851     0.001                 0.013       0.717      0.679
+    MTBP 276     0.256    0.011         14.342                  5.582     0.001                 0.174       0.705      0.685
+ RSL24D1 219     0.255    0.011         -0.839                  4.683     0.001                 0.014       0.749      0.732
+    TCP1 280     0.241    0.011         -6.229                  3.034     0.001                 0.031       0.757      0.717
+   KIF23 235     0.239    0.011         11.784                  4.344     0.001                 0.175       0.641      0.667
+ GOLGA8K 151     0.237    0.011          5.632                  5.481     0.001                 0.071       0.769      0.766
+GOLGA6L1 189     0.225    0.011          8.258                  4.764     0.001                 0.115       0.728      0.695
+  RPL37A 200     0.224    0.011         -2.482                  5.386     0.001                 0.008       0.883      0.829
+   RPS28 273     0.218    0.011         -6.575                  4.972     0.001                -0.083       0.759      0.729
+   SRSF3 181     0.216    0.011         -3.654                  3.445     0.001                -0.011       0.715      0.727
+[   859s] 
+largest AUC drop after removing the cycle:
+  gene   n  cycle_TV  q_cycle  d_pct_4N_pred  within_vs_null_median  q_within  cycle_share_of_shift  auc_before  auc_after
+ CENPA 354     0.064    0.818         -2.349                  2.433     0.001                -0.053       0.623      0.525
+ RPL34  66     0.240    0.237         -5.649                  2.269     0.001                -0.007       0.656      0.575
+ KIF11  76     0.221    0.311         13.179                  2.067     0.001                 0.214       0.645      0.566
+  ADSS 424     0.093    0.474          3.393                  0.847     0.834                 0.368       0.577      0.507
+ STT3B 513     0.078    0.518         -3.303                  2.155     0.001                -0.075       0.621      0.550
+ RPL32 137     0.246    0.195          0.817                  3.516     0.001                 0.021       0.732      0.662
+CCDC59 738     0.123    0.019         -4.268                  3.069     0.001                -0.139       0.628      0.558
+CABIN1 613     0.102    0.133         -1.782                  1.075     0.362                 0.208       0.589      0.519
+  NOL8 490     0.111    0.112         -3.063                  3.802     0.001                -0.085       0.690      0.622
+ RIOK2 522     0.073    0.603         -4.287                  1.612     0.013                 0.018       0.586      0.520
+[   859s] DONE

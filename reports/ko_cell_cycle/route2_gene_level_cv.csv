@@ -1,0 +1,6 @@
+target,n,cv_R2,cv_spearman,null_95th,partial_spearman_given_strength
+z_S,997,-0.004,-0.101,0.016,-0.127
+z_G2M,997,0.022,0.102,0.015,0.105
+z_G1,997,0.013,0.132,0.019,0.13
+z_proliferation,997,0.018,0.099,0.008,0.096
+d_pct_4N,997,0.091,0.159,0.029,0.14
