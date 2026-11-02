@@ -146,6 +146,23 @@ md("""**More anchors do not make the alignment identifiable.**
   That is mixed evidence which the held-out test cannot confirm.""")
 
 
+md("""## 3c. Aligning through predictions instead of profiles
+
+Profile matching compares one-dimensional curves. A stronger test is to **predict one dataset's clock from the other's measurements** (the recipe in Tim's handover notebook for a dataset that only has morphology):
+train a model on Element that predicts the RNA clock from features **both datasets measure** (DNA content, nuclear area, cell area and the seven cell-shape descriptors, each robust z-scored within well),
+apply it to OPS0077 cells, and compare the predicted Element angle with Louise's 4i clock **on the same cells** after one rotation. Gradient boosting predicts the sine and cosine of the angle, with weights balanced over 12 sectors
+and held-out folds made of whole wells, as in Tim's notebook. Models **without DNA are the fair test**, because Louise's clock is built partly from DNA.""")
+
+code("""display(Image(filename=find('cc_align_9_alignment_through_predictions.png')))
+pd.read_csv(find('cc_predictions_across_datasets.csv'))""")
+
+md("""**Predictions confirm the DNA-based alignment and add nothing beyond DNA.**
+- **With DNA, the clocks line up.** DNA alone gives the same direction and a rotation of about 98 degrees (Louise = Element + 98, so Element = Louise + 262), median error **24 degrees** (76% within 45). This agrees with the profile-matching rotation (+240) to within 22 degrees, about the size of the fall-landmark gap in section 2.
+- **Adding area and shape makes it worse** (39 degrees), not better.
+- **Without DNA nothing transfers**: area + shape gives 75 degrees and shape only 83 degrees (a random guess is 90).
+- Element's own shared-feature clock is coarse (held-out median error 54 to 76 degrees), consistent with Tim's note that his morphology clock mainly separates high from low DNA.
+- In the models without DNA, the OPS0077 DNA profile against the predicted Element angle still has Element's high-then-low pattern (r about 0.6; not tested against a null), but its peak sits about 40 degrees earlier and the fall is gradual instead of sharp. That is a weak hint that size and shape carry some cycle information that transfers, but not enough to place cells on the clock. The Element held-out panel shows why: these models essentially predict two blobs (S/G2/M-like and G1-like) and not a position around the cycle.""")
+
 md("""## 4. How phase-contrast morphology predicts each regime
 
 Using only label-free phase-contrast morphology (OrganelleProfiler features), we predicted each OPS0077 regime's angle with circular regression
@@ -181,6 +198,12 @@ markers clock recovers the DNA angle only to about 66 degrees (diagonal: 29 to 3
 *predicted* angles the best alignment is even a reversal (direction -1, about 49 degrees), so the models do not simply reproduce the measured same-direction relation, and the markers regime is the least
 consistent of the three.""")
 
+md("""**The predicted regimes cannot simply be merged.** We also tried to align the phase-contrast predictions with each other (out-of-fold predictions, same cells). Mapping the markers-trained prediction onto the DNA frame with the *measured* relation
+(same direction, 142 degrees) lands it 66 degrees from the measured DNA clock, worse than the 42 degrees between the measured regimes. The best rotation of the two predictions themselves is a reversal (49 degrees). A circular average of the final-trained
+and the mapped markers-trained prediction (47 degrees) is **worse** than the final-trained prediction alone (30 degrees).""")
+
+code("""pd.read_csv(find('cc_predictions_within_ops0077.csv'))""")
+
 md("""## Takeaways and next steps
 
 1. **Within OPS0077**: 4i DNA, DNA+PCs and the final `cc_phase` are one clock (4 to 6 degrees apart). The **markers-only regime is the same cycle in the same direction**, 142 degrees
@@ -188,10 +211,11 @@ md("""## Takeaways and next steps
    (about 0 to 60 degrees) it runs the other way. The DNA clock angle is also clumpy, which limits angle-based comparisons.
 2. **Across datasets**: the S to G2/M arc aligns by a **+240 degree rotation** (OPS0077 to Element RNA clock), tightly identified from DNA (always the same direction, 235 to 240 degrees over 100 bootstraps).
    The G1 and post-division arc **cannot be aligned** with DNA, nuclear area, cell area or seven cell-shape features: each anchor family prefers a different rotation and no rigid or flexible map beats chance on a held-out family (all p >= 0.125).
+   **Aligning through predictions** (an Element-trained model on shared features applied to OPS0077) gives the same answer: with DNA the clocks line up after about 262 degrees (24 degrees median error), without DNA nothing transfers.
    We do not recommend a per-cell cross-dataset angle.
 3. **Phase-contrast morphology predicts every regime** (circular r 0.49 to 0.65, median error 29 to 36 degrees; size alone is about 0), as well as pRb, p21 and phospho-Rb
    (R2 0.27 to 0.42) beyond DNA content, so it is a sensible common readout across regimes.
-4. **Regimes are predictable on different arcs and each is best predicted by its own model**, so a model that predicts the DNA-based and markers angles together may cover more of the cycle.
+4. **Regimes are predictable on different arcs and each is best predicted by its own model**, but simply merging the two predictions does not work (averaging them is worse than the final-trained prediction alone: 47 vs 30 degrees), so a combined model would have to be trained jointly.
 5. **A common currency that needs no angle alignment**: DNA content class (2N vs 4N) is measured the same way in both datasets, is what phase-contrast morphology predicts best (G1 vs G2/M AUC 0.94),
    and is what Tim's morphology clock mainly separates as well. Until there is paired data or better anchors, transfer between datasets through DNA-content classes and not through angles.
 

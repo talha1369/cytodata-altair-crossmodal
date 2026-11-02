@@ -110,6 +110,7 @@ def align_stats(x, y):
 
 
 keys = list(ANG); pred = {k: (np.arctan2(PS[k], PC[k]) % (2 * np.pi)) / (2 * np.pi) for k in keys}; meas = {k: ANG[k] / (2 * np.pi) for k in keys}
+pd.DataFrame({k: pred[k] for k in keys}, index=Q.index).rename_axis("cell_key").to_csv(f"{OUT}/phase_predicted_angles.csv")   # out-of-fold, fraction of a cycle
 print("\nDNA clock vs markers clock, after the best rotation (random error = 90 deg):")
 for nm, src in [("MEASURED", meas), ("PREDICTED from morphology", pred)]:
     sc, f, o, e = align_stats(src["4i markers"], src["4i DNA"])

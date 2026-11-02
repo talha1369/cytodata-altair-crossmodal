@@ -1,0 +1,8 @@
+comparison,mean_cos,direction,rotation_deg,median_err_deg,within_45deg,worst_arc_median_err_deg
+predicted DNA vs measured DNA,0.642,1,0,29.3,0.676,
+predicted markers (mapped by the measured relation) vs measured DNA,0.2,1,142,66.0,0.401,
+predicted markers (mapped by the measured relation) vs predicted DNA,0.323,1,142,47.9,0.483,
+predicted markers vs predicted DNA (best rotation of the predictions themselves),0.421,-1,56,49.2,0.455,
+vs measured final cc_phase: final-trained prediction alone,0.634,1,0,29.6,0.67,83.4
+vs measured final cc_phase: markers-trained prediction mapped to the DNA frame,0.185,1,0,67.4,0.4,150.7
+vs measured final cc_phase: circular average of the two,0.466,1,0,46.7,0.487,85.6

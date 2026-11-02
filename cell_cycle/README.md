@@ -34,6 +34,7 @@ not used.
 - `phase_predicts_regimes.py` - how well phase-contrast morphology predicts each regime and the cell-cycle readouts.
 - `markers_vs_dna.py` - relation of the markers-only and DNA-based 4i clocks.
 - `align_cc_shape_anchors.py` - adds shared cell-shape anchors and tests them leaving out whole anchor families.
+- `align_via_predictions.py` - aligns through predictions: an Element-trained model on shared features applied to OPS0077, and a test of merging the phase-contrast predictions.
 - `build_alignment_nb.py` - emits the alignment notebook.
 
 Data: CZ Biohub OPS Explorer, public S3 `ops-explorer-public` (Biohub_OPS0077 = ops0144_20260406), region us-west-2.

@@ -1,0 +1,5 @@
+predictors,element_heldout_median_err_deg,element_heldout_balanced_err_deg,transfer_mean_cos,transfer_direction,transfer_rotation_deg,transfer_median_err_deg,transfer_within_45deg,dna_profile_corr_no_dna_predictor
+DNA + area + shape,54.0,54.3,0.454,1,100,38.7,0.547,
+area + shape (no DNA),62.2,65.9,0.135,-1,264,74.6,0.313,0.62
+"shape only (no DNA, no area)",75.5,84.6,0.06,1,42,83.0,0.287,0.614
+DNA only,61.3,62.5,0.772,1,98,24.1,0.759,
