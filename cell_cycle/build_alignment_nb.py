@@ -204,6 +204,32 @@ and the mapped markers-trained prediction (47 degrees) is **worse** than the fin
 
 code("""pd.read_csv(find('cc_predictions_within_ops0077.csv'))""")
 
+md("""### 4b. A joint DNA + markers predictor
+
+**What.** Because merging separately trained predictions does not work, we trained the regimes **jointly**. One model predicts
+all 10 targets (sine and cosine of the three clocks, plus DNA, pRb, p21 and phospho-Rb), using the same held-out tiles and
+front-end as above.
+
+**Four predictors compared:**
+* **separate**: one ridge per target (the baseline above);
+* **reduced-rank**: one ridge for all targets, constrained to a few shared directions;
+* **component route**: predict DNA, pRb, p21 and phospho-Rb, then read every clock from that predicted state, using a
+  nearest-neighbour map learned on the measured components;
+* **shared network**: one multi-output neural network.
+
+**Result.**
+* **The shared network is the most accurate.** The DNA clock drops from 29.3 to 24.8 degrees, the final clock from 29.6 to 25.5,
+  and DNA content R2 rises from 0.46 to 0.53. The markers clock does not improve (36 degrees). Whether the gain comes from joint
+  training or simply from the nonlinearity is not settled here: a single-target network is the missing control.
+* **The component route is the only one that keeps the clocks consistent.** Its predicted markers and DNA clocks keep the
+  measured relation (same direction, about 160 degrees, median 35 degrees). Every other predictor *reverses* the markers clock
+  relative to DNA. It is also much better on the arcs where the others fail (240 to 300 degrees: 32 to 39 vs 73 degrees), though
+  slightly worse on average (31 to 32 degrees).
+* **Reduced-rank gains nothing.** The chosen rank was 8 of 10, so the targets do not share a small set of directions.""")
+
+code("""display(pd.read_csv(find('joint_vs_single.csv')).set_index('predictor').T)
+pd.read_csv(find('joint_error_by_arc.csv'), index_col=0)""")
+
 md("""## Takeaways and next steps
 
 1. **Within OPS0077**: 4i DNA, DNA+PCs and the final `cc_phase` are one clock (4 to 6 degrees apart). The **markers-only regime is the same cycle in the same direction**, 142 degrees
@@ -215,7 +241,7 @@ md("""## Takeaways and next steps
    We do not recommend a per-cell cross-dataset angle.
 3. **Phase-contrast morphology predicts every regime** (circular r 0.49 to 0.65, median error 29 to 36 degrees; size alone is about 0), as well as pRb, p21 and phospho-Rb
    (R2 0.27 to 0.42) beyond DNA content, so it is a sensible common readout across regimes.
-4. **Regimes are predictable on different arcs and each is best predicted by its own model**, but simply merging the two predictions does not work (averaging them is worse than the final-trained prediction alone: 47 vs 30 degrees), so a combined model would have to be trained jointly.
+4. **Regimes are predictable on different arcs and each is best predicted by its own model**, but simply merging the two predictions does not work (averaging them is worse than the final-trained prediction alone: 47 vs 30 degrees), so a combined model has to be trained jointly. Trained jointly (4b), a shared network improves the DNA and final clocks (about 25 instead of 30 degrees), and predicting the four 4i readouts first is the only route that keeps the DNA and markers clocks consistent with each other.
 5. **A common currency that needs no angle alignment**: DNA content class (2N vs 4N) is measured the same way in both datasets, is what phase-contrast morphology predicts best (G1 vs G2/M AUC 0.94),
    and is what Tim's morphology clock mainly separates as well. Until there is paired data or better anchors, transfer between datasets through DNA-content classes and not through angles.
 

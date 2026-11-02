@@ -1,0 +1,9 @@
+kind,contrast,n_features,spearman_rho,spearman_p,pct_same_sign,median_abs_d_element,median_abs_d_ops
+all shared,S vs 2N,65,0.72,1.7e-11,94.0,0.54,0.39
+all shared,4N vs 2N,65,0.78,1.9e-14,86.0,0.97,0.73
+DNA-stain granularity,S vs 2N,8,0.06,0.89,75.0,0.19,0.42
+DNA-stain granularity,4N vs 2N,8,0.05,0.91,62.0,0.44,0.53
+DNA-stain texture,S vs 2N,52,0.6,2.5e-06,100.0,0.57,0.41
+DNA-stain texture,4N vs 2N,52,0.67,5.4e-08,94.0,1.0,1.05
+cell shape (scale-free),S vs 2N,5,0.5,0.39,60.0,0.06,0.03
+cell shape (scale-free),4N vs 2N,5,-0.2,0.75,40.0,0.09,0.04

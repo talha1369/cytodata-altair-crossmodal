@@ -1,0 +1,12 @@
+contrast,n,measured_TV,predicted_TV,measured_d_pct_G2M_arc,predicted_d_pct_G2M_arc,bin_shift_corr
+TNFa vs baseline (controls),47130,0.038,0.074,0.215,2.566,-0.394
+"CTNNB1 KO vs controls, baseline",23290,0.087,0.026,-3.483,-2.324,0.268
+"GSK3B KO vs controls, baseline",16792,0.026,0.015,1.37,0.919,0.623
+"IL1R1 KO vs controls, baseline",7109,0.011,0.009,0.307,0.614,0.347
+"SMAD7 KO vs controls, baseline",5115,0.023,0.019,0.146,-0.902,0.341
+"TGFBR2 KO vs controls, baseline",3577,0.034,0.088,-1.013,3.308,-0.114
+"CTNNB1 KO vs controls, TNFa",22058,0.101,0.056,-5.113,-5.047,0.52
+"GSK3B KO vs controls, TNFa",17160,0.021,0.007,0.191,0.224,-0.248
+"IL1R1 KO vs controls, TNFa",6618,0.022,0.016,-1.339,-0.227,0.345
+"SMAD7 KO vs controls, TNFa",5060,0.032,0.021,-1.309,-0.029,0.455
+"TGFBR2 KO vs controls, TNFa",3444,0.044,0.065,-0.74,4.214,-0.166

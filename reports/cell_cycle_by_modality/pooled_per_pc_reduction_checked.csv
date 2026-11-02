@@ -1,0 +1,8 @@
+cells,measure,n_cells,PC1,PC2,PC3,PC4,PC5,PC6,PC7,PC8,PC9,PC10,top3_mean
+"NTC (gradient-boosting predicted, out of fold)",variance,35633,20.1,22.1,6.4,0.4,23.5,0.9,14.3,2.4,19.5,0.9,16.2
+"NTC (gradient-boosting predicted, out of fold)",robust (MAD^2),35633,24.6,20.6,11.2,-0.2,27.2,2.2,19.7,3.1,25.5,6.4,18.8
+"knockouts pooled, all cells",variance,198713,-0.0,-0.0,-0.0,-0.0,0.0,0.0,-0.0,-0.0,-0.0,-0.0,0.0
+"knockouts pooled, all cells",robust (MAD^2),198713,25.8,22.2,8.5,-0.2,19.1,1.8,17.1,2.4,21.5,2.2,18.8
+"knockouts pooled, outlier cells removed",variance,198680,16.4,21.8,6.2,0.2,13.9,0.8,6.6,1.1,12.6,0.9,14.8
+"knockouts pooled, outlier cells removed",robust (MAD^2),198680,25.8,22.2,8.5,-0.2,19.1,1.8,17.1,2.5,21.5,2.2,18.8
+"knockouts, predicted cycle permuted (control)",variance,198680,-11.4,-23.7,-7.1,-0.5,-19.0,-1.5,-10.9,-2.5,-26.2,-4.1,-14.1

@@ -1,0 +1,6 @@
+modality,n_groups,cycle_variance_removed_pct_controls,shuffled_variance_removed_pct,control_spread_change_pct,median_spread_change_pct,median_spread_change_shuffled_pct,median_auc_before,median_auc_after,median_auc_change,n_separating_before,n_separating_after,cycle_used
+OPS0077 phase contrast,1000,8.0,0.009,-4.05,-3.77,0.005,0.572,0.572,-0.0013,137.0,235.0,modality's own predicted clock
+"OPS0077 4i protein panel (pRb, Rb, p21)",1000,8.74,0.007,-4.78,-5.53,0.004,0.585,0.578,-0.0069,87.0,110.0,modality's own predicted clock
+Element imaging (all features),11,2.93,,,-0.64,0.006,0.567,0.569,-0.0003,,,measured RNA clock
+Element imaging (all features),11,14.62,,,-4.53,0.004,0.558,0.563,0.0032,,,imaging's own predicted clock
+Element RNA (DRVI embedding),11,6.38,,,-3.18,0.004,0.558,0.556,-0.0006,,,measured RNA clock

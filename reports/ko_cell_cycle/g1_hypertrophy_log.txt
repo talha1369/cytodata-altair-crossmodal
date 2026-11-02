@@ -1,0 +1,44 @@
+NTC 36,014 cells with measured DNA | knockout cells with measured DNA 22,152 in 111 knockouts
+{'model': 'standard', 'NTC_AUC_4N': 0.919, 'NTC_pred_pct_4N': np.float64(16.0), 'NTC_measured_pct_4N': np.float64(19.4), 'NTC_2N_false_4N_pct': np.float64(3.44), 'NTC_largest_2N_false_4N_pct': np.float64(15.62), 'AUC_of_cell_size_alone': 0.709, 'NTC_measured_4N_called_4N_pct': np.float64(63.2)}
+{'model': 'size-balanced', 'NTC_AUC_4N': 0.902, 'NTC_pred_pct_4N': np.float64(30.6), 'NTC_measured_pct_4N': np.float64(19.4), 'NTC_2N_false_4N_pct': np.float64(13.81), 'NTC_largest_2N_false_4N_pct': np.float64(21.28), 'AUC_of_cell_size_alone': 0.709, 'NTC_measured_4N_called_4N_pct': np.float64(84.6)}
+{'model': 'size-removed', 'NTC_AUC_4N': 0.886, 'NTC_pred_pct_4N': np.float64(13.6), 'NTC_measured_pct_4N': np.float64(19.4), 'NTC_2N_false_4N_pct': np.float64(3.86), 'NTC_largest_2N_false_4N_pct': np.float64(5.82), 'AUC_of_cell_size_alone': 0.709, 'NTC_measured_4N_called_4N_pct': np.float64(50.2)}
+{'model': 'DNA floor', 'NTC_AUC_4N': 0.92, 'NTC_pred_pct_4N': np.float64(16.0), 'NTC_measured_pct_4N': np.float64(19.4), 'NTC_2N_false_4N_pct': np.float64(3.43), 'NTC_largest_2N_false_4N_pct': np.float64(15.62), 'AUC_of_cell_size_alone': 0.709, 'NTC_measured_4N_called_4N_pct': np.float64(63.2)}
+ridge DNA from phase (NTC, held out by tile, n=36,014): Spearman with measured 0.655, Pearson 0.694; % of NTC cells predicted >= 2.5N: 29.2; % of measured-4N NTC cells predicted >= 2.5N: 86.7; % of measured-2N NTC cells predicted >= 2.5N: 10.4
+ridge DNA from phase (knockout cells, n=22,152): Spearman with measured 0.564, Pearson 0.648
+
+across knockouts, predicted vs measured change in % 4N:
+         model  spearman_pred_vs_measured_d4N  pearson  median_false_4N_excess_points  G1_list_median_false_4N_excess
+     standard                          0.859    0.905                          -1.03                           -0.72
+size-balanced                          0.752    0.768                          -3.81                           -3.59
+ size-removed                          0.687    0.704                          -1.45                           -1.67
+    DNA floor                          0.858    0.905                          -1.02                           -0.71
+
+do knockouts whose 2N cells are larger get more false 4N calls (standard model)? Spearman 0.08
+size of measured-2N cells vs false-4N excess, standard: Spearman 0.08 | knockouts with >=10 measured-2N cells: 111
+size of measured-2N cells vs false-4N excess, size-balanced: Spearman -0.27 | knockouts with >=10 measured-2N cells: 111
+size of measured-2N cells vs false-4N excess, size-removed: Spearman -0.19 | knockouts with >=10 measured-2N cells: 111
+size of measured-2N cells vs false-4N excess, DNA floor: Spearman 0.08 | knockouts with >=10 measured-2N cells: 111
+
+knockouts with the largest false-4N excess (standard model):
+   gene expected_arrest_phase   n  measured_d_pct_4N  standard: predicted d%4N  size-balanced: predicted d%4N  DNA floor: predicted d%4N  size_2N_vs_NTC_2N_log2  standard: false 4N excess vs NTC (points)  size-balanced: false 4N excess vs NTC (points)  DNA floor: false 4N excess vs NTC (points)
+ RPL26                       158               4.06                      4.23                          -7.77                       4.23                    0.72                                       3.40                                           -6.12                                        3.41
+ POLA1               S Phase 218               5.87                      9.20                           7.52                       9.21                    0.20                                       3.13                                            5.90                                        3.14
+ KIF23                       157               0.39                      1.81                           3.84                       1.18                    0.19                                       2.98                                            5.46                                        2.99
+ POLA2               S Phase 209               7.92                      9.33                           6.29                       9.34                    0.47                                       2.30                                            0.94                                        2.31
+  MGAM                       214              -5.80                     -2.48                          -2.51                      -2.47                    0.24                                       2.15                                           -0.15                                        2.16
+  ADSS                       199               2.25                      6.08                           7.14                       6.09                    0.25                                       1.86                                            5.89                                        1.87
+  FECH                       210              -0.78                     -0.79                          -3.89                      -0.78                    0.12                                       1.32                                           -3.61                                        1.33
+ SRP54                       187               0.96                     -1.59                           4.74                      -1.58                   -0.05                                       1.04                                            9.32                                        1.05
+ POLE2               S Phase 212               4.70                      3.78                          -3.19                       3.79                    0.36                                       0.94                                           -6.51                                        0.95
+ AP3M1                       205              -6.67                     -7.73                         -12.50                      -7.73                    0.12                                       0.88                                           -2.08                                        0.89
+  RRM1              G1 Phase 120              -6.02                     -2.69                           2.78                      -2.69                    0.59                                       0.67                                            4.00                                        0.68
+POLR2D                       204              -8.08                     -5.73                          -9.96                      -5.72                    0.34                                       0.56                                           -1.81                                        0.57
+
+G1-list knockouts:
+  gene expected_arrest_phase   n  measured_d_pct_4N  standard: predicted d%4N  size-balanced: predicted d%4N  DNA floor: predicted d%4N  size_2N_vs_NTC_2N_log2  standard: false 4N excess vs NTC (points)  size-balanced: false 4N excess vs NTC (points)  DNA floor: false 4N excess vs NTC (points)
+ CUL1              G1 Phase 204              -1.71                     -1.32                          -3.59                      -1.31                    0.15                                      -0.72                                           -2.93                                       -0.71
+ POLE              G1 Phase 219               3.47                      4.98                          -0.42                       4.99                    0.48                                       0.21                                           -3.59                                        0.22
+PSMB6              G1 Phase 215              -3.08                     -2.54                         -10.55                      -2.53                    0.49                                      -1.02                                           -5.93                                       -1.01
+RPTOR              G1 Phase 205              -9.11                     -7.73                         -15.43                      -7.73                    0.30                                      -1.14                                           -6.91                                       -1.13
+ RRM1              G1 Phase 120              -6.02                     -2.69                           2.78                      -2.69                    0.59                                       0.67                                            4.00                                        0.68
+DONE

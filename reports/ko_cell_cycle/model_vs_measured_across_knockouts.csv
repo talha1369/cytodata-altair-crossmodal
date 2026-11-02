@@ -1,0 +1,5 @@
+model,spearman_pred_vs_measured_d4N,pearson,median_false_4N_excess_points,G1_list_median_false_4N_excess
+standard,0.859,0.905,-1.03,-0.72
+size-balanced,0.752,0.768,-3.81,-3.59
+size-removed,0.687,0.704,-1.45,-1.67
+DNA floor,0.858,0.905,-1.02,-0.71

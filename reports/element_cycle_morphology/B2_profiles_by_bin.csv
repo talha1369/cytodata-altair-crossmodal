@@ -1,0 +1,553 @@
+feature,family,bin_deg,mean_SD,half1_SD,half2_SD
+Phospho-p38_FractionAboveThreshold_Cytoplasmic,"antibodies (ERK, pERK, pHSP27, p-p38)",15.0,0.1804,0.1859,0.1752
+Phospho-p38_FractionAboveThreshold_Cytoplasmic,"antibodies (ERK, pERK, pHSP27, p-p38)",45.0,0.2793,0.2858,0.2732
+Phospho-p38_FractionAboveThreshold_Cytoplasmic,"antibodies (ERK, pERK, pHSP27, p-p38)",75.0,0.5698,0.5907,0.5494
+Phospho-p38_FractionAboveThreshold_Cytoplasmic,"antibodies (ERK, pERK, pHSP27, p-p38)",105.0,0.933,0.8604,1.0014
+Phospho-p38_FractionAboveThreshold_Cytoplasmic,"antibodies (ERK, pERK, pHSP27, p-p38)",135.0,1.4303,1.3236,1.5469
+Phospho-p38_FractionAboveThreshold_Cytoplasmic,"antibodies (ERK, pERK, pHSP27, p-p38)",165.0,0.6989,0.6403,0.763
+Phospho-p38_FractionAboveThreshold_Cytoplasmic,"antibodies (ERK, pERK, pHSP27, p-p38)",195.0,0.405,0.4172,0.3922
+Phospho-p38_FractionAboveThreshold_Cytoplasmic,"antibodies (ERK, pERK, pHSP27, p-p38)",225.0,0.1166,0.1462,0.086
+Phospho-p38_FractionAboveThreshold_Cytoplasmic,"antibodies (ERK, pERK, pHSP27, p-p38)",255.0,0.1202,0.1286,0.1109
+Phospho-p38_FractionAboveThreshold_Cytoplasmic,"antibodies (ERK, pERK, pHSP27, p-p38)",285.0,0.1658,0.1838,0.1461
+Phospho-p38_FractionAboveThreshold_Cytoplasmic,"antibodies (ERK, pERK, pHSP27, p-p38)",315.0,0.1439,0.1506,0.1366
+Phospho-p38_FractionAboveThreshold_Cytoplasmic,"antibodies (ERK, pERK, pHSP27, p-p38)",345.0,0.1553,0.1649,0.1458
+Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",15.0,0.0511,0.0274,0.0737
+Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",45.0,0.1476,0.1481,0.1471
+Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",75.0,0.4353,0.4337,0.4368
+Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",105.0,0.7997,0.7495,0.8471
+Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",135.0,1.1584,1.1039,1.218
+Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",165.0,0.5001,0.5341,0.4629
+Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",195.0,0.231,0.2272,0.2349
+Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",225.0,-0.0469,-0.035,-0.0592
+Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",255.0,-0.0218,-0.0307,-0.0119
+Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",285.0,0.0337,0.0409,0.0258
+Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",315.0,0.0199,0.018,0.0219
+Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",345.0,0.0314,0.0222,0.0406
+Intensity_MADIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",15.0,0.0671,0.0553,0.0784
+Intensity_MADIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",45.0,0.1756,0.1957,0.157
+Intensity_MADIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",75.0,0.4573,0.4796,0.4357
+Intensity_MADIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",105.0,0.7554,0.7502,0.7603
+Intensity_MADIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",135.0,1.178,1.1332,1.2269
+Intensity_MADIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",165.0,0.5676,0.5907,0.5425
+Intensity_MADIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",195.0,0.2631,0.2396,0.2877
+Intensity_MADIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",225.0,-0.0135,0.0044,-0.0322
+Intensity_MADIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",255.0,0.0151,0.0119,0.0186
+Intensity_MADIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",285.0,0.0808,0.1042,0.0551
+Intensity_MADIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",315.0,0.0711,0.0777,0.064
+Intensity_MADIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",345.0,0.0658,0.0651,0.0664
+Intensity_UpperQuartileIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",15.0,0.0412,0.0224,0.0592
+Intensity_UpperQuartileIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",45.0,0.1411,0.1545,0.1287
+Intensity_UpperQuartileIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",75.0,0.431,0.4485,0.4138
+Intensity_UpperQuartileIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",105.0,0.7821,0.7556,0.807
+Intensity_UpperQuartileIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",135.0,1.1291,1.0865,1.1757
+Intensity_UpperQuartileIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",165.0,0.4789,0.5229,0.4307
+Intensity_UpperQuartileIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",195.0,0.2215,0.2193,0.2237
+Intensity_UpperQuartileIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",225.0,-0.0546,-0.0341,-0.0758
+Intensity_UpperQuartileIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",255.0,-0.0294,-0.0299,-0.0288
+Intensity_UpperQuartileIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",285.0,0.0259,0.0392,0.0112
+Intensity_UpperQuartileIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",315.0,0.0095,0.0156,0.003
+Intensity_UpperQuartileIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",345.0,0.0208,0.0208,0.0207
+Phospho-p38_Cytoplasmic,"antibodies (ERK, pERK, pHSP27, p-p38)",15.0,0.0484,0.0405,0.0559
+Phospho-p38_Cytoplasmic,"antibodies (ERK, pERK, pHSP27, p-p38)",45.0,0.1479,0.1584,0.1382
+Phospho-p38_Cytoplasmic,"antibodies (ERK, pERK, pHSP27, p-p38)",75.0,0.4356,0.4421,0.4293
+Phospho-p38_Cytoplasmic,"antibodies (ERK, pERK, pHSP27, p-p38)",105.0,0.8,0.7498,0.8473
+Phospho-p38_Cytoplasmic,"antibodies (ERK, pERK, pHSP27, p-p38)",135.0,1.1607,1.1137,1.2121
+Phospho-p38_Cytoplasmic,"antibodies (ERK, pERK, pHSP27, p-p38)",165.0,0.4993,0.5403,0.4545
+Phospho-p38_Cytoplasmic,"antibodies (ERK, pERK, pHSP27, p-p38)",195.0,0.251,0.2592,0.2425
+Phospho-p38_Cytoplasmic,"antibodies (ERK, pERK, pHSP27, p-p38)",225.0,-0.014,0.0054,-0.0341
+Phospho-p38_Cytoplasmic,"antibodies (ERK, pERK, pHSP27, p-p38)",255.0,-0.0027,-0.0006,-0.005
+Phospho-p38_Cytoplasmic,"antibodies (ERK, pERK, pHSP27, p-p38)",285.0,0.0442,0.0591,0.0278
+Phospho-p38_Cytoplasmic,"antibodies (ERK, pERK, pHSP27, p-p38)",315.0,0.0185,0.024,0.0126
+Phospho-p38_Cytoplasmic,"antibodies (ERK, pERK, pHSP27, p-p38)",345.0,0.0283,0.0323,0.0242
+Intensity_MedianIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",15.0,0.0378,0.0277,0.0474
+Intensity_MedianIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",45.0,0.1445,0.1573,0.1326
+Intensity_MedianIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",75.0,0.4292,0.4406,0.4181
+Intensity_MedianIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",105.0,0.8017,0.764,0.8373
+Intensity_MedianIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",135.0,1.1519,1.1291,1.1767
+Intensity_MedianIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",165.0,0.4742,0.5158,0.4288
+Intensity_MedianIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",195.0,0.2258,0.2282,0.2232
+Intensity_MedianIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",225.0,-0.0181,-0.0007,-0.0361
+Intensity_MedianIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",255.0,-0.0035,-0.005,-0.0018
+Intensity_MedianIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",285.0,0.0451,0.0555,0.0337
+Intensity_MedianIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",315.0,0.0183,0.0202,0.0161
+Intensity_MedianIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",345.0,0.0217,0.0201,0.0232
+Intensity_MeanIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",15.0,0.047,0.0317,0.0615
+Intensity_MeanIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",45.0,0.1412,0.1534,0.1298
+Intensity_MeanIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",75.0,0.4305,0.4393,0.422
+Intensity_MeanIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",105.0,0.8001,0.7667,0.8316
+Intensity_MeanIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",135.0,1.1118,1.0803,1.1462
+Intensity_MeanIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",165.0,0.471,0.5159,0.4219
+Intensity_MeanIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",195.0,0.2176,0.2192,0.2159
+Intensity_MeanIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",225.0,-0.0491,-0.0314,-0.0674
+Intensity_MeanIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",255.0,-0.0298,-0.0319,-0.0274
+Intensity_MeanIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",285.0,0.0278,0.0377,0.0168
+Intensity_MeanIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",315.0,0.0111,0.0162,0.0055
+Intensity_MeanIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",345.0,0.0274,0.0274,0.0274
+Phospho-p38_FractionAboveThreshold,"antibodies (ERK, pERK, pHSP27, p-p38)",15.0,0.0264,0.0185,0.0339
+Phospho-p38_FractionAboveThreshold,"antibodies (ERK, pERK, pHSP27, p-p38)",45.0,0.0815,0.0771,0.0857
+Phospho-p38_FractionAboveThreshold,"antibodies (ERK, pERK, pHSP27, p-p38)",75.0,0.3175,0.3347,0.3008
+Phospho-p38_FractionAboveThreshold,"antibodies (ERK, pERK, pHSP27, p-p38)",105.0,0.6104,0.5482,0.6692
+Phospho-p38_FractionAboveThreshold,"antibodies (ERK, pERK, pHSP27, p-p38)",135.0,1.0513,0.9462,1.1661
+Phospho-p38_FractionAboveThreshold,"antibodies (ERK, pERK, pHSP27, p-p38)",165.0,0.4791,0.4118,0.5527
+Phospho-p38_FractionAboveThreshold,"antibodies (ERK, pERK, pHSP27, p-p38)",195.0,0.2048,0.1945,0.2156
+Phospho-p38_FractionAboveThreshold,"antibodies (ERK, pERK, pHSP27, p-p38)",225.0,-0.1012,-0.0818,-0.1213
+Phospho-p38_FractionAboveThreshold,"antibodies (ERK, pERK, pHSP27, p-p38)",255.0,-0.0451,-0.0427,-0.0479
+Phospho-p38_FractionAboveThreshold,"antibodies (ERK, pERK, pHSP27, p-p38)",285.0,0.0224,0.034,0.0096
+Phospho-p38_FractionAboveThreshold,"antibodies (ERK, pERK, pHSP27, p-p38)",315.0,0.0054,0.0038,0.0072
+Phospho-p38_FractionAboveThreshold,"antibodies (ERK, pERK, pHSP27, p-p38)",345.0,0.01,0.0047,0.0152
+Phospho-p38_Nuclear,"antibodies (ERK, pERK, pHSP27, p-p38)",15.0,0.0533,0.0434,0.0628
+Phospho-p38_Nuclear,"antibodies (ERK, pERK, pHSP27, p-p38)",45.0,0.1496,0.1654,0.1349
+Phospho-p38_Nuclear,"antibodies (ERK, pERK, pHSP27, p-p38)",75.0,0.4427,0.4551,0.4306
+Phospho-p38_Nuclear,"antibodies (ERK, pERK, pHSP27, p-p38)",105.0,0.8308,0.8307,0.831
+Phospho-p38_Nuclear,"antibodies (ERK, pERK, pHSP27, p-p38)",135.0,1.0142,0.9961,1.034
+Phospho-p38_Nuclear,"antibodies (ERK, pERK, pHSP27, p-p38)",165.0,0.3843,0.4482,0.3145
+Phospho-p38_Nuclear,"antibodies (ERK, pERK, pHSP27, p-p38)",195.0,0.0622,0.0864,0.0368
+Phospho-p38_Nuclear,"antibodies (ERK, pERK, pHSP27, p-p38)",225.0,-0.1142,-0.0972,-0.1319
+Phospho-p38_Nuclear,"antibodies (ERK, pERK, pHSP27, p-p38)",255.0,-0.096,-0.1002,-0.0914
+Phospho-p38_Nuclear,"antibodies (ERK, pERK, pHSP27, p-p38)",285.0,-0.0439,-0.0084,-0.083
+Phospho-p38_Nuclear,"antibodies (ERK, pERK, pHSP27, p-p38)",315.0,0.0016,0.0158,-0.0138
+Phospho-p38_Nuclear,"antibodies (ERK, pERK, pHSP27, p-p38)",345.0,0.0396,0.0413,0.038
+NuclearAreaUm,shape and size,15.0,0.1252,0.1221,0.1283
+NuclearAreaUm,shape and size,45.0,0.2649,0.2771,0.2536
+NuclearAreaUm,shape and size,75.0,0.309,0.292,0.3256
+NuclearAreaUm,shape and size,105.0,0.2786,0.2803,0.2769
+NuclearAreaUm,shape and size,135.0,-0.4764,-0.4509,-0.5043
+NuclearAreaUm,shape and size,165.0,-0.3743,-0.3556,-0.3947
+NuclearAreaUm,shape and size,195.0,-0.0324,-0.0014,-0.0648
+NuclearAreaUm,shape and size,225.0,0.6246,0.6241,0.6252
+NuclearAreaUm,shape and size,255.0,0.1119,0.1351,0.0862
+NuclearAreaUm,shape and size,285.0,-0.061,-0.0416,-0.0824
+NuclearAreaUm,shape and size,315.0,-0.0459,-0.0259,-0.0675
+NuclearAreaUm,shape and size,345.0,0.0103,0.0249,-0.0041
+NuclearArea,shape and size,15.0,0.1252,0.1221,0.1283
+NuclearArea,shape and size,45.0,0.2649,0.2771,0.2536
+NuclearArea,shape and size,75.0,0.309,0.292,0.3256
+NuclearArea,shape and size,105.0,0.2786,0.2803,0.2769
+NuclearArea,shape and size,135.0,-0.4764,-0.4509,-0.5043
+NuclearArea,shape and size,165.0,-0.3743,-0.3556,-0.3947
+NuclearArea,shape and size,195.0,-0.0324,-0.0014,-0.0648
+NuclearArea,shape and size,225.0,0.6246,0.6241,0.6252
+NuclearArea,shape and size,255.0,0.1119,0.1351,0.0862
+NuclearArea,shape and size,285.0,-0.061,-0.0416,-0.0824
+NuclearArea,shape and size,315.0,-0.0459,-0.0259,-0.0675
+NuclearArea,shape and size,345.0,0.0103,0.0249,-0.0041
+Texture_DifferenceEntropy_3_03_256_Nucleus,DNA stain (Nucleus),15.0,-0.0388,-0.0437,-0.034
+Texture_DifferenceEntropy_3_03_256_Nucleus,DNA stain (Nucleus),45.0,0.1288,0.1433,0.1153
+Texture_DifferenceEntropy_3_03_256_Nucleus,DNA stain (Nucleus),75.0,0.3311,0.3283,0.3338
+Texture_DifferenceEntropy_3_03_256_Nucleus,DNA stain (Nucleus),105.0,0.5633,0.5441,0.5814
+Texture_DifferenceEntropy_3_03_256_Nucleus,DNA stain (Nucleus),135.0,0.7219,0.692,0.7545
+Texture_DifferenceEntropy_3_03_256_Nucleus,DNA stain (Nucleus),165.0,0.3663,0.3534,0.3804
+Texture_DifferenceEntropy_3_03_256_Nucleus,DNA stain (Nucleus),195.0,0.0617,0.0559,0.0677
+Texture_DifferenceEntropy_3_03_256_Nucleus,DNA stain (Nucleus),225.0,-0.3777,-0.3312,-0.4259
+Texture_DifferenceEntropy_3_03_256_Nucleus,DNA stain (Nucleus),255.0,-0.2295,-0.2444,-0.2128
+Texture_DifferenceEntropy_3_03_256_Nucleus,DNA stain (Nucleus),285.0,-0.0416,-0.0347,-0.0492
+Texture_DifferenceEntropy_3_03_256_Nucleus,DNA stain (Nucleus),315.0,-0.0721,-0.054,-0.0916
+Texture_DifferenceEntropy_3_03_256_Nucleus,DNA stain (Nucleus),345.0,-0.1011,-0.1008,-0.1014
+Texture_DifferenceEntropy_3_01_256_Nucleus,DNA stain (Nucleus),15.0,-0.048,-0.0582,-0.0384
+Texture_DifferenceEntropy_3_01_256_Nucleus,DNA stain (Nucleus),45.0,0.1252,0.1473,0.1047
+Texture_DifferenceEntropy_3_01_256_Nucleus,DNA stain (Nucleus),75.0,0.3383,0.3412,0.3355
+Texture_DifferenceEntropy_3_01_256_Nucleus,DNA stain (Nucleus),105.0,0.5625,0.5524,0.572
+Texture_DifferenceEntropy_3_01_256_Nucleus,DNA stain (Nucleus),135.0,0.722,0.6965,0.7499
+Texture_DifferenceEntropy_3_01_256_Nucleus,DNA stain (Nucleus),165.0,0.3664,0.3686,0.364
+Texture_DifferenceEntropy_3_01_256_Nucleus,DNA stain (Nucleus),195.0,0.0586,0.0462,0.0715
+Texture_DifferenceEntropy_3_01_256_Nucleus,DNA stain (Nucleus),225.0,-0.3718,-0.3312,-0.4138
+Texture_DifferenceEntropy_3_01_256_Nucleus,DNA stain (Nucleus),255.0,-0.2125,-0.23,-0.193
+Texture_DifferenceEntropy_3_01_256_Nucleus,DNA stain (Nucleus),285.0,-0.052,-0.0496,-0.0547
+Texture_DifferenceEntropy_3_01_256_Nucleus,DNA stain (Nucleus),315.0,-0.0713,-0.0549,-0.0891
+Texture_DifferenceEntropy_3_01_256_Nucleus,DNA stain (Nucleus),345.0,-0.1065,-0.0968,-0.1161
+Texture_Entropy_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",15.0,-0.085,-0.0997,-0.071
+Texture_Entropy_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",45.0,-0.1119,-0.1171,-0.1071
+Texture_Entropy_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",75.0,0.0114,0.0192,0.0039
+Texture_Entropy_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",105.0,0.2868,0.2711,0.3016
+Texture_Entropy_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",135.0,0.5006,0.4721,0.5316
+Texture_Entropy_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",165.0,0.0928,0.1471,0.0335
+Texture_Entropy_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",195.0,-0.3347,-0.3038,-0.367
+Texture_Entropy_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",225.0,-0.5919,-0.5436,-0.6421
+Texture_Entropy_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",255.0,-0.4407,-0.4272,-0.4557
+Texture_Entropy_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",285.0,-0.2541,-0.2178,-0.294
+Texture_Entropy_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",315.0,-0.0806,-0.0718,-0.0901
+Texture_Entropy_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",345.0,-0.0283,-0.0374,-0.0193
+Texture_Entropy_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",15.0,-0.0821,-0.0959,-0.0688
+Texture_Entropy_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",45.0,-0.1096,-0.1125,-0.107
+Texture_Entropy_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",75.0,0.0159,0.0267,0.0054
+Texture_Entropy_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",105.0,0.2888,0.2733,0.3034
+Texture_Entropy_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",135.0,0.5041,0.477,0.5338
+Texture_Entropy_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",165.0,0.0977,0.1558,0.0343
+Texture_Entropy_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",195.0,-0.3337,-0.3018,-0.367
+Texture_Entropy_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",225.0,-0.5883,-0.5395,-0.639
+Texture_Entropy_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",255.0,-0.4371,-0.4211,-0.4548
+Texture_Entropy_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",285.0,-0.2509,-0.2141,-0.2915
+Texture_Entropy_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",315.0,-0.0766,-0.0675,-0.0864
+Texture_Entropy_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",345.0,-0.0245,-0.0327,-0.0163
+Texture_SumEntropy_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",15.0,-0.1013,-0.1128,-0.0903
+Texture_SumEntropy_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",45.0,-0.1291,-0.1316,-0.1267
+Texture_SumEntropy_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",75.0,-0.005,0.0064,-0.0161
+Texture_SumEntropy_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",105.0,0.2701,0.2583,0.2812
+Texture_SumEntropy_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",135.0,0.4722,0.4519,0.4943
+Texture_SumEntropy_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",165.0,0.0771,0.135,0.0138
+Texture_SumEntropy_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",195.0,-0.3584,-0.3258,-0.3926
+Texture_SumEntropy_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",225.0,-0.6182,-0.5672,-0.6712
+Texture_SumEntropy_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",255.0,-0.4669,-0.45,-0.4858
+Texture_SumEntropy_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",285.0,-0.2801,-0.2412,-0.323
+Texture_SumEntropy_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",315.0,-0.1013,-0.0903,-0.1132
+Texture_SumEntropy_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",345.0,-0.0448,-0.0507,-0.0389
+Texture_DifferenceEntropy_3_00_256_Nucleus,DNA stain (Nucleus),15.0,-0.044,-0.0515,-0.0368
+Texture_DifferenceEntropy_3_00_256_Nucleus,DNA stain (Nucleus),45.0,0.1336,0.1498,0.1186
+Texture_DifferenceEntropy_3_00_256_Nucleus,DNA stain (Nucleus),75.0,0.3436,0.3325,0.3543
+Texture_DifferenceEntropy_3_00_256_Nucleus,DNA stain (Nucleus),105.0,0.5787,0.5653,0.5913
+Texture_DifferenceEntropy_3_00_256_Nucleus,DNA stain (Nucleus),135.0,0.7451,0.7091,0.7845
+Texture_DifferenceEntropy_3_00_256_Nucleus,DNA stain (Nucleus),165.0,0.3814,0.3582,0.4067
+Texture_DifferenceEntropy_3_00_256_Nucleus,DNA stain (Nucleus),195.0,0.0796,0.0688,0.0908
+Texture_DifferenceEntropy_3_00_256_Nucleus,DNA stain (Nucleus),225.0,-0.344,-0.2975,-0.3923
+Texture_DifferenceEntropy_3_00_256_Nucleus,DNA stain (Nucleus),255.0,-0.2042,-0.2284,-0.1773
+Texture_DifferenceEntropy_3_00_256_Nucleus,DNA stain (Nucleus),285.0,-0.0334,-0.0256,-0.042
+Texture_DifferenceEntropy_3_00_256_Nucleus,DNA stain (Nucleus),315.0,-0.0682,-0.047,-0.091
+Texture_DifferenceEntropy_3_00_256_Nucleus,DNA stain (Nucleus),345.0,-0.1001,-0.0943,-0.1058
+Texture_SumEntropy_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",15.0,-0.1066,-0.1172,-0.0964
+Texture_SumEntropy_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",45.0,-0.1342,-0.1372,-0.1314
+Texture_SumEntropy_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",75.0,-0.0109,-0.0004,-0.0212
+Texture_SumEntropy_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",105.0,0.2656,0.255,0.2756
+Texture_SumEntropy_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",135.0,0.4642,0.4458,0.4843
+Texture_SumEntropy_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",165.0,0.0702,0.1271,0.0081
+Texture_SumEntropy_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",195.0,-0.3638,-0.3308,-0.3982
+Texture_SumEntropy_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",225.0,-0.6243,-0.5723,-0.6783
+Texture_SumEntropy_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",255.0,-0.4735,-0.4565,-0.4923
+Texture_SumEntropy_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",285.0,-0.2855,-0.2452,-0.3298
+Texture_SumEntropy_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",315.0,-0.1076,-0.0954,-0.1208
+Texture_SumEntropy_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",345.0,-0.0504,-0.0558,-0.045
+Texture_DifferenceEntropy_3_02_256_Nucleus,DNA stain (Nucleus),15.0,-0.0362,-0.0459,-0.027
+Texture_DifferenceEntropy_3_02_256_Nucleus,DNA stain (Nucleus),45.0,0.1302,0.145,0.1166
+Texture_DifferenceEntropy_3_02_256_Nucleus,DNA stain (Nucleus),75.0,0.3399,0.3469,0.3331
+Texture_DifferenceEntropy_3_02_256_Nucleus,DNA stain (Nucleus),105.0,0.5804,0.5656,0.5943
+Texture_DifferenceEntropy_3_02_256_Nucleus,DNA stain (Nucleus),135.0,0.7358,0.7089,0.7652
+Texture_DifferenceEntropy_3_02_256_Nucleus,DNA stain (Nucleus),165.0,0.3807,0.387,0.3739
+Texture_DifferenceEntropy_3_02_256_Nucleus,DNA stain (Nucleus),195.0,0.0907,0.0771,0.105
+Texture_DifferenceEntropy_3_02_256_Nucleus,DNA stain (Nucleus),225.0,-0.3465,-0.3143,-0.3799
+Texture_DifferenceEntropy_3_02_256_Nucleus,DNA stain (Nucleus),255.0,-0.2044,-0.218,-0.1892
+Texture_DifferenceEntropy_3_02_256_Nucleus,DNA stain (Nucleus),285.0,-0.0367,-0.0378,-0.0356
+Texture_DifferenceEntropy_3_02_256_Nucleus,DNA stain (Nucleus),315.0,-0.0631,-0.0548,-0.072
+Texture_DifferenceEntropy_3_02_256_Nucleus,DNA stain (Nucleus),345.0,-0.1001,-0.1002,-0.1001
+Texture_Entropy_3_03_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",15.0,-0.09,-0.1034,-0.0772
+Texture_Entropy_3_03_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",45.0,-0.1204,-0.1247,-0.1164
+Texture_Entropy_3_03_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",75.0,-0.0013,0.0086,-0.011
+Texture_Entropy_3_03_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",105.0,0.2684,0.2552,0.2809
+Texture_Entropy_3_03_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",135.0,0.4756,0.4518,0.5016
+Texture_Entropy_3_03_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",165.0,0.0804,0.1375,0.0181
+Texture_Entropy_3_03_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",195.0,-0.3518,-0.3188,-0.3864
+Texture_Entropy_3_03_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",225.0,-0.6053,-0.5555,-0.657
+Texture_Entropy_3_03_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",255.0,-0.4543,-0.4381,-0.4722
+Texture_Entropy_3_03_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",285.0,-0.2654,-0.2274,-0.3073
+Texture_Entropy_3_03_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",315.0,-0.0867,-0.0757,-0.0986
+Texture_Entropy_3_03_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",345.0,-0.0321,-0.0402,-0.0241
+Texture_Entropy_3_01_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",15.0,-0.0909,-0.1062,-0.0763
+Texture_Entropy_3_01_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",45.0,-0.1218,-0.125,-0.1189
+Texture_Entropy_3_01_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",75.0,-0.0008,0.0091,-0.0103
+Texture_Entropy_3_01_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",105.0,0.2681,0.254,0.2813
+Texture_Entropy_3_01_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",135.0,0.4733,0.4461,0.5029
+Texture_Entropy_3_01_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",165.0,0.0797,0.138,0.0159
+Texture_Entropy_3_01_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",195.0,-0.3504,-0.3202,-0.3821
+Texture_Entropy_3_01_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",225.0,-0.6064,-0.5587,-0.656
+Texture_Entropy_3_01_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",255.0,-0.4544,-0.4406,-0.4698
+Texture_Entropy_3_01_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",285.0,-0.2642,-0.2272,-0.305
+Texture_Entropy_3_01_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",315.0,-0.0888,-0.0817,-0.0964
+Texture_Entropy_3_01_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",345.0,-0.0335,-0.0423,-0.0248
+Texture_SumEntropy_3_03_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",15.0,-0.1212,-0.1314,-0.1115
+Texture_SumEntropy_3_03_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",45.0,-0.1509,-0.1532,-0.1487
+Texture_SumEntropy_3_03_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",75.0,-0.0316,-0.0194,-0.0435
+Texture_SumEntropy_3_03_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",105.0,0.2409,0.2323,0.2489
+Texture_SumEntropy_3_03_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",135.0,0.4287,0.4145,0.4442
+Texture_SumEntropy_3_03_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",165.0,0.0487,0.1069,-0.0148
+Texture_SumEntropy_3_03_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",195.0,-0.3893,-0.3558,-0.4243
+Texture_SumEntropy_3_03_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",225.0,-0.6472,-0.5945,-0.7018
+Texture_SumEntropy_3_03_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",255.0,-0.4965,-0.4783,-0.5169
+Texture_SumEntropy_3_03_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",285.0,-0.3062,-0.2655,-0.351
+Texture_SumEntropy_3_03_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",315.0,-0.125,-0.1114,-0.1398
+Texture_SumEntropy_3_03_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",345.0,-0.065,-0.0695,-0.0606
+Texture_SumEntropy_3_01_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",15.0,-0.1208,-0.1299,-0.1121
+Texture_SumEntropy_3_01_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",45.0,-0.1511,-0.152,-0.1503
+Texture_SumEntropy_3_01_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",75.0,-0.0307,-0.0183,-0.0427
+Texture_SumEntropy_3_01_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",105.0,0.2424,0.2346,0.2498
+Texture_SumEntropy_3_01_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",135.0,0.4283,0.4139,0.4441
+Texture_SumEntropy_3_01_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",165.0,0.0486,0.1084,-0.0166
+Texture_SumEntropy_3_01_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",195.0,-0.3868,-0.3533,-0.4219
+Texture_SumEntropy_3_01_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",225.0,-0.6472,-0.5945,-0.7019
+Texture_SumEntropy_3_01_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",255.0,-0.4953,-0.4771,-0.5156
+Texture_SumEntropy_3_01_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",285.0,-0.3045,-0.2635,-0.3496
+Texture_SumEntropy_3_01_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",315.0,-0.1248,-0.1125,-0.1381
+Texture_SumEntropy_3_01_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",345.0,-0.065,-0.0684,-0.0615
+Phospho-ERK1_Phospho-ERK2_Nuclear,"antibodies (ERK, pERK, pHSP27, p-p38)",15.0,0.0947,0.0954,0.094
+Phospho-ERK1_Phospho-ERK2_Nuclear,"antibodies (ERK, pERK, pHSP27, p-p38)",45.0,0.1402,0.1618,0.1201
+Phospho-ERK1_Phospho-ERK2_Nuclear,"antibodies (ERK, pERK, pHSP27, p-p38)",75.0,0.3686,0.3769,0.3604
+Phospho-ERK1_Phospho-ERK2_Nuclear,"antibodies (ERK, pERK, pHSP27, p-p38)",105.0,0.7567,0.7423,0.7703
+Phospho-ERK1_Phospho-ERK2_Nuclear,"antibodies (ERK, pERK, pHSP27, p-p38)",135.0,0.8653,0.8351,0.8983
+Phospho-ERK1_Phospho-ERK2_Nuclear,"antibodies (ERK, pERK, pHSP27, p-p38)",165.0,0.3357,0.408,0.2567
+Phospho-ERK1_Phospho-ERK2_Nuclear,"antibodies (ERK, pERK, pHSP27, p-p38)",195.0,-0.0213,0.0228,-0.0674
+Phospho-ERK1_Phospho-ERK2_Nuclear,"antibodies (ERK, pERK, pHSP27, p-p38)",225.0,-0.2004,-0.1552,-0.2473
+Phospho-ERK1_Phospho-ERK2_Nuclear,"antibodies (ERK, pERK, pHSP27, p-p38)",255.0,-0.1195,-0.1047,-0.1359
+Phospho-ERK1_Phospho-ERK2_Nuclear,"antibodies (ERK, pERK, pHSP27, p-p38)",285.0,-0.0214,0.0205,-0.0675
+Phospho-ERK1_Phospho-ERK2_Nuclear,"antibodies (ERK, pERK, pHSP27, p-p38)",315.0,0.0713,0.0901,0.0508
+Phospho-ERK1_Phospho-ERK2_Nuclear,"antibodies (ERK, pERK, pHSP27, p-p38)",345.0,0.1094,0.1104,0.1084
+Intensity_StdIntensity_Nucleus,DNA stain (Nucleus),15.0,0.0361,0.0393,0.0331
+Intensity_StdIntensity_Nucleus,DNA stain (Nucleus),45.0,0.2792,0.3228,0.2386
+Intensity_StdIntensity_Nucleus,DNA stain (Nucleus),75.0,0.5442,0.5836,0.5059
+Intensity_StdIntensity_Nucleus,DNA stain (Nucleus),105.0,0.8424,0.9125,0.7762
+Intensity_StdIntensity_Nucleus,DNA stain (Nucleus),135.0,0.6262,0.6634,0.5856
+Intensity_StdIntensity_Nucleus,DNA stain (Nucleus),165.0,0.2381,0.2613,0.2128
+Intensity_StdIntensity_Nucleus,DNA stain (Nucleus),195.0,0.0132,0.0016,0.0253
+Intensity_StdIntensity_Nucleus,DNA stain (Nucleus),225.0,-0.2066,-0.1758,-0.2386
+Intensity_StdIntensity_Nucleus,DNA stain (Nucleus),255.0,-0.1803,-0.2056,-0.1521
+Intensity_StdIntensity_Nucleus,DNA stain (Nucleus),285.0,-0.065,-0.0521,-0.0793
+Intensity_StdIntensity_Nucleus,DNA stain (Nucleus),315.0,-0.0723,-0.0566,-0.0892
+Intensity_StdIntensity_Nucleus,DNA stain (Nucleus),345.0,-0.0747,-0.0703,-0.0791
+Intensity_MADIntensity_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",15.0,0.0898,0.0743,0.1046
+Intensity_MADIntensity_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",45.0,0.1602,0.1741,0.1472
+Intensity_MADIntensity_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",75.0,0.3792,0.3872,0.3715
+Intensity_MADIntensity_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",105.0,0.6423,0.6195,0.6638
+Intensity_MADIntensity_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",135.0,0.9902,0.9132,1.0743
+Intensity_MADIntensity_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",165.0,0.5273,0.5546,0.4975
+Intensity_MADIntensity_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",195.0,0.2197,0.2096,0.2303
+Intensity_MADIntensity_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",225.0,-0.0363,-0.0235,-0.0496
+Intensity_MADIntensity_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",255.0,0.0021,0.0059,-0.0021
+Intensity_MADIntensity_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",285.0,0.0913,0.1125,0.068
+Intensity_MADIntensity_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",315.0,0.0959,0.1067,0.0841
+Intensity_MADIntensity_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",345.0,0.0903,0.085,0.0956
+Texture_DifferenceEntropy_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",15.0,-0.0943,-0.1316,-0.0586
+Texture_DifferenceEntropy_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",45.0,-0.1495,-0.176,-0.1249
+Texture_DifferenceEntropy_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",75.0,-0.0786,-0.0893,-0.0683
+Texture_DifferenceEntropy_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",105.0,0.1423,0.114,0.1691
+Texture_DifferenceEntropy_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",135.0,0.379,0.3357,0.4262
+Texture_DifferenceEntropy_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",165.0,0.0504,0.0665,0.0327
+Texture_DifferenceEntropy_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",195.0,-0.382,-0.3748,-0.3894
+Texture_DifferenceEntropy_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",225.0,-0.6464,-0.6237,-0.6699
+Texture_DifferenceEntropy_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",255.0,-0.4452,-0.4466,-0.4437
+Texture_DifferenceEntropy_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",285.0,-0.2285,-0.2309,-0.2259
+Texture_DifferenceEntropy_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",315.0,-0.0483,-0.0635,-0.0319
+Texture_DifferenceEntropy_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",345.0,-0.0174,-0.0476,0.0126
+Texture_AngularSecondMoment_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",15.0,0.1577,0.1504,0.1647
+Texture_AngularSecondMoment_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",45.0,0.2107,0.2032,0.2177
+Texture_AngularSecondMoment_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",75.0,0.1392,0.107,0.1705
+Texture_AngularSecondMoment_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",105.0,-0.082,-0.0973,-0.0676
+Texture_AngularSecondMoment_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",135.0,-0.285,-0.2943,-0.2749
+Texture_AngularSecondMoment_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",165.0,0.0212,-0.0517,0.1008
+Texture_AngularSecondMoment_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",195.0,0.4718,0.4232,0.5225
+Texture_AngularSecondMoment_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",225.0,0.7399,0.6647,0.818
+Texture_AngularSecondMoment_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",255.0,0.5629,0.5235,0.6068
+Texture_AngularSecondMoment_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",285.0,0.3518,0.2984,0.4105
+Texture_AngularSecondMoment_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",315.0,0.1536,0.1329,0.1761
+Texture_AngularSecondMoment_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",345.0,0.0932,0.0849,0.1014
+Texture_AngularSecondMoment_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",15.0,0.1628,0.157,0.1683
+Texture_AngularSecondMoment_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",45.0,0.2152,0.2101,0.22
+Texture_AngularSecondMoment_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",75.0,0.1463,0.1178,0.174
+Texture_AngularSecondMoment_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",105.0,-0.0766,-0.0912,-0.0629
+Texture_AngularSecondMoment_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",135.0,-0.2777,-0.286,-0.2686
+Texture_AngularSecondMoment_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",165.0,0.0286,-0.0396,0.103
+Texture_AngularSecondMoment_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",195.0,0.4764,0.4296,0.5252
+Texture_AngularSecondMoment_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",225.0,0.7466,0.6721,0.8239
+Texture_AngularSecondMoment_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",255.0,0.5692,0.5316,0.6109
+Texture_AngularSecondMoment_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",285.0,0.3573,0.3049,0.415
+Texture_AngularSecondMoment_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",315.0,0.1591,0.1392,0.1807
+Texture_AngularSecondMoment_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",345.0,0.0982,0.0912,0.1052
+Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",15.0,0.0613,0.0488,0.0733
+Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",45.0,0.1248,0.136,0.1144
+Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",75.0,0.3733,0.3753,0.3713
+Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",105.0,0.735,0.691,0.7765
+Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",135.0,0.9995,0.9419,1.0625
+Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",165.0,0.4437,0.4876,0.3958
+Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",195.0,0.2148,0.2191,0.2104
+Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",225.0,-0.0232,-0.0012,-0.0459
+Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",255.0,-0.0105,-0.0099,-0.0112
+Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",285.0,0.0493,0.0617,0.0357
+Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",315.0,0.0434,0.0539,0.032
+Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",345.0,0.0525,0.0496,0.0554
+Intensity_IntegratedIntensity_Actin,Actin,15.0,0.1366,0.1316,0.1414
+Intensity_IntegratedIntensity_Actin,Actin,45.0,0.2328,0.2061,0.2575
+Intensity_IntegratedIntensity_Actin,Actin,75.0,0.302,0.2676,0.3355
+Intensity_IntegratedIntensity_Actin,Actin,105.0,0.3409,0.31,0.3701
+Intensity_IntegratedIntensity_Actin,Actin,135.0,-0.1207,-0.0646,-0.1821
+Intensity_IntegratedIntensity_Actin,Actin,165.0,-0.0742,-0.0433,-0.1079
+Intensity_IntegratedIntensity_Actin,Actin,195.0,0.1466,0.1439,0.1493
+Intensity_IntegratedIntensity_Actin,Actin,225.0,0.7068,0.6101,0.8072
+Intensity_IntegratedIntensity_Actin,Actin,255.0,0.2717,0.2651,0.2791
+Intensity_IntegratedIntensity_Actin,Actin,285.0,0.0564,0.0896,0.0197
+Intensity_IntegratedIntensity_Actin,Actin,315.0,0.0409,0.0692,0.0102
+Intensity_IntegratedIntensity_Actin,Actin,345.0,0.0787,0.0915,0.066
+Actin_Nuclear,Actin,15.0,0.0513,0.0451,0.0572
+Actin_Nuclear,Actin,45.0,0.0748,0.0712,0.0782
+Actin_Nuclear,Actin,75.0,0.1431,0.1349,0.1511
+Actin_Nuclear,Actin,105.0,0.2237,0.1969,0.2491
+Actin_Nuclear,Actin,135.0,0.5226,0.5027,0.5443
+Actin_Nuclear,Actin,165.0,0.5019,0.4824,0.5232
+Actin_Nuclear,Actin,195.0,0.6679,0.6008,0.7381
+Actin_Nuclear,Actin,225.0,0.4277,0.4375,0.4175
+Actin_Nuclear,Actin,255.0,0.3503,0.296,0.4106
+Actin_Nuclear,Actin,285.0,0.2485,0.2379,0.2602
+Actin_Nuclear,Actin,315.0,0.1219,0.1359,0.1067
+Actin_Nuclear,Actin,345.0,0.0745,0.0763,0.0727
+RadialDistribution_MeanFrac_4of4_Actin,Actin,15.0,0.1501,0.1345,0.1651
+RadialDistribution_MeanFrac_4of4_Actin,Actin,45.0,0.1189,0.1247,0.1136
+RadialDistribution_MeanFrac_4of4_Actin,Actin,75.0,-0.0223,-0.0317,-0.013
+RadialDistribution_MeanFrac_4of4_Actin,Actin,105.0,-0.2183,-0.1935,-0.2417
+RadialDistribution_MeanFrac_4of4_Actin,Actin,135.0,-0.4541,-0.413,-0.499
+RadialDistribution_MeanFrac_4of4_Actin,Actin,165.0,-0.3935,-0.3609,-0.4291
+RadialDistribution_MeanFrac_4of4_Actin,Actin,195.0,-0.3762,-0.3707,-0.3819
+RadialDistribution_MeanFrac_4of4_Actin,Actin,225.0,-0.1803,-0.1908,-0.1695
+RadialDistribution_MeanFrac_4of4_Actin,Actin,255.0,-0.1143,-0.1135,-0.1153
+RadialDistribution_MeanFrac_4of4_Actin,Actin,285.0,-0.0583,-0.0514,-0.066
+RadialDistribution_MeanFrac_4of4_Actin,Actin,315.0,0.0542,0.055,0.0533
+RadialDistribution_MeanFrac_4of4_Actin,Actin,345.0,0.0954,0.1029,0.0881
+Cell-Membrane_FractionAboveThreshold_Nuclear,Cell membrane,15.0,0.2001,0.1732,0.2257
+Cell-Membrane_FractionAboveThreshold_Nuclear,Cell membrane,45.0,0.2583,0.2633,0.2537
+Cell-Membrane_FractionAboveThreshold_Nuclear,Cell membrane,75.0,0.3961,0.4132,0.3794
+Cell-Membrane_FractionAboveThreshold_Nuclear,Cell membrane,105.0,0.6782,0.6705,0.6855
+Cell-Membrane_FractionAboveThreshold_Nuclear,Cell membrane,135.0,0.6995,0.6873,0.7128
+Cell-Membrane_FractionAboveThreshold_Nuclear,Cell membrane,165.0,0.4939,0.4682,0.5219
+Cell-Membrane_FractionAboveThreshold_Nuclear,Cell membrane,195.0,0.5044,0.4974,0.5118
+Cell-Membrane_FractionAboveThreshold_Nuclear,Cell membrane,225.0,0.4222,0.4656,0.3771
+Cell-Membrane_FractionAboveThreshold_Nuclear,Cell membrane,255.0,0.2129,0.2039,0.2229
+Cell-Membrane_FractionAboveThreshold_Nuclear,Cell membrane,285.0,0.1741,0.1565,0.1935
+Cell-Membrane_FractionAboveThreshold_Nuclear,Cell membrane,315.0,0.1308,0.1451,0.1154
+Cell-Membrane_FractionAboveThreshold_Nuclear,Cell membrane,345.0,0.1591,0.1626,0.1557
+Cell-Membrane_FractionAboveThreshold_Cytoplasmic,Cell membrane,15.0,0.2,0.1761,0.2228
+Cell-Membrane_FractionAboveThreshold_Cytoplasmic,Cell membrane,45.0,0.2168,0.2238,0.2103
+Cell-Membrane_FractionAboveThreshold_Cytoplasmic,Cell membrane,75.0,0.2856,0.3101,0.2617
+Cell-Membrane_FractionAboveThreshold_Cytoplasmic,Cell membrane,105.0,0.4297,0.4207,0.4382
+Cell-Membrane_FractionAboveThreshold_Cytoplasmic,Cell membrane,135.0,0.636,0.6141,0.66
+Cell-Membrane_FractionAboveThreshold_Cytoplasmic,Cell membrane,165.0,0.5758,0.5529,0.6007
+Cell-Membrane_FractionAboveThreshold_Cytoplasmic,Cell membrane,195.0,0.7105,0.7307,0.6893
+Cell-Membrane_FractionAboveThreshold_Cytoplasmic,Cell membrane,225.0,0.5198,0.5578,0.4804
+Cell-Membrane_FractionAboveThreshold_Cytoplasmic,Cell membrane,255.0,0.328,0.3267,0.3295
+Cell-Membrane_FractionAboveThreshold_Cytoplasmic,Cell membrane,285.0,0.2574,0.2248,0.2933
+Cell-Membrane_FractionAboveThreshold_Cytoplasmic,Cell membrane,315.0,0.1595,0.1561,0.1632
+Cell-Membrane_FractionAboveThreshold_Cytoplasmic,Cell membrane,345.0,0.1532,0.1395,0.1668
+Cell-Membrane_FractionAboveThreshold,Cell membrane,15.0,0.1886,0.1621,0.2139
+Cell-Membrane_FractionAboveThreshold,Cell membrane,45.0,0.2206,0.2279,0.2138
+Cell-Membrane_FractionAboveThreshold,Cell membrane,75.0,0.3141,0.338,0.2908
+Cell-Membrane_FractionAboveThreshold,Cell membrane,105.0,0.5037,0.4915,0.5152
+Cell-Membrane_FractionAboveThreshold,Cell membrane,135.0,0.6867,0.665,0.7104
+Cell-Membrane_FractionAboveThreshold,Cell membrane,165.0,0.5788,0.5522,0.6078
+Cell-Membrane_FractionAboveThreshold,Cell membrane,195.0,0.6644,0.6703,0.6582
+Cell-Membrane_FractionAboveThreshold,Cell membrane,225.0,0.4922,0.5345,0.4482
+Cell-Membrane_FractionAboveThreshold,Cell membrane,255.0,0.2852,0.2816,0.2892
+Cell-Membrane_FractionAboveThreshold,Cell membrane,285.0,0.2226,0.1929,0.2552
+Cell-Membrane_FractionAboveThreshold,Cell membrane,315.0,0.1375,0.1385,0.1365
+Cell-Membrane_FractionAboveThreshold,Cell membrane,345.0,0.1435,0.1346,0.1523
+RadialDistribution_MeanFrac_4of4_Mouse_IgG,IgG isotype controls (negative control),15.0,-0.0491,-0.0398,-0.058
+RadialDistribution_MeanFrac_4of4_Mouse_IgG,IgG isotype controls (negative control),45.0,-0.0863,-0.097,-0.0763
+RadialDistribution_MeanFrac_4of4_Mouse_IgG,IgG isotype controls (negative control),75.0,-0.194,-0.1954,-0.1925
+RadialDistribution_MeanFrac_4of4_Mouse_IgG,IgG isotype controls (negative control),105.0,-0.3242,-0.3244,-0.3241
+RadialDistribution_MeanFrac_4of4_Mouse_IgG,IgG isotype controls (negative control),135.0,-0.0826,-0.0689,-0.0974
+RadialDistribution_MeanFrac_4of4_Mouse_IgG,IgG isotype controls (negative control),165.0,0.0636,0.0769,0.0491
+RadialDistribution_MeanFrac_4of4_Mouse_IgG,IgG isotype controls (negative control),195.0,0.1641,0.1414,0.1877
+RadialDistribution_MeanFrac_4of4_Mouse_IgG,IgG isotype controls (negative control),225.0,0.0426,0.0104,0.0761
+RadialDistribution_MeanFrac_4of4_Mouse_IgG,IgG isotype controls (negative control),255.0,0.0982,0.0814,0.1169
+RadialDistribution_MeanFrac_4of4_Mouse_IgG,IgG isotype controls (negative control),285.0,0.088,0.0731,0.1044
+RadialDistribution_MeanFrac_4of4_Mouse_IgG,IgG isotype controls (negative control),315.0,-0.0226,-0.0252,-0.0197
+RadialDistribution_MeanFrac_4of4_Mouse_IgG,IgG isotype controls (negative control),345.0,-0.0466,-0.0414,-0.0519
+Mouse_IgG_FractionAboveThreshold_Nuclear,IgG isotype controls (negative control),15.0,-0.3494,-0.3682,-0.3313
+Mouse_IgG_FractionAboveThreshold_Nuclear,IgG isotype controls (negative control),45.0,-0.2515,-0.2443,-0.2581
+Mouse_IgG_FractionAboveThreshold_Nuclear,IgG isotype controls (negative control),75.0,-0.0957,-0.0938,-0.0976
+Mouse_IgG_FractionAboveThreshold_Nuclear,IgG isotype controls (negative control),105.0,0.0316,0.0031,0.0584
+Mouse_IgG_FractionAboveThreshold_Nuclear,IgG isotype controls (negative control),135.0,-0.114,-0.1097,-0.1187
+Mouse_IgG_FractionAboveThreshold_Nuclear,IgG isotype controls (negative control),165.0,-0.2442,-0.2592,-0.2278
+Mouse_IgG_FractionAboveThreshold_Nuclear,IgG isotype controls (negative control),195.0,-0.1669,-0.2108,-0.121
+Mouse_IgG_FractionAboveThreshold_Nuclear,IgG isotype controls (negative control),225.0,-0.1097,-0.1255,-0.0933
+Mouse_IgG_FractionAboveThreshold_Nuclear,IgG isotype controls (negative control),255.0,-0.3354,-0.3185,-0.3542
+Mouse_IgG_FractionAboveThreshold_Nuclear,IgG isotype controls (negative control),285.0,-0.3932,-0.4063,-0.3788
+Mouse_IgG_FractionAboveThreshold_Nuclear,IgG isotype controls (negative control),315.0,-0.4421,-0.4505,-0.4329
+Mouse_IgG_FractionAboveThreshold_Nuclear,IgG isotype controls (negative control),345.0,-0.3988,-0.4209,-0.3768
+RadialDistribution_FracAtD_4of4_Mouse_IgG,IgG isotype controls (negative control),15.0,0.0166,0.0268,0.0069
+RadialDistribution_FracAtD_4of4_Mouse_IgG,IgG isotype controls (negative control),45.0,-0.001,-0.0186,0.0154
+RadialDistribution_FracAtD_4of4_Mouse_IgG,IgG isotype controls (negative control),75.0,-0.116,-0.1214,-0.1108
+RadialDistribution_FracAtD_4of4_Mouse_IgG,IgG isotype controls (negative control),105.0,-0.2314,-0.2295,-0.2332
+RadialDistribution_FracAtD_4of4_Mouse_IgG,IgG isotype controls (negative control),135.0,-0.0786,-0.0656,-0.0929
+RadialDistribution_FracAtD_4of4_Mouse_IgG,IgG isotype controls (negative control),165.0,0.1066,0.0969,0.1172
+RadialDistribution_FracAtD_4of4_Mouse_IgG,IgG isotype controls (negative control),195.0,0.2158,0.1777,0.2556
+RadialDistribution_FracAtD_4of4_Mouse_IgG,IgG isotype controls (negative control),225.0,0.1775,0.1368,0.2197
+RadialDistribution_FracAtD_4of4_Mouse_IgG,IgG isotype controls (negative control),255.0,0.196,0.1834,0.2101
+RadialDistribution_FracAtD_4of4_Mouse_IgG,IgG isotype controls (negative control),285.0,0.1606,0.1454,0.1774
+RadialDistribution_FracAtD_4of4_Mouse_IgG,IgG isotype controls (negative control),315.0,0.0455,0.0422,0.0491
+RadialDistribution_FracAtD_4of4_Mouse_IgG,IgG isotype controls (negative control),345.0,0.0269,0.0297,0.0242
+Intensity_IntegratedIntensity_Mitochondria,Mitochondria,15.0,0.1091,0.1138,0.1045
+Intensity_IntegratedIntensity_Mitochondria,Mitochondria,45.0,0.2469,0.2338,0.259
+Intensity_IntegratedIntensity_Mitochondria,Mitochondria,75.0,0.3766,0.3685,0.3845
+Intensity_IntegratedIntensity_Mitochondria,Mitochondria,105.0,0.3973,0.3809,0.4129
+Intensity_IntegratedIntensity_Mitochondria,Mitochondria,135.0,-0.1267,-0.083,-0.1744
+Intensity_IntegratedIntensity_Mitochondria,Mitochondria,165.0,-0.1338,-0.1347,-0.1328
+Intensity_IntegratedIntensity_Mitochondria,Mitochondria,195.0,0.2132,0.2072,0.2194
+Intensity_IntegratedIntensity_Mitochondria,Mitochondria,225.0,0.7804,0.7388,0.8235
+Intensity_IntegratedIntensity_Mitochondria,Mitochondria,255.0,0.1443,0.163,0.1235
+Intensity_IntegratedIntensity_Mitochondria,Mitochondria,285.0,-0.105,-0.0829,-0.1292
+Intensity_IntegratedIntensity_Mitochondria,Mitochondria,315.0,-0.1188,-0.1017,-0.1372
+Intensity_IntegratedIntensity_Mitochondria,Mitochondria,345.0,-0.0057,-0.0072,-0.0042
+Intensity_MADIntensity_Mitochondria,Mitochondria,15.0,0.1242,0.1252,0.1233
+Intensity_MADIntensity_Mitochondria,Mitochondria,45.0,0.2134,0.2267,0.2009
+Intensity_MADIntensity_Mitochondria,Mitochondria,75.0,0.3764,0.3775,0.3753
+Intensity_MADIntensity_Mitochondria,Mitochondria,105.0,0.5239,0.5078,0.5391
+Intensity_MADIntensity_Mitochondria,Mitochondria,135.0,0.5934,0.6275,0.5561
+Intensity_MADIntensity_Mitochondria,Mitochondria,165.0,0.3999,0.4343,0.3623
+Intensity_MADIntensity_Mitochondria,Mitochondria,195.0,0.6543,0.6626,0.6457
+Intensity_MADIntensity_Mitochondria,Mitochondria,225.0,0.6789,0.7075,0.6493
+Intensity_MADIntensity_Mitochondria,Mitochondria,255.0,0.2789,0.289,0.2676
+Intensity_MADIntensity_Mitochondria,Mitochondria,285.0,0.1358,0.1624,0.1065
+Intensity_MADIntensity_Mitochondria,Mitochondria,315.0,0.0574,0.0793,0.0337
+Intensity_MADIntensity_Mitochondria,Mitochondria,345.0,0.0754,0.0805,0.0703
+Mitochondria,Mitochondria,15.0,0.0639,0.0585,0.0691
+Mitochondria,Mitochondria,45.0,0.1208,0.1143,0.1269
+Mitochondria,Mitochondria,75.0,0.2236,0.2154,0.2315
+Mitochondria,Mitochondria,105.0,0.2207,0.1984,0.2417
+Mitochondria,Mitochondria,135.0,0.3607,0.4106,0.3062
+Mitochondria,Mitochondria,165.0,0.3078,0.3423,0.2701
+Mitochondria,Mitochondria,195.0,0.5098,0.5065,0.5133
+Mitochondria,Mitochondria,225.0,0.3582,0.374,0.3418
+Mitochondria,Mitochondria,255.0,0.1235,0.1282,0.1184
+Mitochondria,Mitochondria,285.0,0.0039,0.0091,-0.0019
+Mitochondria,Mitochondria,315.0,-0.0676,-0.0637,-0.0719
+Mitochondria,Mitochondria,345.0,-0.0023,-0.0225,0.0178
+AreaShape_Perimeter,shape and size,15.0,0.1121,0.1155,0.1088
+AreaShape_Perimeter,shape and size,45.0,0.22,0.2079,0.2312
+AreaShape_Perimeter,shape and size,75.0,0.2514,0.2311,0.2712
+AreaShape_Perimeter,shape and size,105.0,0.2912,0.2904,0.2919
+AreaShape_Perimeter,shape and size,135.0,-0.3888,-0.3682,-0.4112
+AreaShape_Perimeter,shape and size,165.0,-0.3384,-0.3421,-0.3344
+AreaShape_Perimeter,shape and size,195.0,-0.1375,-0.1569,-0.1172
+AreaShape_Perimeter,shape and size,225.0,0.5119,0.446,0.5803
+AreaShape_Perimeter,shape and size,255.0,0.1156,0.1273,0.1027
+AreaShape_Perimeter,shape and size,285.0,-0.0624,-0.0529,-0.0729
+AreaShape_Perimeter,shape and size,315.0,-0.0238,-0.0256,-0.0219
+AreaShape_Perimeter,shape and size,345.0,0.0496,0.0558,0.0435
+Nucleus_Nuclear,DNA stain (Nucleus),15.0,0.0419,0.0519,0.0324
+Nucleus_Nuclear,DNA stain (Nucleus),45.0,0.2791,0.3216,0.2397
+Nucleus_Nuclear,DNA stain (Nucleus),75.0,0.5449,0.5837,0.5071
+Nucleus_Nuclear,DNA stain (Nucleus),105.0,0.8388,0.9101,0.7716
+Nucleus_Nuclear,DNA stain (Nucleus),135.0,0.5849,0.6355,0.5296
+Nucleus_Nuclear,DNA stain (Nucleus),165.0,0.1918,0.2254,0.1551
+Nucleus_Nuclear,DNA stain (Nucleus),195.0,-0.0128,-0.0144,-0.0112
+Nucleus_Nuclear,DNA stain (Nucleus),225.0,-0.1779,-0.1513,-0.2056
+Nucleus_Nuclear,DNA stain (Nucleus),255.0,-0.1736,-0.1929,-0.1523
+Nucleus_Nuclear,DNA stain (Nucleus),285.0,-0.0823,-0.0683,-0.0978
+Nucleus_Nuclear,DNA stain (Nucleus),315.0,-0.0815,-0.0645,-0.0999
+Nucleus_Nuclear,DNA stain (Nucleus),345.0,-0.0729,-0.0667,-0.0791
+Area,shape and size,15.0,0.1905,0.2015,0.18
+Area,shape and size,45.0,0.2943,0.2926,0.2959
+Area,shape and size,75.0,0.3538,0.3365,0.3706
+Area,shape and size,105.0,0.4025,0.4031,0.402
+Area,shape and size,135.0,-0.273,-0.2448,-0.3039
+Area,shape and size,165.0,-0.2744,-0.2498,-0.3012
+Area,shape and size,195.0,-0.0874,-0.0839,-0.091
+Area,shape and size,225.0,0.5909,0.5412,0.6425
+Area,shape and size,255.0,0.1605,0.1814,0.1372
+Area,shape and size,285.0,-0.0058,0.0152,-0.0289
+Area,shape and size,315.0,0.0442,0.0526,0.0352
+Area,shape and size,345.0,0.1168,0.1348,0.0989
+Granularity_1_Nucleus,DNA stain (Nucleus),15.0,0.2302,0.261,0.2007
+Granularity_1_Nucleus,DNA stain (Nucleus),45.0,0.1842,0.1894,0.1795
+Granularity_1_Nucleus,DNA stain (Nucleus),75.0,0.1357,0.1282,0.143
+Granularity_1_Nucleus,DNA stain (Nucleus),105.0,0.0021,-0.0438,0.0455
+Granularity_1_Nucleus,DNA stain (Nucleus),135.0,0.0961,0.0867,0.1064
+Granularity_1_Nucleus,DNA stain (Nucleus),165.0,0.1609,0.1656,0.1559
+Granularity_1_Nucleus,DNA stain (Nucleus),195.0,0.2558,0.2652,0.246
+Granularity_1_Nucleus,DNA stain (Nucleus),225.0,0.3214,0.3612,0.2801
+Granularity_1_Nucleus,DNA stain (Nucleus),255.0,0.2347,0.2368,0.2325
+Granularity_1_Nucleus,DNA stain (Nucleus),285.0,0.1971,0.2208,0.171
+Granularity_1_Nucleus,DNA stain (Nucleus),315.0,0.1742,0.1956,0.1511
+Granularity_1_Nucleus,DNA stain (Nucleus),345.0,0.2234,0.2368,0.2102

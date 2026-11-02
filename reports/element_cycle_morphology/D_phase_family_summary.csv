@@ -1,0 +1,12 @@
+group,n_features,median_abs_d_4N,max_abs_d_4N,n_abs_d_4N_ge_0_8
+tubular objects (phase2d),191,0.145,1.64,11
+tubular objects (focus3d),191,0.131,1.638,11
+vesicular objects (phase2d),382,0.115,1.61,17
+vesicular objects (focus3d),382,0.112,1.59,21
+nucleus shape/size,116,0.042,0.917,5
+nucleoli (focus3d),191,0.085,0.801,1
+cell shape/size,16,0.026,0.735,0
+network (focus3d),30,0.198,0.731,0
+network (phase2d),30,0.165,0.716,0
+nucleoli (phase2d),191,0.055,0.707,0
+nucleus phase intensity,20,0.448,0.623,0

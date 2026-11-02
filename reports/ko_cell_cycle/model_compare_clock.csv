@@ -1,0 +1,11 @@
+model,target,median_err_deg,mean_err_deg,circ_r,within_45,quarter_vs_DNAxpRb_stage_bal_acc
+"HistGB, raw features NaN->0 (Brian)",cc_phase_dna,21.7,34.2,0.563,0.747,0.309
+"HistGB, raw features (>=85% finite), native NaN",cc_phase_dna,21.8,34.5,0.559,0.745,0.309
+"MLP single-target, PCA-100",cc_phase_dna,26.8,40.9,0.494,0.684,0.287
+"HistGB, PCA-100",cc_phase_dna,28.3,42.1,0.484,0.671,0.286
+"ridge, PCA-100 (ours)",cc_phase_dna,29.3,41.9,0.494,0.676,0.283
+"HistGB, raw features (>=85% finite), native NaN",final cc_phase,22.2,35.3,0.56,0.733,0.307
+"HistGB, raw features NaN->0 (Brian)",final cc_phase,22.3,35.2,0.561,0.737,0.307
+"MLP single-target, PCA-100",final cc_phase,27.3,41.6,0.483,0.678,0.287
+"HistGB, PCA-100",final cc_phase,29.1,43.0,0.477,0.662,0.286
+"ridge, PCA-100 (ours)",final cc_phase,29.6,42.6,0.489,0.67,0.28

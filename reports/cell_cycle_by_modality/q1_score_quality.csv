@@ -1,0 +1,19 @@
+dataset,score,n,DNA_state_balanced_acc,AUC_4N_vs_2N,median_err_vs_final_clock_deg,variance_explained_by_measured_clock_pct,variance_explained_by_shuffled_pct
+OPS0077,4i final cc_phase (measured; uses DNA),35633,0.872,1.0,0.0,,
+OPS0077,4i DNA clock (measured; uses DNA),35633,0.874,1.0,,,
+OPS0077,4i markers clock (measured; no DNA),35633,0.333,0.65,,,
+OPS0077,phase contrast: predicted clock,35633,0.573,0.917,30.4,,
+OPS0077,"4i protein panel (pRb, Rb, p21): predicted clock",35633,0.528,0.889,29.1,,
+OPS0077,DAPI features (uses DNA): predicted clock,35633,0.845,1.0,24.7,,
+OPS0077,random angle (null),35633,0.333,0.503,89.8,,
+OPS0077,phase contrast: % variance (PCA-50) explained by the measured clock,35633,,,,3.29,0.011
+OPS0077,"4i protein panel (pRb, Rb, p21): % variance (PCA-50) explained by the measured clock",35633,,,,4.89,0.013
+Element,"RNA clock (cycleVI, measured)",95868,0.457,0.737,,,
+Element,imaging (all features; uses DNA stain): predicted clock,95868,0.499,0.817,40.8,,
+Element,imaging without the DNA stain: predicted clock,95868,0.424,0.714,45.1,,
+Element,RNA (DRVI embedding): predicted clock,95868,0.443,0.722,16.9,,
+Element,random angle (null),95868,0.333,0.502,89.6,,
+Element,RNA scanpy phase call (G1/S/G2M),95868,0.333,0.625,,,
+Element,imaging (all features): % variance explained by the measured RNA clock,95868,,,,2.37,0.004
+Element,RNA (DRVI embedding): % variance explained by the measured RNA clock,95868,,,,6.17,0.005
+Element,RNA (cycleVI cycle-free latent; model-based removal): % variance explained by the measured RNA clock,95868,,,,1.47,0.003

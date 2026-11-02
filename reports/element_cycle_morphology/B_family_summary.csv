@@ -1,0 +1,8 @@
+family,n,median_amplitude_SD,max_amplitude_SD,n_reproducible_and_large
+Actin,97,0.321,0.828,8
+Cell membrane,97,0.423,0.569,16
+DNA stain (Nucleus),97,0.748,1.1,77
+IgG isotype controls (negative control),194,0.08,0.488,0
+Mitochondria,97,0.324,0.914,9
+"antibodies (ERK, pERK, pHSP27, p-p38)",388,0.501,1.314,195
+shape and size,20,0.765,1.101,14

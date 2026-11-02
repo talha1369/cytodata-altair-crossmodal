@@ -1,0 +1,9 @@
+,Early_G1,Late_G1,S,G2M
+"measured clock, labelled NTC",46.3,9.5,24.9,19.3
+NTC in-sample (notebook reference),56.9,11.7,18.8,12.7
+NTC out-of-fold,57.4,12.1,18.4,12.1
+"NTC in-sample, labelled cells only",55.9,10.4,21.4,12.4
+"NTC out-of-fold, labelled cells only",56.5,10.9,20.8,11.8
+CCNB1 KO (n=421),50.8,9.5,20.9,18.8
+POLA1 KO (n=531),42.2,13.7,29.0,15.1
+CDK7 KO (n=482),52.5,10.4,13.5,23.7

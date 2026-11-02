@@ -1,0 +1,991 @@
+feature,family,amplitude_SD,peak_deg,trough_deg,split_half_r
+Phospho-p38_FractionAboveThreshold_Cytoplasmic,"antibodies (ERK, pERK, pHSP27, p-p38)",1.314,135.0,225.0,0.996
+Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",1.205,135.0,225.0,0.994
+Intensity_MADIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",1.192,135.0,225.0,0.995
+Intensity_UpperQuartileIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",1.184,135.0,225.0,0.994
+Phospho-p38_Cytoplasmic,"antibodies (ERK, pERK, pHSP27, p-p38)",1.175,135.0,225.0,0.994
+Intensity_MedianIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",1.17,135.0,225.0,0.995
+Intensity_MeanIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",1.161,135.0,225.0,0.995
+Phospho-p38_FractionAboveThreshold,"antibodies (ERK, pERK, pHSP27, p-p38)",1.152,135.0,225.0,0.995
+Phospho-p38_Nuclear,"antibodies (ERK, pERK, pHSP27, p-p38)",1.128,135.0,225.0,0.993
+NuclearAreaUm,shape and size,1.101,225.0,135.0,0.997
+NuclearArea,shape and size,1.101,225.0,135.0,0.997
+Texture_DifferenceEntropy_3_03_256_Nucleus,DNA stain (Nucleus),1.1,135.0,225.0,0.996
+Texture_DifferenceEntropy_3_01_256_Nucleus,DNA stain (Nucleus),1.094,135.0,225.0,0.995
+Texture_Entropy_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",1.092,135.0,225.0,0.99
+Texture_Entropy_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",1.092,135.0,225.0,0.989
+Texture_SumEntropy_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",1.09,135.0,225.0,0.99
+Texture_DifferenceEntropy_3_00_256_Nucleus,DNA stain (Nucleus),1.089,135.0,225.0,0.994
+Texture_SumEntropy_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",1.088,135.0,225.0,0.99
+Texture_DifferenceEntropy_3_02_256_Nucleus,DNA stain (Nucleus),1.082,135.0,225.0,0.996
+Texture_Entropy_3_03_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",1.081,135.0,225.0,0.989
+Texture_Entropy_3_01_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",1.08,135.0,225.0,0.989
+Texture_SumEntropy_3_03_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",1.076,135.0,225.0,0.99
+Texture_SumEntropy_3_01_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",1.076,135.0,225.0,0.99
+Phospho-ERK1_Phospho-ERK2_Nuclear,"antibodies (ERK, pERK, pHSP27, p-p38)",1.066,135.0,225.0,0.99
+Intensity_StdIntensity_Nucleus,DNA stain (Nucleus),1.049,105.0,225.0,0.995
+Intensity_MADIntensity_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",1.027,135.0,225.0,0.991
+Texture_DifferenceEntropy_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",1.025,135.0,225.0,0.994
+Texture_AngularSecondMoment_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",1.025,225.0,135.0,0.989
+Texture_AngularSecondMoment_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",1.024,225.0,135.0,0.989
+Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",1.023,135.0,225.0,0.992
+Texture_DifferenceEntropy_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",1.022,135.0,225.0,0.992
+Intensity_UpperQuartileIntensity_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",1.02,135.0,225.0,0.991
+Nucleus_Nuclear,DNA stain (Nucleus),1.017,105.0,225.0,0.997
+Texture_DifferenceEntropy_3_03_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",1.013,135.0,225.0,0.993
+Texture_InverseDifferenceMoment_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",1.012,225.0,135.0,0.988
+Intensity_MaxIntensity_Nucleus,DNA stain (Nucleus),1.012,105.0,255.0,0.996
+Texture_DifferenceEntropy_3_01_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",1.012,135.0,225.0,0.992
+Texture_InverseDifferenceMoment_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",1.01,225.0,135.0,0.986
+Intensity_IntegratedIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",1.004,105.0,285.0,0.997
+Texture_AngularSecondMoment_3_01_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",1.004,225.0,135.0,0.989
+Texture_AngularSecondMoment_3_03_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",1.003,225.0,135.0,0.989
+Phospho-p38_NuclearRatio,"antibodies (ERK, pERK, pHSP27, p-p38)",0.998,315.0,135.0,0.995
+Texture_InverseDifferenceMoment_3_02_256_Nucleus,DNA stain (Nucleus),0.995,225.0,135.0,0.994
+Texture_InverseDifferenceMoment_3_00_256_Nucleus,DNA stain (Nucleus),0.994,225.0,135.0,0.994
+Texture_InverseDifferenceMoment_3_03_256_Nucleus,DNA stain (Nucleus),0.989,225.0,135.0,0.994
+Texture_InverseDifferenceMoment_3_03_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.988,225.0,135.0,0.985
+Intensity_MeanIntensity_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.988,135.0,225.0,0.991
+Texture_InverseDifferenceMoment_3_01_256_Nucleus,DNA stain (Nucleus),0.986,225.0,135.0,0.993
+Texture_InverseDifferenceMoment_3_01_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.985,225.0,135.0,0.984
+Granularity_2_Nucleus,DNA stain (Nucleus),0.984,135.0,225.0,0.988
+Nucleus_MeanIntensityOfFractionAboveThreshold_Nuclear,DNA stain (Nucleus),0.972,105.0,225.0,0.996
+Texture_SumVariance_3_01_256_Nucleus,DNA stain (Nucleus),0.972,105.0,225.0,0.993
+Texture_SumVariance_3_03_256_Nucleus,DNA stain (Nucleus),0.971,105.0,225.0,0.993
+Texture_Variance_3_01_256_Nucleus,DNA stain (Nucleus),0.971,105.0,225.0,0.993
+Texture_Variance_3_03_256_Nucleus,DNA stain (Nucleus),0.97,105.0,225.0,0.993
+Phospho-ERK1_Phospho-ERK2_FractionAboveThreshold_Cytoplasmic,"antibodies (ERK, pERK, pHSP27, p-p38)",0.968,135.0,315.0,0.992
+Texture_SumVariance_3_02_256_Nucleus,DNA stain (Nucleus),0.968,105.0,225.0,0.993
+Texture_SumVariance_3_00_256_Nucleus,DNA stain (Nucleus),0.968,105.0,225.0,0.993
+Texture_Variance_3_02_256_Nucleus,DNA stain (Nucleus),0.967,105.0,225.0,0.993
+Texture_Variance_3_00_256_Nucleus,DNA stain (Nucleus),0.967,105.0,225.0,0.993
+Texture_Contrast_3_03_256_Nucleus,DNA stain (Nucleus),0.966,135.0,225.0,0.992
+Phospho-ERK1_Phospho-ERK2_Cytoplasmic,"antibodies (ERK, pERK, pHSP27, p-p38)",0.962,135.0,315.0,0.992
+Intensity_StdIntensity_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.96,135.0,225.0,0.989
+Texture_Contrast_3_02_256_Nucleus,DNA stain (Nucleus),0.959,135.0,225.0,0.991
+Texture_Contrast_3_01_256_Nucleus,DNA stain (Nucleus),0.952,135.0,225.0,0.988
+Intensity_MedianIntensity_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.952,135.0,315.0,0.993
+Texture_Contrast_3_00_256_Nucleus,DNA stain (Nucleus),0.943,135.0,225.0,0.988
+Intensity_LowerQuartileIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.941,135.0,225.0,0.991
+Texture_DifferenceVariance_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.935,225.0,135.0,0.994
+Texture_DifferenceVariance_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.932,225.0,135.0,0.993
+Texture_SumAverage_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.93,135.0,225.0,0.988
+Texture_SumAverage_3_01_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.93,135.0,225.0,0.988
+Texture_SumAverage_3_03_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.929,135.0,225.0,0.988
+Granularity_3_Nucleus,DNA stain (Nucleus),0.927,135.0,225.0,0.985
+Texture_SumAverage_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.927,135.0,225.0,0.988
+Nucleus_MeanIntensityOfFractionAboveThreshold,DNA stain (Nucleus),0.917,105.0,225.0,0.996
+Intensity_IntegratedIntensity_Mitochondria,Mitochondria,0.914,225.0,165.0,0.996
+Texture_DifferenceVariance_3_01_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.914,225.0,135.0,0.993
+Texture_DifferenceVariance_3_03_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.912,225.0,135.0,0.993
+Texture_InfoMeas2_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.905,135.0,225.0,0.993
+AreaShape_Perimeter,shape and size,0.901,225.0,135.0,0.991
+Texture_InfoMeas2_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.9,135.0,225.0,0.992
+Texture_Entropy_3_01_256_Nucleus,DNA stain (Nucleus),0.898,135.0,225.0,0.992
+Texture_Entropy_3_03_256_Nucleus,DNA stain (Nucleus),0.895,135.0,225.0,0.992
+Texture_DifferenceVariance_3_03_256_Nucleus,DNA stain (Nucleus),0.894,225.0,135.0,0.993
+Texture_DifferenceVariance_3_01_256_Nucleus,DNA stain (Nucleus),0.894,225.0,135.0,0.993
+AreaShape_MaxFeretDiameter,shape and size,0.894,225.0,135.0,0.988
+Nucleus_FractionAboveThreshold_Nuclear,DNA stain (Nucleus),0.893,105.0,255.0,0.998
+Texture_DifferenceVariance_3_02_256_Nucleus,DNA stain (Nucleus),0.892,225.0,105.0,0.995
+Texture_DifferenceVariance_3_00_256_Nucleus,DNA stain (Nucleus),0.889,225.0,105.0,0.992
+Texture_InfoMeas2_3_03_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.888,135.0,225.0,0.991
+Texture_InfoMeas2_3_01_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.884,135.0,225.0,0.993
+AreaShape_ConvexArea,shape and size,0.882,225.0,135.0,0.994
+Texture_Entropy_3_00_256_Nucleus,DNA stain (Nucleus),0.882,135.0,225.0,0.991
+Texture_Entropy_3_02_256_Nucleus,DNA stain (Nucleus),0.88,135.0,225.0,0.993
+Intensity_IntegratedIntensity_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.875,105.0,285.0,0.997
+AreaShape_MajorAxisLength,shape and size,0.874,225.0,135.0,0.99
+Intensity_IntegratedIntensity_Nucleus,DNA stain (Nucleus),0.869,105.0,165.0,0.998
+Intensity_StdIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.867,135.0,225.0,0.996
+AreaShape_EquivalentDiameter,shape and size,0.867,225.0,135.0,0.995
+Area,shape and size,0.865,225.0,165.0,0.995
+AreaUm,shape and size,0.865,225.0,165.0,0.995
+Texture_InfoMeas1_3_00_256_Nucleus,DNA stain (Nucleus),0.86,135.0,225.0,0.975
+Phospho-ERK1_Phospho-ERK2_FractionAboveThreshold,"antibodies (ERK, pERK, pHSP27, p-p38)",0.855,135.0,225.0,0.992
+Intensity_MeanIntensityEdge_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.853,135.0,225.0,0.992
+Texture_InfoMeas1_3_02_256_Nucleus,DNA stain (Nucleus),0.848,135.0,225.0,0.975
+Texture_InfoMeas1_3_01_256_Nucleus,DNA stain (Nucleus),0.842,135.0,225.0,0.978
+Texture_InfoMeas1_3_03_256_Nucleus,DNA stain (Nucleus),0.835,135.0,225.0,0.968
+Intensity_IntegratedIntensity_Actin,Actin,0.828,225.0,135.0,0.996
+RadialDistribution_MeanFrac_4of4_Nucleus,DNA stain (Nucleus),0.821,195.0,105.0,0.994
+Texture_SumEntropy_3_01_256_Nucleus,DNA stain (Nucleus),0.817,135.0,225.0,0.987
+Texture_SumEntropy_3_03_256_Nucleus,DNA stain (Nucleus),0.815,135.0,225.0,0.988
+Granularity_7_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.806,135.0,255.0,0.992
+Texture_SumEntropy_3_00_256_Nucleus,DNA stain (Nucleus),0.804,135.0,225.0,0.988
+Texture_SumEntropy_3_02_256_Nucleus,DNA stain (Nucleus),0.802,135.0,225.0,0.988
+Intensity_LowerQuartileIntensity_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.79,135.0,315.0,0.99
+Intensity_MeanIntensityEdge_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.786,135.0,345.0,0.984
+RadialDistribution_RadialCV_3of4_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.779,345.0,135.0,0.991
+Intensity_IntegratedIntensity_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.772,225.0,315.0,0.994
+Nucleus_NuclearRatio,DNA stain (Nucleus),0.768,255.0,135.0,0.998
+Phospho-ERK1_Phospho-ERK2_MeanIntensityOfFractionAboveThreshold_Nuclear,"antibodies (ERK, pERK, pHSP27, p-p38)",0.767,135.0,225.0,0.994
+AreaShape_MeanRadius,shape and size,0.766,225.0,165.0,0.997
+Granularity_6_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.764,135.0,255.0,0.994
+AreaShape_MedianRadius,shape and size,0.764,225.0,165.0,0.998
+RadialDistribution_FracAtD_4of4_Nucleus,DNA stain (Nucleus),0.757,195.0,105.0,0.992
+RadialDistribution_RadialCV_2of4_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.756,345.0,135.0,0.991
+AreaShape_MaximumRadius,shape and size,0.749,225.0,165.0,0.996
+Texture_SumAverage_3_01_256_Nucleus,DNA stain (Nucleus),0.748,135.0,225.0,0.988
+Texture_SumAverage_3_03_256_Nucleus,DNA stain (Nucleus),0.748,135.0,225.0,0.988
+AreaShape_MinFeretDiameter,shape and size,0.743,225.0,165.0,0.994
+Texture_SumAverage_3_02_256_Nucleus,DNA stain (Nucleus),0.738,135.0,225.0,0.988
+Texture_SumAverage_3_00_256_Nucleus,DNA stain (Nucleus),0.737,135.0,225.0,0.988
+Nucleus_FractionAboveThreshold_Cytoplasmic,DNA stain (Nucleus),0.73,135.0,225.0,0.992
+Texture_InfoMeas1_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.72,255.0,105.0,0.991
+AreaShape_MinorAxisLength,shape and size,0.717,225.0,165.0,0.995
+Texture_InfoMeas1_3_03_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.716,255.0,105.0,0.99
+Texture_InfoMeas1_3_01_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.714,255.0,105.0,0.992
+Texture_Contrast_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.713,135.0,225.0,0.976
+Texture_InfoMeas1_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.708,255.0,105.0,0.991
+Texture_Contrast_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.707,135.0,225.0,0.977
+Intensity_UpperQuartileIntensity_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.7,135.0,315.0,0.985
+Nucleus,DNA stain (Nucleus),0.69,135.0,225.0,0.985
+Texture_Correlation_3_03_256_Nucleus,DNA stain (Nucleus),0.688,75.0,135.0,0.987
+Intensity_StdIntensityEdge_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.681,135.0,225.0,0.982
+Phospho-ERK1_Phospho-ERK2_NuclearRatio,"antibodies (ERK, pERK, pHSP27, p-p38)",0.68,315.0,135.0,0.996
+Texture_Correlation_3_01_256_Nucleus,DNA stain (Nucleus),0.679,75.0,135.0,0.987
+Granularity_8_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.675,135.0,255.0,0.979
+Texture_Contrast_3_03_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.671,135.0,225.0,0.974
+Intensity_IntegratedIntensity_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.663,225.0,315.0,0.978
+Granularity_5_Nucleus,DNA stain (Nucleus),0.661,105.0,315.0,0.995
+Phospho-p38_MeanIntensityOfFractionAboveThreshold_Nuclear,"antibodies (ERK, pERK, pHSP27, p-p38)",0.66,135.0,255.0,0.986
+Texture_AngularSecondMoment_3_01_256_Nucleus,DNA stain (Nucleus),0.657,225.0,135.0,0.973
+Texture_Correlation_3_00_256_Nucleus,DNA stain (Nucleus),0.656,75.0,135.0,0.992
+Texture_SumAverage_3_03_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.656,135.0,225.0,0.981
+RadialDistribution_FracAtD_2of4_Nucleus,DNA stain (Nucleus),0.655,105.0,195.0,0.992
+Texture_SumAverage_3_01_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.654,135.0,225.0,0.98
+Texture_AngularSecondMoment_3_03_256_Nucleus,DNA stain (Nucleus),0.654,225.0,135.0,0.975
+Texture_SumAverage_3_00_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.652,135.0,225.0,0.98
+Texture_SumAverage_3_02_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.652,135.0,225.0,0.98
+RadialDistribution_MeanFrac_2of4_Nucleus,DNA stain (Nucleus),0.651,105.0,195.0,0.994
+Phospho-HSP27_Nuclear,"antibodies (ERK, pERK, pHSP27, p-p38)",0.65,135.0,315.0,0.991
+Texture_AngularSecondMoment_3_00_256_Nucleus,DNA stain (Nucleus),0.649,225.0,135.0,0.974
+RadialDistribution_RadialCV_1of4_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.648,345.0,135.0,0.982
+Intensity_MeanIntensity_Nucleus,DNA stain (Nucleus),0.648,135.0,225.0,0.981
+Texture_AngularSecondMoment_3_02_256_Nucleus,DNA stain (Nucleus),0.647,225.0,135.0,0.977
+Granularity_4_Nucleus,DNA stain (Nucleus),0.646,75.0,195.0,0.983
+Granularity_2_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.646,315.0,135.0,0.995
+Texture_Contrast_3_01_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.645,135.0,225.0,0.969
+Texture_Correlation_3_02_256_Nucleus,DNA stain (Nucleus),0.642,75.0,165.0,0.977
+ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.64,135.0,315.0,0.981
+Intensity_MedianIntensity_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.637,135.0,315.0,0.982
+Intensity_StdIntensityEdge_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.636,135.0,225.0,0.991
+ERK1_ERK2_Cytoplasmic,"antibodies (ERK, pERK, pHSP27, p-p38)",0.629,195.0,315.0,0.982
+Texture_SumEntropy_3_03_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.626,135.0,315.0,0.985
+RadialDistribution_RadialCV_3of4_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.626,345.0,135.0,0.987
+ERK1_ERK2_Nuclear,"antibodies (ERK, pERK, pHSP27, p-p38)",0.624,135.0,315.0,0.976
+Texture_SumEntropy_3_01_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.622,135.0,315.0,0.984
+Intensity_MADIntensity_Mitochondria,Mitochondria,0.622,225.0,315.0,0.99
+Texture_Entropy_3_03_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.62,135.0,315.0,0.985
+Phospho-ERK1_Phospho-ERK2_MeanIntensityOfFractionAboveThreshold,"antibodies (ERK, pERK, pHSP27, p-p38)",0.619,135.0,225.0,0.994
+Texture_SumEntropy_3_00_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.618,135.0,315.0,0.984
+Texture_SumEntropy_3_02_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.617,135.0,315.0,0.983
+Actin_Nuclear,Actin,0.617,195.0,15.0,0.982
+Texture_Entropy_3_01_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.616,135.0,315.0,0.983
+Texture_InfoMeas2_3_00_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.614,135.0,315.0,0.981
+Intensity_MeanIntensity_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.613,135.0,315.0,0.977
+Texture_InfoMeas2_3_02_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.613,135.0,315.0,0.981
+Texture_Entropy_3_00_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.611,135.0,315.0,0.984
+Granularity_2_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.611,135.0,225.0,0.97
+Texture_Entropy_3_02_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.61,135.0,315.0,0.983
+Texture_InfoMeas2_3_03_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.61,135.0,285.0,0.985
+Texture_InfoMeas2_3_01_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.609,135.0,285.0,0.98
+Texture_Variance_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.608,135.0,225.0,0.965
+Intensity_MedianIntensity_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.607,135.0,345.0,0.985
+Texture_Variance_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.606,135.0,225.0,0.966
+RadialDistribution_MeanFrac_4of4_Actin,Actin,0.604,15.0,135.0,0.993
+Nucleus_MeanIntensityOfFractionAboveThreshold_Cytoplasmic,DNA stain (Nucleus),0.6,105.0,225.0,0.992
+Texture_DifferenceEntropy_3_03_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.6,135.0,315.0,0.984
+Texture_Variance_3_03_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.599,135.0,225.0,0.965
+Phospho-HSP27_Cytoplasmic,"antibodies (ERK, pERK, pHSP27, p-p38)",0.598,195.0,345.0,0.984
+Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.597,135.0,345.0,0.985
+Texture_Variance_3_01_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.597,135.0,225.0,0.965
+Texture_DifferenceEntropy_3_01_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.595,135.0,315.0,0.981
+Texture_AngularSecondMoment_3_00_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.593,315.0,135.0,0.975
+Actin_FractionAboveThreshold_Nuclear,Actin,0.592,195.0,345.0,0.98
+Texture_AngularSecondMoment_3_02_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.592,315.0,135.0,0.976
+Texture_AngularSecondMoment_3_01_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.591,315.0,135.0,0.976
+Texture_AngularSecondMoment_3_03_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.591,315.0,135.0,0.978
+Granularity_7_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.59,135.0,315.0,0.99
+RadialDistribution_RadialCV_2of4_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.59,345.0,135.0,0.983
+Intensity_MADIntensity_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.587,135.0,345.0,0.985
+Texture_SumVariance_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.587,135.0,225.0,0.963
+Granularity_2_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.584,315.0,105.0,0.982
+Intensity_MeanIntensity_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.584,195.0,345.0,0.984
+Texture_SumVariance_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.583,135.0,225.0,0.964
+Texture_InverseDifferenceMoment_3_03_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.583,315.0,135.0,0.983
+Texture_Contrast_3_02_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.579,135.0,345.0,0.978
+Texture_DifferenceEntropy_3_00_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.578,135.0,315.0,0.982
+Mitochondria,Mitochondria,0.577,195.0,315.0,0.975
+Texture_DifferenceEntropy_3_02_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.577,135.0,315.0,0.978
+Texture_InverseDifferenceMoment_3_01_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.577,315.0,135.0,0.974
+Intensity_MaxIntensity_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.576,105.0,255.0,0.975
+RadialDistribution_FracAtD_4of4_Actin,Actin,0.576,45.0,135.0,0.981
+Phospho-p38_FractionAboveThreshold_Nuclear,"antibodies (ERK, pERK, pHSP27, p-p38)",0.576,135.0,225.0,0.978
+Texture_SumVariance_3_01_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.572,135.0,225.0,0.964
+Intensity_UpperQuartileIntensity_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.572,195.0,345.0,0.986
+Intensity_UpperQuartileIntensity_Mitochondria,Mitochondria,0.57,195.0,315.0,0.973
+Texture_SumVariance_3_03_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.569,135.0,225.0,0.963
+Intensity_MeanIntensity_Mitochondria,Mitochondria,0.569,195.0,315.0,0.964
+Cell-Membrane_FractionAboveThreshold_Nuclear,Cell membrane,0.569,135.0,315.0,0.98
+Texture_Contrast_3_00_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.568,135.0,345.0,0.974
+Texture_InverseDifferenceMoment_3_02_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.567,345.0,135.0,0.978
+Texture_InfoMeas2_3_03_256_Nucleus,DNA stain (Nucleus),0.567,105.0,195.0,0.955
+Texture_InverseDifferenceMoment_3_00_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.567,315.0,135.0,0.974
+Texture_Entropy_3_00_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.565,135.0,315.0,0.977
+Texture_Entropy_3_02_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.564,135.0,315.0,0.978
+Texture_Contrast_3_03_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.564,135.0,315.0,0.982
+RadialDistribution_MeanFrac_4of4_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.562,195.0,105.0,0.982
+Intensity_MedianIntensity_Mitochondria,Mitochondria,0.561,195.0,315.0,0.967
+RadialDistribution_MeanFrac_2of4_Actin,Actin,0.561,135.0,15.0,0.99
+Texture_SumEntropy_3_00_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.561,135.0,315.0,0.977
+Texture_Entropy_3_01_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.561,135.0,315.0,0.977
+Intensity_MADIntensity_Nucleus,DNA stain (Nucleus),0.56,135.0,225.0,0.974
+Texture_SumEntropy_3_02_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.56,135.0,315.0,0.977
+Texture_Contrast_3_01_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.56,135.0,315.0,0.973
+Texture_Entropy_3_03_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.56,135.0,315.0,0.979
+Cell-Membrane_FractionAboveThreshold_Cytoplasmic,Cell membrane,0.557,195.0,345.0,0.975
+RadialDistribution_MeanFrac_4of4_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.557,195.0,45.0,0.995
+Texture_SumEntropy_3_01_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.557,135.0,315.0,0.978
+Texture_SumAverage_3_01_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.555,135.0,315.0,0.965
+Texture_SumEntropy_3_03_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.555,135.0,315.0,0.979
+Texture_SumAverage_3_03_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.554,135.0,315.0,0.965
+Phospho-ERK1_Phospho-ERK2_MeanIntensityOfFractionAboveThreshold_Cytoplasmic,"antibodies (ERK, pERK, pHSP27, p-p38)",0.553,135.0,225.0,0.992
+ERK1_ERK2_FractionAboveThreshold_Cytoplasmic,"antibodies (ERK, pERK, pHSP27, p-p38)",0.552,195.0,345.0,0.99
+Texture_SumAverage_3_00_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.551,135.0,345.0,0.964
+Texture_SumAverage_3_02_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.551,135.0,345.0,0.964
+Texture_InfoMeas2_3_02_256_Nucleus,DNA stain (Nucleus),0.551,105.0,255.0,0.953
+Texture_DifferenceEntropy_3_00_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.551,135.0,315.0,0.977
+Texture_DifferenceEntropy_3_02_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.55,135.0,315.0,0.979
+Cell-Membrane_FractionAboveThreshold,Cell membrane,0.549,135.0,315.0,0.976
+Texture_InfoMeas1_3_00_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.548,285.0,135.0,0.972
+Granularity_6_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.548,135.0,255.0,0.983
+Texture_Correlation_3_02_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.547,135.0,255.0,0.932
+ERK1_ERK2_FractionAboveThreshold,"antibodies (ERK, pERK, pHSP27, p-p38)",0.547,135.0,345.0,0.991
+RadialDistribution_FracAtD_1of4_Nucleus,DNA stain (Nucleus),0.547,105.0,195.0,0.991
+Texture_InverseDifferenceMoment_3_03_256_Cell-Membrane,Cell membrane,0.546,45.0,135.0,0.972
+Texture_InfoMeas1_3_02_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.546,315.0,105.0,0.971
+Texture_InverseDifferenceMoment_3_01_256_Cell-Membrane,Cell membrane,0.542,45.0,135.0,0.975
+Phospho-HSP27_FractionAboveThreshold_Nuclear,"antibodies (ERK, pERK, pHSP27, p-p38)",0.542,135.0,315.0,0.974
+Texture_Correlation_3_00_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.54,135.0,255.0,0.924
+RadialDistribution_FracAtD_2of4_Actin,Actin,0.539,135.0,45.0,0.974
+RadialDistribution_MeanFrac_1of4_Nucleus,DNA stain (Nucleus),0.539,105.0,195.0,0.993
+Nucleus_Cytoplasmic,DNA stain (Nucleus),0.537,135.0,225.0,0.966
+Mitochondria_Cytoplasmic,Mitochondria,0.537,195.0,315.0,0.972
+Texture_InfoMeas2_3_01_256_Nucleus,DNA stain (Nucleus),0.537,105.0,195.0,0.962
+Texture_DifferenceEntropy_3_01_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.536,135.0,315.0,0.979
+Texture_DifferenceEntropy_3_03_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.534,135.0,315.0,0.983
+Intensity_MADIntensity_Cell-Membrane,Cell membrane,0.533,135.0,15.0,0.955
+Granularity_1_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.531,225.0,135.0,0.988
+Actin_NuclearRatio,Actin,0.53,195.0,45.0,0.97
+Texture_DifferenceEntropy_3_03_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.528,135.0,255.0,0.973
+Texture_InfoMeas1_3_01_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.528,285.0,135.0,0.961
+Texture_InverseDifferenceMoment_3_00_256_Cell-Membrane,Cell membrane,0.527,45.0,135.0,0.972
+Intensity_MeanIntensityEdge_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.526,195.0,345.0,0.95
+Intensity_StdIntensity_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.525,135.0,345.0,0.987
+Texture_DifferenceEntropy_3_02_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.525,135.0,255.0,0.973
+Granularity_8_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.524,135.0,345.0,0.968
+RadialDistribution_RadialCV_1of4_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.524,345.0,135.0,0.957
+Texture_DifferenceVariance_3_03_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.523,255.0,135.0,0.976
+Texture_DifferenceEntropy_3_01_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.523,135.0,255.0,0.969
+Intensity_IntegratedIntensity_Cell-Membrane,Cell membrane,0.522,225.0,315.0,0.979
+Texture_DifferenceVariance_3_01_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.521,255.0,135.0,0.974
+RadialDistribution_MeanFrac_2of4_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.521,45.0,195.0,0.992
+Texture_InverseDifferenceMoment_3_02_256_Cell-Membrane,Cell membrane,0.52,45.0,135.0,0.976
+Intensity_LowerQuartileIntensity_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.52,135.0,315.0,0.978
+Texture_InfoMeas1_3_03_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.519,285.0,135.0,0.982
+Texture_InfoMeas2_3_00_256_Nucleus,DNA stain (Nucleus),0.518,105.0,255.0,0.978
+Texture_Entropy_3_00_256_Cell-Membrane,Cell membrane,0.517,135.0,15.0,0.971
+Texture_Entropy_3_01_256_Cell-Membrane,Cell membrane,0.516,135.0,15.0,0.97
+Texture_Entropy_3_03_256_Cell-Membrane,Cell membrane,0.516,135.0,15.0,0.97
+Texture_Entropy_3_02_256_Cell-Membrane,Cell membrane,0.513,135.0,15.0,0.972
+Mitochondria_FractionAboveThreshold,Mitochondria,0.512,225.0,315.0,0.99
+Mitochondria_FractionAboveThreshold_Nuclear,Mitochondria,0.512,135.0,315.0,0.983
+Texture_DifferenceEntropy_3_00_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.51,135.0,255.0,0.968
+Texture_DifferenceEntropy_3_01_256_Cell-Membrane,Cell membrane,0.51,135.0,15.0,0.973
+Granularity_5_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.508,105.0,255.0,0.954
+Texture_InfoMeas2_3_00_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.507,135.0,255.0,0.975
+Texture_DifferenceEntropy_3_03_256_Cell-Membrane,Cell membrane,0.507,135.0,15.0,0.972
+Texture_Variance_3_00_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.506,135.0,315.0,0.977
+Texture_Variance_3_02_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.506,135.0,315.0,0.976
+Texture_DifferenceEntropy_3_00_256_Cell-Membrane,Cell membrane,0.506,135.0,15.0,0.972
+RadialDistribution_FracAtD_4of4_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.505,195.0,15.0,0.994
+Intensity_MADIntensity_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.505,195.0,345.0,0.969
+Nucleus_FractionAboveThreshold,DNA stain (Nucleus),0.504,135.0,225.0,0.977
+RadialDistribution_MeanFrac_4of4_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.504,195.0,105.0,0.994
+Texture_Variance_3_01_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.504,135.0,315.0,0.977
+Texture_Variance_3_03_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.503,135.0,315.0,0.977
+Phospho-ERK1_Phospho-ERK2_FractionAboveThreshold_Nuclear,"antibodies (ERK, pERK, pHSP27, p-p38)",0.501,135.0,225.0,0.977
+Texture_DifferenceVariance_3_02_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.5,255.0,135.0,0.975
+Granularity_2_Mitochondria,Mitochondria,0.5,165.0,225.0,0.964
+Texture_SumEntropy_3_00_256_Cell-Membrane,Cell membrane,0.5,135.0,15.0,0.971
+RadialDistribution_MeanFrac_4of4_Cell-Membrane,Cell membrane,0.499,195.0,105.0,0.99
+Texture_SumEntropy_3_02_256_Cell-Membrane,Cell membrane,0.499,135.0,15.0,0.971
+Texture_InfoMeas2_3_01_256_Cell-Membrane,Cell membrane,0.497,105.0,285.0,0.964
+Texture_DifferenceEntropy_3_02_256_Cell-Membrane,Cell membrane,0.497,135.0,15.0,0.975
+Texture_InfoMeas2_3_02_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.497,135.0,255.0,0.97
+RadialDistribution_MeanFrac_1of4_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.497,45.0,135.0,0.989
+Texture_DifferenceVariance_3_00_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.496,255.0,135.0,0.973
+Texture_InfoMeas2_3_03_256_Cell-Membrane,Cell membrane,0.496,105.0,285.0,0.957
+RadialDistribution_MeanFrac_4of4_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.495,195.0,105.0,0.984
+Texture_InfoMeas1_3_02_256_Cell-Membrane,Cell membrane,0.493,285.0,105.0,0.921
+RadialDistribution_FracAtD_4of4_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.492,195.0,105.0,0.977
+Texture_Correlation_3_03_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.492,135.0,255.0,0.908
+Texture_InfoMeas1_3_00_256_Cell-Membrane,Cell membrane,0.491,285.0,105.0,0.927
+Mitochondria_Nuclear,Mitochondria,0.491,135.0,315.0,0.958
+Texture_InfoMeas2_3_00_256_Cell-Membrane,Cell membrane,0.491,105.0,285.0,0.97
+Texture_Correlation_3_01_256_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.491,135.0,255.0,0.929
+Texture_InfoMeas2_3_02_256_Cell-Membrane,Cell membrane,0.491,105.0,285.0,0.966
+RadialDistribution_MeanFrac_1of4_Actin,Actin,0.49,135.0,45.0,0.996
+Intensity_UpperQuartileIntensity_Nucleus,DNA stain (Nucleus),0.489,135.0,225.0,0.962
+RadialDistribution_MeanFrac_4of4_Mouse_IgG,IgG isotype controls (negative control),0.488,195.0,105.0,0.98
+RadialDistribution_MeanFrac_2of4_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.488,105.0,195.0,0.983
+Texture_SumEntropy_3_01_256_Cell-Membrane,Cell membrane,0.488,135.0,15.0,0.97
+Texture_AngularSecondMoment_3_03_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.487,255.0,135.0,0.968
+Texture_SumVariance_3_00_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.487,135.0,315.0,0.976
+Texture_SumEntropy_3_03_256_Cell-Membrane,Cell membrane,0.487,135.0,15.0,0.969
+Texture_SumEntropy_3_03_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.487,135.0,255.0,0.969
+Texture_SumVariance_3_02_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.487,135.0,315.0,0.975
+Texture_SumEntropy_3_01_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.485,135.0,255.0,0.968
+Texture_AngularSecondMoment_3_01_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.485,255.0,135.0,0.967
+RadialDistribution_FracAtD_4of4_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.484,225.0,105.0,0.985
+Intensity_LowerQuartileIntensity_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.483,195.0,315.0,0.943
+RadialDistribution_FracAtD_1of4_Actin,Actin,0.48,135.0,45.0,0.983
+Texture_SumVariance_3_01_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.48,135.0,315.0,0.977
+Texture_InfoMeas2_3_00_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.479,105.0,255.0,0.975
+RadialDistribution_FracAtD_4of4_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.479,195.0,105.0,0.987
+Texture_SumEntropy_3_02_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.479,135.0,255.0,0.967
+Texture_DifferenceVariance_3_03_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.478,255.0,135.0,0.975
+Texture_SumVariance_3_03_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.478,135.0,315.0,0.975
+RadialDistribution_FracAtD_2of4_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.478,15.0,195.0,0.987
+Texture_Entropy_3_03_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.478,135.0,255.0,0.97
+Granularity_5_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.477,135.0,15.0,0.962
+Texture_Entropy_3_01_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.477,135.0,255.0,0.969
+Texture_SumAverage_3_01_256_Actin,Actin,0.476,195.0,15.0,0.965
+Texture_SumEntropy_3_00_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.476,135.0,255.0,0.966
+Texture_DifferenceVariance_3_01_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.475,255.0,135.0,0.972
+Texture_SumAverage_3_03_256_Actin,Actin,0.475,195.0,15.0,0.964
+Mouse_IgG_FractionAboveThreshold_Nuclear,IgG isotype controls (negative control),0.474,105.0,315.0,0.974
+Texture_Entropy_3_02_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.473,135.0,255.0,0.969
+Texture_InfoMeas1_3_01_256_Cell-Membrane,Cell membrane,0.472,285.0,105.0,0.941
+Texture_AngularSecondMoment_3_02_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.472,255.0,135.0,0.965
+Texture_InfoMeas1_3_03_256_Cell-Membrane,Cell membrane,0.471,285.0,105.0,0.924
+Texture_AngularSecondMoment_3_00_256_Cell-Membrane,Cell membrane,0.471,15.0,135.0,0.97
+Texture_InfoMeas2_3_02_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.471,105.0,255.0,0.971
+RadialDistribution_FracAtD_3of4_Actin,Actin,0.47,135.0,225.0,0.981
+Intensity_MeanIntensityEdge_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.47,195.0,315.0,0.931
+Texture_SumAverage_3_00_256_Actin,Actin,0.47,195.0,15.0,0.963
+RadialDistribution_MeanFrac_2of4_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.469,45.0,135.0,0.987
+Texture_AngularSecondMoment_3_00_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.469,255.0,135.0,0.964
+Texture_SumAverage_3_02_256_Actin,Actin,0.468,195.0,15.0,0.964
+Texture_Correlation_3_02_256_Cell-Membrane,Cell membrane,0.468,105.0,285.0,0.936
+Texture_Entropy_3_00_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.468,135.0,255.0,0.966
+Texture_Correlation_3_00_256_Cell-Membrane,Cell membrane,0.468,105.0,285.0,0.935
+Texture_InfoMeas2_3_01_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.467,135.0,285.0,0.975
+Texture_AngularSecondMoment_3_02_256_Cell-Membrane,Cell membrane,0.467,15.0,135.0,0.972
+Phospho-HSP27_FractionAboveThreshold_Cytoplasmic,"antibodies (ERK, pERK, pHSP27, p-p38)",0.466,195.0,345.0,0.981
+Texture_AngularSecondMoment_3_01_256_Cell-Membrane,Cell membrane,0.465,15.0,135.0,0.971
+Granularity_4_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.465,345.0,225.0,0.977
+Intensity_StdIntensity_Mitochondria,Mitochondria,0.465,195.0,315.0,0.969
+Actin_FractionAboveThreshold,Actin,0.464,195.0,345.0,0.994
+Texture_InfoMeas2_3_03_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.464,105.0,255.0,0.966
+Intensity_StdIntensity_Cell-Membrane,Cell membrane,0.464,135.0,15.0,0.958
+Texture_AngularSecondMoment_3_03_256_Cell-Membrane,Cell membrane,0.463,15.0,135.0,0.968
+Texture_InfoMeas2_3_03_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.463,135.0,285.0,0.969
+Texture_DifferenceVariance_3_02_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.462,255.0,105.0,0.97
+Texture_DifferenceVariance_3_00_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.459,255.0,105.0,0.968
+RadialDistribution_MeanFrac_3of4_Actin,Actin,0.459,135.0,15.0,0.993
+Phospho-HSP27_FractionAboveThreshold,"antibodies (ERK, pERK, pHSP27, p-p38)",0.459,195.0,345.0,0.981
+Texture_InfoMeas2_3_01_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.459,105.0,285.0,0.965
+RadialDistribution_FracAtD_2of4_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.458,105.0,195.0,0.976
+Granularity_5_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.457,105.0,225.0,0.982
+Texture_Correlation_3_01_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.457,315.0,135.0,0.964
+Texture_Correlation_3_01_256_Cell-Membrane,Cell membrane,0.455,105.0,285.0,0.94
+Texture_InfoMeas1_3_00_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.453,285.0,135.0,0.978
+Granularity_4_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.453,135.0,15.0,0.934
+RadialDistribution_FracAtD_1of4_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.451,45.0,195.0,0.986
+Texture_Correlation_3_03_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.45,345.0,135.0,0.966
+Granularity_6_Mitochondria,Mitochondria,0.447,225.0,315.0,0.951
+RadialDistribution_FracAtD_4of4_Mouse_IgG,IgG isotype controls (negative control),0.447,195.0,105.0,0.983
+Texture_Correlation_3_03_256_Cell-Membrane,Cell membrane,0.446,105.0,285.0,0.921
+Actin,Actin,0.446,195.0,15.0,0.956
+Rabbit_IgG_FractionAboveThreshold_Cytoplasmic,IgG isotype controls (negative control),0.445,195.0,345.0,0.981
+Intensity_UpperQuartileIntensity_Actin,Actin,0.444,195.0,345.0,0.958
+Intensity_UpperQuartileIntensity_Cell-Membrane,Cell membrane,0.442,195.0,15.0,0.961
+Cell-Membrane_Cytoplasmic,Cell membrane,0.442,195.0,15.0,0.966
+Intensity_MeanIntensity_Actin,Actin,0.442,195.0,15.0,0.953
+Cell-Membrane_Nuclear,Cell membrane,0.44,135.0,15.0,0.956
+Texture_InfoMeas1_3_00_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.439,255.0,105.0,0.93
+Intensity_LowerQuartileIntensity_Mitochondria,Mitochondria,0.439,195.0,315.0,0.897
+RadialDistribution_MeanFrac_1of4_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.438,45.0,135.0,0.984
+Intensity_MedianIntensity_Actin,Actin,0.438,195.0,15.0,0.952
+Texture_SumAverage_3_01_256_Cell-Membrane,Cell membrane,0.438,135.0,15.0,0.963
+Texture_SumAverage_3_03_256_Cell-Membrane,Cell membrane,0.438,135.0,15.0,0.963
+Granularity_5_Mitochondria,Mitochondria,0.437,225.0,315.0,0.955
+RadialDistribution_MeanFrac_2of4_Mouse_IgG,IgG isotype controls (negative control),0.437,105.0,195.0,0.985
+Texture_SumAverage_3_02_256_Cell-Membrane,Cell membrane,0.435,135.0,15.0,0.963
+Texture_SumAverage_3_00_256_Cell-Membrane,Cell membrane,0.435,135.0,15.0,0.963
+Intensity_MedianIntensity_Nucleus,DNA stain (Nucleus),0.435,135.0,225.0,0.948
+ERK1_ERK2_FractionAboveThreshold_Nuclear,"antibodies (ERK, pERK, pHSP27, p-p38)",0.434,135.0,45.0,0.983
+Granularity_5_Cell-Membrane,Cell membrane,0.433,135.0,15.0,0.942
+Rabbit_IgG_FractionAboveThreshold_Nuclear,IgG isotype controls (negative control),0.432,105.0,315.0,0.982
+RadialDistribution_FracAtD_2of4_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.432,75.0,195.0,0.981
+Texture_InfoMeas1_3_02_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.43,285.0,135.0,0.963
+Rabbit_IgG_FractionAboveThreshold,IgG isotype controls (negative control),0.43,195.0,345.0,0.98
+Granularity_6_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.429,135.0,15.0,0.971
+RadialDistribution_FracAtD_2of4_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.429,135.0,225.0,0.983
+Mitochondria_FractionAboveThreshold_Cytoplasmic,Mitochondria,0.428,195.0,315.0,0.991
+RadialDistribution_FracAtD_1of4_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.426,75.0,165.0,0.981
+Intensity_LowerQuartileIntensity_Actin,Actin,0.424,195.0,15.0,0.939
+Texture_InfoMeas1_3_02_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.424,255.0,105.0,0.916
+RadialDistribution_FracAtD_3of4_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.424,105.0,255.0,0.978
+Texture_InfoMeas2_3_03_256_Mitochondria,Mitochondria,0.424,195.0,315.0,0.936
+RadialDistribution_FracAtD_3of4_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.424,105.0,255.0,0.972
+RadialDistribution_FracAtD_4of4_Cell-Membrane,Cell membrane,0.424,255.0,105.0,0.98
+RadialDistribution_MeanFrac_2of4_Cell-Membrane,Cell membrane,0.423,105.0,195.0,0.984
+Intensity_IntegratedIntensity_Rabbit_IgG,IgG isotype controls (negative control),0.422,225.0,135.0,0.957
+Phospho-p38_MeanIntensityOfFractionAboveThreshold,"antibodies (ERK, pERK, pHSP27, p-p38)",0.422,135.0,255.0,0.981
+Texture_InfoMeas1_3_03_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.421,255.0,105.0,0.929
+RadialDistribution_FracAtD_2of4_Mouse_IgG,IgG isotype controls (negative control),0.42,105.0,195.0,0.981
+Intensity_MaxIntensityEdge_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.42,135.0,255.0,0.939
+Cell-Membrane,Cell membrane,0.42,195.0,15.0,0.96
+Mouse_IgG_FractionAboveThreshold_Cytoplasmic,IgG isotype controls (negative control),0.418,195.0,345.0,0.993
+Texture_InfoMeas2_3_01_256_Mitochondria,Mitochondria,0.418,195.0,315.0,0.928
+Texture_Correlation_3_03_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.417,255.0,135.0,0.981
+Mouse_IgG_FractionAboveThreshold,IgG isotype controls (negative control),0.417,195.0,315.0,0.986
+Texture_Contrast_3_03_256_Cell-Membrane,Cell membrane,0.416,135.0,15.0,0.953
+Actin_FractionAboveThreshold_Cytoplasmic,Actin,0.416,195.0,345.0,0.997
+Texture_Contrast_3_00_256_Cell-Membrane,Cell membrane,0.416,135.0,15.0,0.948
+Granularity_3_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.415,345.0,225.0,0.963
+RadialDistribution_RadialCV_3of4_Nucleus,DNA stain (Nucleus),0.414,105.0,195.0,0.962
+Texture_Contrast_3_01_256_Cell-Membrane,Cell membrane,0.412,135.0,45.0,0.932
+Texture_InfoMeas1_3_01_256_Mitochondria,Mitochondria,0.41,315.0,195.0,0.924
+Texture_Contrast_3_02_256_Cell-Membrane,Cell membrane,0.409,135.0,45.0,0.947
+Texture_Correlation_3_01_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.407,255.0,135.0,0.969
+Intensity_IntegratedIntensityEdge_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.407,135.0,315.0,0.938
+Texture_InfoMeas1_3_01_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.405,285.0,105.0,0.906
+RadialDistribution_MeanFrac_1of4_Mouse_IgG,IgG isotype controls (negative control),0.404,105.0,195.0,0.98
+Intensity_MeanIntensity_Cell-Membrane,Cell membrane,0.404,195.0,15.0,0.959
+Texture_Correlation_3_00_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.404,345.0,135.0,0.951
+Texture_Correlation_3_02_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.403,345.0,135.0,0.949
+Actin_Cytoplasmic,Actin,0.402,195.0,345.0,0.943
+Texture_DifferenceVariance_3_03_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.401,315.0,135.0,0.972
+Texture_InfoMeas1_3_00_256_Mitochondria,Mitochondria,0.4,315.0,195.0,0.886
+Texture_DifferenceVariance_3_01_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.399,315.0,135.0,0.969
+Texture_InfoMeas2_3_00_256_Mitochondria,Mitochondria,0.399,195.0,315.0,0.932
+Phospho-p38_MeanIntensityOfFractionAboveThreshold_Cytoplasmic,"antibodies (ERK, pERK, pHSP27, p-p38)",0.399,135.0,255.0,0.977
+RadialDistribution_MeanFrac_3of4_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.397,105.0,255.0,0.97
+AreaShape_Compactness,shape and size,0.396,225.0,135.0,0.924
+Intensity_MedianIntensity_Cell-Membrane,Cell membrane,0.396,195.0,15.0,0.958
+Texture_DifferenceVariance_3_02_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.395,315.0,225.0,0.967
+RadialDistribution_FracAtD_1of4_Mouse_IgG,IgG isotype controls (negative control),0.395,105.0,195.0,0.971
+Texture_DifferenceVariance_3_01_256_Cell-Membrane,Cell membrane,0.393,15.0,135.0,0.978
+RadialDistribution_FracAtD_2of4_Cell-Membrane,Cell membrane,0.391,105.0,195.0,0.985
+Texture_InfoMeas1_3_03_256_Mitochondria,Mitochondria,0.391,315.0,195.0,0.923
+Texture_DifferenceVariance_3_00_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.39,315.0,225.0,0.966
+ERK1_ERK2_MeanIntensityOfFractionAboveThreshold_Nuclear,"antibodies (ERK, pERK, pHSP27, p-p38)",0.388,135.0,315.0,0.879
+Texture_InfoMeas2_3_02_256_Mitochondria,Mitochondria,0.388,195.0,315.0,0.959
+Intensity_StdIntensity_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.386,135.0,255.0,0.965
+Texture_InverseDifferenceMoment_3_02_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.386,15.0,225.0,0.923
+Texture_DifferenceVariance_3_03_256_Cell-Membrane,Cell membrane,0.386,15.0,135.0,0.97
+AreaShape_FormFactor,shape and size,0.386,135.0,225.0,0.915
+Intensity_MassDisplacement_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.385,135.0,225.0,0.927
+Intensity_StdIntensityEdge_Cell-Membrane,Cell membrane,0.385,135.0,45.0,0.962
+RadialDistribution_MeanFrac_2of4_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.384,105.0,195.0,0.982
+Texture_InfoMeas1_3_01_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.384,285.0,135.0,0.97
+Texture_InverseDifferenceMoment_3_00_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.383,165.0,225.0,0.918
+Texture_DifferenceVariance_3_00_256_Cell-Membrane,Cell membrane,0.383,15.0,135.0,0.971
+Texture_InfoMeas1_3_03_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.381,285.0,135.0,0.958
+Granularity_3_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.381,135.0,225.0,0.944
+Texture_InfoMeas1_3_02_256_Mitochondria,Mitochondria,0.38,315.0,195.0,0.96
+Texture_InverseDifferenceMoment_3_01_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.379,15.0,225.0,0.912
+Texture_InverseDifferenceMoment_3_03_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.379,15.0,225.0,0.915
+RadialDistribution_MeanFrac_4of4_Rabbit_IgG,IgG isotype controls (negative control),0.378,195.0,105.0,0.963
+RadialDistribution_MeanFrac_3of4_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.378,105.0,195.0,0.96
+Intensity_StdIntensityEdge_Nucleus,DNA stain (Nucleus),0.376,135.0,15.0,0.975
+Granularity_4_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.375,45.0,195.0,0.963
+Texture_DifferenceVariance_3_02_256_Cell-Membrane,Cell membrane,0.374,15.0,135.0,0.975
+Intensity_MassDisplacement_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.374,135.0,225.0,0.914
+Intensity_MeanIntensityEdge_Mitochondria,Mitochondria,0.373,195.0,315.0,0.868
+Texture_SumEntropy_3_00_256_Mitochondria,Mitochondria,0.372,195.0,315.0,0.95
+Texture_SumEntropy_3_01_256_Mitochondria,Mitochondria,0.372,195.0,315.0,0.946
+Texture_SumEntropy_3_03_256_Mitochondria,Mitochondria,0.371,195.0,315.0,0.949
+Texture_SumEntropy_3_02_256_Mitochondria,Mitochondria,0.37,195.0,315.0,0.947
+Granularity_6_Mouse_IgG,IgG isotype controls (negative control),0.368,105.0,345.0,0.989
+Texture_AngularSecondMoment_3_03_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.367,315.0,135.0,0.957
+Texture_Entropy_3_00_256_Mitochondria,Mitochondria,0.366,195.0,315.0,0.951
+Texture_Entropy_3_02_256_Mitochondria,Mitochondria,0.366,195.0,315.0,0.944
+RadialDistribution_RadialCV_2of4_Nucleus,DNA stain (Nucleus),0.366,105.0,195.0,0.941
+Texture_Variance_3_00_256_Cell-Membrane,Cell membrane,0.365,135.0,15.0,0.916
+Granularity_5_Actin,Actin,0.365,195.0,15.0,0.923
+Texture_AngularSecondMoment_3_01_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.365,315.0,135.0,0.954
+Texture_Entropy_3_03_256_Mitochondria,Mitochondria,0.364,195.0,315.0,0.947
+Texture_Variance_3_02_256_Cell-Membrane,Cell membrane,0.364,135.0,15.0,0.916
+RadialDistribution_FracAtD_4of4_Rabbit_IgG,IgG isotype controls (negative control),0.363,195.0,105.0,0.974
+Granularity_6_Cell-Membrane,Cell membrane,0.363,135.0,15.0,0.98
+Texture_Entropy_3_01_256_Mitochondria,Mitochondria,0.362,195.0,315.0,0.944
+Intensity_StdIntensityEdge_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.36,195.0,345.0,0.975
+Texture_Variance_3_01_256_Cell-Membrane,Cell membrane,0.36,135.0,15.0,0.915
+Texture_Correlation_3_02_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.359,255.0,135.0,0.955
+Texture_Variance_3_03_256_Cell-Membrane,Cell membrane,0.359,135.0,15.0,0.915
+Intensity_IntegratedIntensityEdge_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.359,135.0,315.0,0.942
+Intensity_MeanIntensityEdge_Cell-Membrane,Cell membrane,0.357,195.0,45.0,0.943
+Granularity_5_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.356,135.0,15.0,0.924
+Texture_SumEntropy_3_03_256_Actin,Actin,0.356,195.0,345.0,0.94
+Texture_SumEntropy_3_01_256_Actin,Actin,0.355,195.0,345.0,0.944
+Texture_SumVariance_3_02_256_Cell-Membrane,Cell membrane,0.353,135.0,15.0,0.912
+Texture_SumVariance_3_00_256_Cell-Membrane,Cell membrane,0.352,135.0,15.0,0.911
+Texture_AngularSecondMoment_3_00_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.351,315.0,135.0,0.952
+Texture_SumEntropy_3_02_256_Actin,Actin,0.351,195.0,345.0,0.94
+Texture_InverseDifferenceMoment_3_00_256_Actin,Actin,0.35,75.0,195.0,0.959
+Texture_InverseDifferenceMoment_3_03_256_Actin,Actin,0.35,75.0,195.0,0.961
+Texture_Entropy_3_03_256_Actin,Actin,0.35,195.0,345.0,0.946
+Texture_AngularSecondMoment_3_02_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.35,315.0,135.0,0.953
+Intensity_MaxIntensity_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.349,105.0,255.0,0.953
+Texture_SumEntropy_3_00_256_Actin,Actin,0.348,195.0,345.0,0.942
+Texture_Entropy_3_01_256_Actin,Actin,0.348,195.0,15.0,0.944
+Cell-Membrane_NuclearRatio,Cell membrane,0.347,105.0,255.0,0.893
+Texture_InverseDifferenceMoment_3_01_256_Actin,Actin,0.347,15.0,195.0,0.946
+Texture_InverseDifferenceMoment_3_02_256_Actin,Actin,0.346,75.0,195.0,0.952
+Granularity_3_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.345,345.0,105.0,0.933
+Texture_Entropy_3_00_256_Actin,Actin,0.345,195.0,15.0,0.946
+RadialDistribution_FracAtD_1of4_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.345,105.0,195.0,0.969
+Texture_Correlation_3_00_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.345,255.0,135.0,0.968
+Granularity_4_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.343,135.0,345.0,0.929
+Texture_SumVariance_3_01_256_Cell-Membrane,Cell membrane,0.343,135.0,15.0,0.913
+Texture_Entropy_3_02_256_Actin,Actin,0.342,195.0,15.0,0.943
+RadialDistribution_FracAtD_2of4_Rabbit_IgG,IgG isotype controls (negative control),0.342,105.0,195.0,0.97
+RadialDistribution_MeanFrac_2of4_Rabbit_IgG,IgG isotype controls (negative control),0.341,105.0,195.0,0.958
+Texture_SumVariance_3_03_256_Cell-Membrane,Cell membrane,0.341,135.0,15.0,0.906
+Texture_AngularSecondMoment_3_03_256_Actin,Actin,0.34,345.0,195.0,0.947
+Granularity_3_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.339,135.0,315.0,0.962
+Intensity_MADIntensity_Actin,Actin,0.338,195.0,345.0,0.956
+Texture_AngularSecondMoment_3_02_256_Actin,Actin,0.337,345.0,195.0,0.943
+Texture_SumVariance_3_00_256_Mitochondria,Mitochondria,0.337,195.0,315.0,0.933
+Intensity_MaxIntensity_Mitochondria,Mitochondria,0.337,195.0,315.0,0.944
+Texture_AngularSecondMoment_3_00_256_Actin,Actin,0.337,345.0,195.0,0.946
+RadialDistribution_MeanFrac_4of4_Mitochondria,Mitochondria,0.337,195.0,105.0,0.94
+Texture_AngularSecondMoment_3_01_256_Actin,Actin,0.336,345.0,195.0,0.948
+Granularity_1_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.334,225.0,105.0,0.979
+Intensity_StdIntensityEdge_Mitochondria,Mitochondria,0.332,195.0,315.0,0.872
+RadialDistribution_MeanFrac_1of4_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.332,105.0,195.0,0.978
+Texture_AngularSecondMoment_3_00_256_Mitochondria,Mitochondria,0.332,315.0,195.0,0.897
+Texture_SumVariance_3_01_256_Mitochondria,Mitochondria,0.331,195.0,315.0,0.922
+Texture_AngularSecondMoment_3_02_256_Mitochondria,Mitochondria,0.331,315.0,195.0,0.897
+RadialDistribution_FracAtD_3of4_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.329,135.0,225.0,0.921
+Texture_DifferenceEntropy_3_03_256_Mitochondria,Mitochondria,0.329,195.0,315.0,0.955
+Texture_Variance_3_01_256_Actin,Actin,0.328,195.0,45.0,0.964
+Granularity_6_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.328,135.0,15.0,0.981
+Texture_AngularSecondMoment_3_03_256_Mitochondria,Mitochondria,0.328,315.0,195.0,0.9
+Texture_DifferenceEntropy_3_02_256_Mitochondria,Mitochondria,0.327,195.0,315.0,0.946
+Intensity_MaxIntensityEdge_Nucleus,DNA stain (Nucleus),0.327,135.0,15.0,0.951
+Texture_AngularSecondMoment_3_01_256_Mitochondria,Mitochondria,0.326,315.0,195.0,0.905
+RadialDistribution_FracAtD_4of4_Mitochondria,Mitochondria,0.326,195.0,105.0,0.97
+Granularity_7_Cell-Membrane,Cell membrane,0.325,135.0,345.0,0.952
+Texture_Variance_3_03_256_Actin,Actin,0.325,195.0,45.0,0.963
+Texture_SumAverage_3_00_256_Mitochondria,Mitochondria,0.325,195.0,315.0,0.94
+Texture_DifferenceEntropy_3_01_256_Mitochondria,Mitochondria,0.324,195.0,315.0,0.955
+Texture_SumAverage_3_02_256_Mitochondria,Mitochondria,0.324,195.0,315.0,0.935
+Texture_DifferenceEntropy_3_00_256_Mitochondria,Mitochondria,0.324,195.0,315.0,0.96
+Intensity_LowerQuartileIntensity_Cell-Membrane,Cell membrane,0.324,195.0,45.0,0.939
+Texture_SumVariance_3_01_256_Actin,Actin,0.324,195.0,45.0,0.963
+Granularity_4_Actin,Actin,0.323,195.0,15.0,0.925
+Granularity_4_Cell-Membrane,Cell membrane,0.323,135.0,15.0,0.946
+Texture_SumVariance_3_03_256_Actin,Actin,0.323,195.0,15.0,0.959
+Texture_SumAverage_3_02_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.322,195.0,315.0,0.952
+Granularity_7_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.322,135.0,315.0,0.932
+Texture_SumVariance_3_03_256_Mitochondria,Mitochondria,0.322,195.0,315.0,0.927
+Texture_SumAverage_3_01_256_Mitochondria,Mitochondria,0.322,195.0,315.0,0.928
+Granularity_2_Cell-Membrane,Cell membrane,0.321,135.0,225.0,0.883
+Texture_Variance_3_02_256_Actin,Actin,0.321,195.0,75.0,0.964
+Texture_SumAverage_3_00_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.321,195.0,315.0,0.952
+Texture_SumVariance_3_02_256_Actin,Actin,0.321,195.0,45.0,0.965
+Texture_SumAverage_3_03_256_Mitochondria,Mitochondria,0.321,195.0,315.0,0.935
+Texture_SumAverage_3_01_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.32,195.0,315.0,0.953
+Texture_Variance_3_00_256_Actin,Actin,0.32,195.0,75.0,0.961
+Granularity_1_Nucleus,DNA stain (Nucleus),0.319,225.0,105.0,0.962
+Granularity_7_Mitochondria,Mitochondria,0.318,225.0,345.0,0.942
+Texture_SumAverage_3_03_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.318,195.0,315.0,0.95
+Texture_InfoMeas2_3_03_256_Actin,Actin,0.318,225.0,315.0,0.88
+RadialDistribution_RadialCV_3of4_Mitochondria,Mitochondria,0.317,345.0,105.0,0.954
+Texture_SumVariance_3_02_256_Mitochondria,Mitochondria,0.317,195.0,315.0,0.934
+Intensity_StdIntensity_Actin,Actin,0.317,195.0,75.0,0.965
+RadialDistribution_FracAtD_1of4_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.316,135.0,225.0,0.964
+Texture_SumVariance_3_00_256_Actin,Actin,0.316,195.0,45.0,0.957
+Texture_DifferenceVariance_3_02_256_Mitochondria,Mitochondria,0.314,315.0,195.0,0.91
+Mitochondria_MeanIntensityOfFractionAboveThreshold_Cytoplasmic,Mitochondria,0.314,195.0,315.0,0.94
+Granularity_2_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.313,105.0,225.0,0.922
+RadialDistribution_FracAtD_3of4_Mouse_IgG,IgG isotype controls (negative control),0.311,105.0,255.0,0.969
+Texture_Contrast_3_00_256_Actin,Actin,0.31,195.0,75.0,0.966
+Texture_Variance_3_00_256_Mitochondria,Mitochondria,0.31,195.0,315.0,0.937
+Texture_DifferenceVariance_3_00_256_Mitochondria,Mitochondria,0.309,315.0,195.0,0.91
+Intensity_MeanIntensityEdge_Nucleus,DNA stain (Nucleus),0.309,195.0,345.0,0.942
+Intensity_StdIntensityEdge_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.309,195.0,345.0,0.951
+ERK1_ERK2_MeanIntensityOfFractionAboveThreshold,"antibodies (ERK, pERK, pHSP27, p-p38)",0.308,135.0,285.0,0.896
+Texture_Variance_3_02_256_Mitochondria,Mitochondria,0.308,195.0,315.0,0.937
+Texture_DifferenceVariance_3_03_256_Mitochondria,Mitochondria,0.307,315.0,195.0,0.921
+Cell-Membrane_MeanIntensityOfFractionAboveThreshold_Nuclear,Cell membrane,0.305,135.0,15.0,0.934
+Granularity_4_Mouse_IgG,IgG isotype controls (negative control),0.304,135.0,255.0,0.93
+Actin_MeanIntensityOfFractionAboveThreshold_Nuclear,Actin,0.304,195.0,15.0,0.944
+Texture_DifferenceVariance_3_01_256_Mitochondria,Mitochondria,0.303,315.0,195.0,0.929
+Texture_Variance_3_01_256_Mitochondria,Mitochondria,0.303,195.0,315.0,0.921
+Granularity_5_Mouse_IgG,IgG isotype controls (negative control),0.302,105.0,255.0,0.95
+RadialDistribution_FracAtD_3of4_Mitochondria,Mitochondria,0.302,105.0,195.0,0.96
+Intensity_MassDisplacement_Nucleus,DNA stain (Nucleus),0.302,135.0,225.0,0.886
+RadialDistribution_FracAtD_1of4_Rabbit_IgG,IgG isotype controls (negative control),0.302,105.0,195.0,0.961
+Mitochondria_MeanIntensityOfFractionAboveThreshold,Mitochondria,0.302,195.0,315.0,0.941
+Texture_Correlation_3_03_256_Actin,Actin,0.301,225.0,315.0,0.889
+Intensity_MaxIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.301,135.0,315.0,0.98
+Granularity_7_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.3,135.0,345.0,0.898
+Intensity_MaxIntensityEdge_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.3,135.0,315.0,0.919
+Texture_DifferenceEntropy_3_00_256_Actin,Actin,0.3,195.0,75.0,0.951
+Mitochondria_NuclearRatio,Mitochondria,0.3,135.0,255.0,0.931
+Texture_Contrast_3_01_256_Actin,Actin,0.299,195.0,75.0,0.934
+RadialDistribution_MeanFrac_3of4_Mitochondria,Mitochondria,0.299,105.0,195.0,0.951
+Intensity_MADIntensity_Rabbit_IgG,IgG isotype controls (negative control),0.298,195.0,315.0,0.924
+Texture_Contrast_3_03_256_Actin,Actin,0.297,195.0,75.0,0.965
+RadialDistribution_RadialCV_4of4_Cell-Membrane,Cell membrane,0.297,135.0,345.0,0.949
+Granularity_7_Mouse_IgG,IgG isotype controls (negative control),0.295,105.0,345.0,0.872
+Texture_DifferenceEntropy_3_03_256_Actin,Actin,0.294,195.0,75.0,0.953
+RadialDistribution_MeanFrac_1of4_Rabbit_IgG,IgG isotype controls (negative control),0.292,105.0,195.0,0.959
+Texture_DifferenceEntropy_3_02_256_Actin,Actin,0.291,195.0,75.0,0.949
+RadialDistribution_RadialCV_1of4_Mouse_IgG,IgG isotype controls (negative control),0.29,315.0,105.0,0.874
+Texture_InfoMeas2_3_01_256_Actin,Actin,0.29,195.0,345.0,0.926
+RadialDistribution_RadialCV_4of4_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.29,315.0,225.0,0.94
+AreaShape_Extent,shape and size,0.289,135.0,225.0,0.916
+RadialDistribution_FracAtD_3of4_Nucleus,DNA stain (Nucleus),0.289,135.0,225.0,0.849
+Texture_InfoMeas2_3_00_256_Actin,Actin,0.289,225.0,345.0,0.9
+RadialDistribution_MeanFrac_3of4_Mouse_IgG,IgG isotype controls (negative control),0.287,105.0,285.0,0.875
+Texture_InfoMeas2_3_02_256_Actin,Actin,0.287,225.0,345.0,0.913
+Texture_Variance_3_03_256_Mitochondria,Mitochondria,0.286,195.0,315.0,0.928
+Texture_InfoMeas1_3_03_256_Actin,Actin,0.285,315.0,225.0,0.851
+Intensity_MeanIntensityEdge_Actin,Actin,0.284,225.0,105.0,0.75
+Texture_DifferenceEntropy_3_01_256_Actin,Actin,0.283,195.0,75.0,0.942
+RadialDistribution_FracAtD_1of4_Cell-Membrane,Cell membrane,0.283,105.0,195.0,0.975
+RadialDistribution_FracAtD_3of4_Cell-Membrane,Cell membrane,0.283,105.0,255.0,0.904
+Phospho-HSP27_MeanIntensityOfFractionAboveThreshold,"antibodies (ERK, pERK, pHSP27, p-p38)",0.283,135.0,255.0,0.914
+Phospho-HSP27_MeanIntensityOfFractionAboveThreshold_Nuclear,"antibodies (ERK, pERK, pHSP27, p-p38)",0.282,135.0,345.0,0.909
+RadialDistribution_MeanFrac_3of4_Cell-Membrane,Cell membrane,0.282,105.0,345.0,0.915
+Phospho-HSP27_MeanIntensityOfFractionAboveThreshold_Cytoplasmic,"antibodies (ERK, pERK, pHSP27, p-p38)",0.281,135.0,255.0,0.919
+RadialDistribution_FracAtD_3of4_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.278,135.0,225.0,0.882
+Texture_InverseDifferenceMoment_3_03_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.276,255.0,135.0,0.961
+Intensity_IntegratedIntensityEdge_Actin,Actin,0.275,225.0,135.0,0.683
+Granularity_3_Mitochondria,Mitochondria,0.274,135.0,225.0,0.715
+Texture_InverseDifferenceMoment_3_01_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.274,255.0,135.0,0.94
+Granularity_3_Mouse_IgG,IgG isotype controls (negative control),0.274,135.0,225.0,0.797
+Texture_Contrast_3_02_256_Actin,Actin,0.273,195.0,75.0,0.929
+Intensity_MassDisplacement_Cell-Membrane,Cell membrane,0.273,135.0,225.0,0.884
+ERK1_ERK2_MeanIntensityOfFractionAboveThreshold_Cytoplasmic,"antibodies (ERK, pERK, pHSP27, p-p38)",0.273,135.0,285.0,0.885
+RadialDistribution_MeanFrac_1of4_Cell-Membrane,Cell membrane,0.269,105.0,195.0,0.983
+Granularity_2_Mouse_IgG,IgG isotype controls (negative control),0.269,165.0,105.0,0.909
+RadialDistribution_MeanFrac_1of4_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.268,135.0,195.0,0.963
+Texture_Correlation_3_02_256_Actin,Actin,0.261,225.0,315.0,0.913
+Texture_Correlation_3_00_256_Actin,Actin,0.261,225.0,315.0,0.916
+Granularity_8_Cell-Membrane,Cell membrane,0.26,135.0,345.0,0.921
+Granularity_1_Cell-Membrane,Cell membrane,0.26,15.0,135.0,0.878
+Granularity_8_Mitochondria,Mitochondria,0.26,225.0,345.0,0.791
+Texture_Correlation_3_01_256_Actin,Actin,0.26,195.0,315.0,0.932
+Granularity_6_Rabbit_IgG,IgG isotype controls (negative control),0.259,105.0,345.0,0.912
+Intensity_UpperQuartileIntensity_Rabbit_IgG,IgG isotype controls (negative control),0.257,195.0,315.0,0.903
+RadialDistribution_RadialCV_2of4_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.257,45.0,225.0,0.921
+RadialDistribution_RadialCV_2of4_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.257,75.0,195.0,0.915
+Texture_InfoMeas1_3_02_256_Actin,Actin,0.256,315.0,225.0,0.882
+Texture_DifferenceVariance_3_02_256_Actin,Actin,0.256,75.0,225.0,0.931
+Texture_DifferenceVariance_3_03_256_Actin,Actin,0.256,75.0,195.0,0.936
+Granularity_4_Rabbit_IgG,IgG isotype controls (negative control),0.254,135.0,15.0,0.917
+Phospho-HSP27_NuclearRatio,"antibodies (ERK, pERK, pHSP27, p-p38)",0.254,135.0,255.0,0.911
+Intensity_LowerQuartileIntensity_Nucleus,DNA stain (Nucleus),0.252,195.0,315.0,0.839
+Cell-Membrane_MeanIntensityOfFractionAboveThreshold,Cell membrane,0.252,135.0,15.0,0.895
+Texture_DifferenceVariance_3_00_256_Actin,Actin,0.252,75.0,225.0,0.933
+Texture_InfoMeas1_3_00_256_Actin,Actin,0.251,315.0,225.0,0.88
+Texture_DifferenceVariance_3_01_256_Actin,Actin,0.249,75.0,225.0,0.93
+Mitochondria_MeanIntensityOfFractionAboveThreshold_Nuclear,Mitochondria,0.249,75.0,315.0,0.829
+Cell-Membrane_MeanIntensityOfFractionAboveThreshold_Cytoplasmic,Cell membrane,0.247,135.0,15.0,0.898
+Intensity_StdIntensityEdge_Actin,Actin,0.247,225.0,75.0,0.947
+Granularity_1_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.243,15.0,135.0,0.909
+Intensity_IntegratedIntensity_Mouse_IgG,IgG isotype controls (negative control),0.242,225.0,165.0,0.924
+Granularity_5_Rabbit_IgG,IgG isotype controls (negative control),0.242,105.0,15.0,0.956
+Rabbit_IgG_Nuclear,IgG isotype controls (negative control),0.242,195.0,315.0,0.913
+RadialDistribution_MeanFrac_3of4_Rabbit_IgG,IgG isotype controls (negative control),0.242,105.0,15.0,0.809
+Intensity_MassDisplacement_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.241,135.0,225.0,0.818
+Granularity_8_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.24,195.0,15.0,0.938
+Granularity_6_Nucleus,DNA stain (Nucleus),0.24,105.0,315.0,0.954
+Intensity_MaxIntensity_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.239,135.0,255.0,0.92
+Granularity_3_Actin,Actin,0.239,195.0,45.0,0.939
+Intensity_MaxIntensityEdge_Cell-Membrane,Cell membrane,0.238,135.0,15.0,0.886
+Rabbit_IgG,IgG isotype controls (negative control),0.237,195.0,315.0,0.873
+Granularity_3_Cell-Membrane,Cell membrane,0.237,135.0,345.0,0.867
+Granularity_6_Actin,Actin,0.236,135.0,15.0,0.976
+Texture_Contrast_3_02_256_Mitochondria,Mitochondria,0.236,195.0,315.0,0.881
+Intensity_MassDisplacement_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.236,135.0,225.0,0.865
+Actin_MeanIntensityOfFractionAboveThreshold_Cytoplasmic,Actin,0.235,195.0,15.0,0.844
+RadialDistribution_RadialCV_1of4_Rabbit_IgG,IgG isotype controls (negative control),0.234,315.0,105.0,0.927
+Intensity_MeanIntensity_Rabbit_IgG,IgG isotype controls (negative control),0.234,195.0,315.0,0.911
+Granularity_1_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.233,15.0,105.0,0.892
+RadialDistribution_RadialCV_1of4_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.233,75.0,195.0,0.917
+RadialDistribution_FracAtD_3of4_Rabbit_IgG,IgG isotype controls (negative control),0.232,105.0,285.0,0.93
+RadialDistribution_RadialCV_4of4_Actin,Actin,0.23,195.0,75.0,0.921
+Texture_InfoMeas1_3_01_256_Actin,Actin,0.227,315.0,225.0,0.91
+RadialDistribution_FracAtD_2of4_Mitochondria,Mitochondria,0.227,105.0,195.0,0.962
+Actin_MeanIntensityOfFractionAboveThreshold,Actin,0.225,195.0,15.0,0.815
+RadialDistribution_RadialCV_1of4_Nucleus,DNA stain (Nucleus),0.224,105.0,195.0,0.854
+Rabbit_IgG_Cytoplasmic,IgG isotype controls (negative control),0.224,195.0,315.0,0.86
+Granularity_8_Mouse_IgG,IgG isotype controls (negative control),0.222,225.0,345.0,0.853
+Granularity_7_Rabbit_IgG,IgG isotype controls (negative control),0.221,225.0,345.0,0.766
+Texture_Contrast_3_01_256_Mitochondria,Mitochondria,0.221,195.0,315.0,0.889
+Texture_InverseDifferenceMoment_3_02_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.22,255.0,135.0,0.926
+RadialDistribution_RadialCV_4of4_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.22,315.0,135.0,0.862
+Intensity_IntegratedIntensityEdge_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.219,225.0,315.0,0.671
+Granularity_3_Rabbit_IgG,IgG isotype controls (negative control),0.219,135.0,225.0,0.955
+Intensity_MaxIntensity_Cell-Membrane,Cell membrane,0.218,135.0,15.0,0.93
+Texture_Contrast_3_02_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.218,135.0,255.0,0.853
+Granularity_1_Mitochondria,Mitochondria,0.218,15.0,105.0,0.903
+RadialDistribution_RadialCV_3of4_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.218,105.0,135.0,0.919
+RadialDistribution_RadialCV_2of4_Mitochondria,Mitochondria,0.217,345.0,135.0,0.781
+Texture_InverseDifferenceMoment_3_00_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.216,285.0,135.0,0.909
+RadialDistribution_MeanFrac_3of4_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.213,315.0,195.0,0.628
+Granularity_1_Actin,Actin,0.212,15.0,105.0,0.739
+Intensity_MaxIntensityEdge_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.211,195.0,345.0,0.821
+Intensity_MaxIntensity_Actin,Actin,0.21,225.0,15.0,0.933
+Granularity_4_Mitochondria,Mitochondria,0.21,105.0,285.0,0.778
+Intensity_MaxIntensityEdge_Mitochondria,Mitochondria,0.209,195.0,315.0,0.785
+Rabbit_IgG_NuclearRatio,IgG isotype controls (negative control),0.208,105.0,225.0,0.869
+Intensity_MassDisplacement_Mitochondria,Mitochondria,0.208,135.0,225.0,0.819
+Intensity_MedianIntensity_Rabbit_IgG,IgG isotype controls (negative control),0.207,195.0,315.0,0.855
+AreaShape_Eccentricity,shape and size,0.207,225.0,135.0,0.826
+RadialDistribution_RadialCV_1of4_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.207,75.0,195.0,0.796
+RadialDistribution_FracAtD_1of4_Mitochondria,Mitochondria,0.204,135.0,195.0,0.907
+Texture_InverseDifferenceMoment_3_03_256_Mitochondria,Mitochondria,0.203,105.0,195.0,0.63
+RadialDistribution_RadialCV_1of4_Cell-Membrane,Cell membrane,0.202,345.0,195.0,0.604
+Granularity_2_Actin,Actin,0.201,135.0,75.0,0.731
+AreaShape_Solidity,shape and size,0.2,105.0,225.0,0.94
+Granularity_8_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.199,195.0,15.0,0.814
+Texture_Contrast_3_00_256_Mitochondria,Mitochondria,0.197,195.0,315.0,0.892
+RadialDistribution_MeanFrac_2of4_Mitochondria,Mitochondria,0.197,105.0,195.0,0.902
+Texture_Contrast_3_03_256_Mitochondria,Mitochondria,0.196,195.0,315.0,0.902
+Granularity_1_Rabbit_IgG,IgG isotype controls (negative control),0.195,45.0,165.0,0.895
+Texture_Contrast_3_03_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.194,135.0,255.0,0.832
+RadialDistribution_RadialCV_1of4_Actin,Actin,0.193,45.0,195.0,0.95
+Intensity_MaxIntensityEdge_Actin,Actin,0.191,225.0,45.0,0.846
+Intensity_MassDisplacement_Actin,Actin,0.189,165.0,75.0,0.794
+Intensity_IntegratedIntensityEdge_Mitochondria,Mitochondria,0.189,225.0,315.0,0.649
+Intensity_MinIntensity_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.189,195.0,105.0,0.763
+Intensity_IntegratedIntensityEdge_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.188,225.0,315.0,0.573
+Texture_InverseDifferenceMoment_3_01_256_Mitochondria,Mitochondria,0.188,105.0,195.0,0.611
+Intensity_MinIntensityEdge_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.186,195.0,105.0,0.754
+RadialDistribution_RadialCV_2of4_Actin,Actin,0.186,45.0,165.0,0.954
+Intensity_MaxIntensityEdge_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.185,195.0,255.0,0.828
+RadialDistribution_RadialCV_4of4_Mitochondria,Mitochondria,0.184,195.0,105.0,0.808
+RadialDistribution_RadialCV_4of4_Nucleus,DNA stain (Nucleus),0.183,135.0,15.0,0.792
+Texture_Contrast_3_00_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.182,135.0,255.0,0.774
+RadialDistribution_MeanFrac_3of4_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.18,105.0,195.0,0.334
+Mouse_IgG_NuclearRatio,IgG isotype controls (negative control),0.18,75.0,225.0,0.862
+ERK1_ERK2_NuclearRatio,"antibodies (ERK, pERK, pHSP27, p-p38)",0.178,315.0,225.0,0.865
+Texture_InverseDifferenceMoment_3_00_256_Mitochondria,Mitochondria,0.177,105.0,195.0,0.461
+Intensity_MinIntensity_Nucleus,DNA stain (Nucleus),0.176,195.0,105.0,0.704
+Granularity_8_Rabbit_IgG,IgG isotype controls (negative control),0.176,195.0,15.0,0.872
+RadialDistribution_RadialCV_1of4_Mitochondria,Mitochondria,0.176,75.0,135.0,0.668
+Texture_InverseDifferenceMoment_3_02_256_Mitochondria,Mitochondria,0.176,105.0,195.0,0.525
+Granularity_8_Actin,Actin,0.175,195.0,45.0,0.796
+RadialDistribution_RadialCV_2of4_Rabbit_IgG,IgG isotype controls (negative control),0.175,165.0,105.0,0.863
+Intensity_MinIntensityEdge_Nucleus,DNA stain (Nucleus),0.175,195.0,105.0,0.697
+Granularity_2_Rabbit_IgG,IgG isotype controls (negative control),0.175,315.0,105.0,0.766
+Intensity_MinIntensity_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.174,195.0,105.0,0.764
+Intensity_MinIntensityEdge_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.172,195.0,105.0,0.764
+Intensity_LowerQuartileIntensity_Rabbit_IgG,IgG isotype controls (negative control),0.17,195.0,315.0,0.837
+Intensity_MinIntensity_Actin,Actin,0.169,195.0,105.0,0.661
+Texture_Correlation_3_00_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.169,105.0,315.0,0.506
+Texture_Correlation_3_02_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.168,105.0,315.0,0.426
+Granularity_7_Actin,Actin,0.166,165.0,345.0,0.757
+Intensity_MassDisplacement_Mouse_IgG,IgG isotype controls (negative control),0.166,135.0,45.0,0.828
+Granularity_1_Mouse_IgG,IgG isotype controls (negative control),0.164,15.0,135.0,0.904
+RadialDistribution_RadialCV_2of4_Mouse_IgG,IgG isotype controls (negative control),0.161,345.0,105.0,0.714
+Intensity_MinIntensity_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.161,195.0,315.0,0.71
+Intensity_MinIntensity_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.161,195.0,315.0,0.802
+RadialDistribution_RadialCV_3of4_Cell-Membrane,Cell membrane,0.16,225.0,15.0,0.68
+RadialDistribution_RadialCV_4of4_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.16,105.0,165.0,0.593
+Intensity_MinIntensityEdge_Phospho-ERK1_Phospho-ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.159,195.0,315.0,0.788
+Intensity_MinIntensityEdge_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.157,195.0,315.0,0.694
+Granularity_8_Nucleus,DNA stain (Nucleus),0.157,195.0,75.0,0.584
+RadialDistribution_MeanFrac_1of4_Mitochondria,Mitochondria,0.156,135.0,195.0,0.844
+RadialDistribution_RadialCV_2of4_Cell-Membrane,Cell membrane,0.154,345.0,195.0,0.833
+Texture_Contrast_3_01_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.147,195.0,225.0,0.643
+RadialDistribution_RadialCV_3of4_Mouse_IgG,IgG isotype controls (negative control),0.147,45.0,195.0,0.729
+RadialDistribution_RadialCV_3of4_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.147,45.0,225.0,0.863
+RadialDistribution_RadialCV_4of4_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.143,105.0,255.0,0.577
+Intensity_MinIntensity_Mouse_IgG,IgG isotype controls (negative control),0.142,195.0,105.0,0.892
+Texture_Correlation_3_03_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.141,225.0,315.0,0.509
+Texture_Correlation_3_01_256_ERK1_ERK2,"antibodies (ERK, pERK, pHSP27, p-p38)",0.14,105.0,315.0,0.418
+Intensity_IntegratedIntensityEdge_Cell-Membrane,Cell membrane,0.139,225.0,345.0,0.518
+Intensity_MADIntensity_Mouse_IgG,IgG isotype controls (negative control),0.139,135.0,345.0,0.78
+RadialDistribution_RadialCV_3of4_Actin,Actin,0.139,15.0,105.0,0.812
+Intensity_MinIntensityEdge_Actin,Actin,0.137,195.0,105.0,0.519
+Intensity_MinIntensityEdge_Mitochondria,Mitochondria,0.137,195.0,105.0,0.601
+Intensity_MinIntensityEdge_Mouse_IgG,IgG isotype controls (negative control),0.136,195.0,105.0,0.897
+Intensity_MinIntensity_Mitochondria,Mitochondria,0.136,195.0,105.0,0.598
+Intensity_IntegratedIntensityEdge_Nucleus,DNA stain (Nucleus),0.127,165.0,345.0,0.384
+Intensity_MinIntensityEdge_Cell-Membrane,Cell membrane,0.125,195.0,105.0,-0.07
+Intensity_MinIntensity_Cell-Membrane,Cell membrane,0.125,195.0,105.0,-0.098
+Intensity_MassDisplacement_Rabbit_IgG,IgG isotype controls (negative control),0.124,165.0,45.0,0.738
+Granularity_7_Nucleus,DNA stain (Nucleus),0.123,135.0,15.0,0.672
+Intensity_MinIntensity_Rabbit_IgG,IgG isotype controls (negative control),0.121,195.0,105.0,0.579
+Intensity_MeanIntensityEdge_Rabbit_IgG,IgG isotype controls (negative control),0.118,195.0,315.0,0.736
+Texture_Variance_3_02_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.118,195.0,255.0,0.535
+Intensity_MinIntensityEdge_Rabbit_IgG,IgG isotype controls (negative control),0.118,195.0,105.0,0.586
+Intensity_StdIntensity_Rabbit_IgG,IgG isotype controls (negative control),0.117,195.0,345.0,0.827
+Texture_Variance_3_00_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.117,195.0,255.0,0.528
+Texture_Variance_3_03_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.115,195.0,255.0,0.518
+Rabbit_IgG_MeanIntensityOfFractionAboveThreshold_Nuclear,IgG isotype controls (negative control),0.115,195.0,315.0,0.383
+Texture_Variance_3_01_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.115,195.0,255.0,0.515
+Texture_SumVariance_3_02_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.114,195.0,255.0,0.505
+Texture_SumVariance_3_00_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.113,195.0,255.0,0.504
+Mouse_IgG_Nuclear,IgG isotype controls (negative control),0.112,105.0,315.0,0.73
+Texture_SumVariance_3_01_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.11,195.0,255.0,0.493
+RadialDistribution_RadialCV_4of4_Rabbit_IgG,IgG isotype controls (negative control),0.109,225.0,45.0,0.511
+Texture_SumVariance_3_03_256_Phospho-HSP27,"antibodies (ERK, pERK, pHSP27, p-p38)",0.109,195.0,255.0,0.467
+Intensity_IntegratedIntensityEdge_Mouse_IgG,IgG isotype controls (negative control),0.108,225.0,135.0,0.471
+Texture_Correlation_3_01_256_Mitochondria,Mitochondria,0.104,285.0,135.0,0.86
+Texture_Correlation_3_00_256_Mitochondria,Mitochondria,0.1,195.0,75.0,0.636
+Texture_Correlation_3_03_256_Mitochondria,Mitochondria,0.1,285.0,165.0,0.746
+Mouse_IgG_MeanIntensityOfFractionAboveThreshold,IgG isotype controls (negative control),0.097,225.0,345.0,0.217
+Rabbit_IgG_MeanIntensityOfFractionAboveThreshold_Cytoplasmic,IgG isotype controls (negative control),0.097,195.0,285.0,0.492
+Intensity_StdIntensity_Mouse_IgG,IgG isotype controls (negative control),0.094,225.0,345.0,0.514
+Texture_Correlation_3_02_256_Mitochondria,Mitochondria,0.094,195.0,15.0,0.668
+Rabbit_IgG_MeanIntensityOfFractionAboveThreshold,IgG isotype controls (negative control),0.091,195.0,285.0,0.345
+RadialDistribution_RadialCV_4of4_Mouse_IgG,IgG isotype controls (negative control),0.09,105.0,345.0,0.345
+Intensity_IntegratedIntensityEdge_Rabbit_IgG,IgG isotype controls (negative control),0.089,225.0,135.0,0.166
+Texture_Correlation_3_01_256_Mouse_IgG,IgG isotype controls (negative control),0.088,285.0,195.0,0.158
+RadialDistribution_MeanFrac_3of4_Nucleus,DNA stain (Nucleus),0.088,105.0,15.0,-0.053
+Intensity_UpperQuartileIntensity_Mouse_IgG,IgG isotype controls (negative control),0.087,225.0,345.0,0.467
+Mouse_IgG,IgG isotype controls (negative control),0.087,135.0,345.0,0.547
+Texture_SumVariance_3_00_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.087,105.0,345.0,0.696
+Texture_Variance_3_03_256_Mouse_IgG,IgG isotype controls (negative control),0.087,225.0,195.0,0.213
+Texture_Correlation_3_00_256_Mouse_IgG,IgG isotype controls (negative control),0.086,285.0,195.0,0.115
+Texture_Variance_3_00_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.086,105.0,345.0,0.687
+Mouse_IgG_MeanIntensityOfFractionAboveThreshold_Nuclear,IgG isotype controls (negative control),0.086,135.0,345.0,0.566
+Texture_Correlation_3_02_256_Mouse_IgG,IgG isotype controls (negative control),0.085,285.0,195.0,0.144
+Texture_SumVariance_3_03_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.085,105.0,345.0,0.689
+Texture_Correlation_3_03_256_Mouse_IgG,IgG isotype controls (negative control),0.084,285.0,195.0,0.095
+Texture_SumVariance_3_01_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.084,105.0,345.0,0.684
+Texture_Variance_3_02_256_Mouse_IgG,IgG isotype controls (negative control),0.083,225.0,195.0,0.222
+Texture_SumVariance_3_03_256_Mouse_IgG,IgG isotype controls (negative control),0.083,225.0,195.0,0.239
+Texture_Variance_3_01_256_Mouse_IgG,IgG isotype controls (negative control),0.083,225.0,195.0,0.192
+Texture_Variance_3_00_256_Mouse_IgG,IgG isotype controls (negative control),0.083,225.0,195.0,0.197
+Mouse_IgG_MeanIntensityOfFractionAboveThreshold_Cytoplasmic,IgG isotype controls (negative control),0.083,225.0,345.0,0.008
+Intensity_MeanIntensityEdge_Mouse_IgG,IgG isotype controls (negative control),0.083,225.0,105.0,0.657
+Texture_SumVariance_3_02_256_Mouse_IgG,IgG isotype controls (negative control),0.083,225.0,195.0,0.253
+Texture_SumVariance_3_01_256_Mouse_IgG,IgG isotype controls (negative control),0.082,225.0,195.0,0.244
+Intensity_MaxIntensity_Mouse_IgG,IgG isotype controls (negative control),0.082,225.0,45.0,0.317
+Intensity_MaxIntensity_Rabbit_IgG,IgG isotype controls (negative control),0.082,225.0,345.0,0.694
+Texture_SumVariance_3_00_256_Mouse_IgG,IgG isotype controls (negative control),0.082,225.0,195.0,0.205
+Texture_InfoMeas1_3_01_256_Mouse_IgG,IgG isotype controls (negative control),0.082,195.0,225.0,0.106
+Texture_Variance_3_03_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.082,105.0,345.0,0.667
+Texture_Variance_3_02_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.082,105.0,345.0,0.704
+Texture_SumEntropy_3_00_256_Mouse_IgG,IgG isotype controls (negative control),0.081,225.0,195.0,0.065
+Texture_InfoMeas1_3_02_256_Mouse_IgG,IgG isotype controls (negative control),0.081,195.0,225.0,0.152
+Texture_SumVariance_3_02_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.081,105.0,345.0,0.708
+Texture_SumEntropy_3_03_256_Mouse_IgG,IgG isotype controls (negative control),0.081,225.0,195.0,0.02
+Texture_Entropy_3_00_256_Mouse_IgG,IgG isotype controls (negative control),0.08,225.0,195.0,0.07
+Texture_Variance_3_01_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.08,105.0,345.0,0.65
+Texture_Entropy_3_03_256_Mouse_IgG,IgG isotype controls (negative control),0.08,225.0,195.0,0.019
+Intensity_MeanIntensity_Mouse_IgG,IgG isotype controls (negative control),0.08,225.0,345.0,0.556
+Texture_InfoMeas2_3_03_256_Mouse_IgG,IgG isotype controls (negative control),0.079,225.0,195.0,0.04
+Texture_InfoMeas2_3_01_256_Mouse_IgG,IgG isotype controls (negative control),0.079,225.0,195.0,0.025
+Texture_SumEntropy_3_02_256_Mouse_IgG,IgG isotype controls (negative control),0.079,225.0,195.0,0.048
+Texture_InfoMeas1_3_03_256_Mouse_IgG,IgG isotype controls (negative control),0.079,165.0,225.0,0.015
+Texture_SumEntropy_3_01_256_Mouse_IgG,IgG isotype controls (negative control),0.079,225.0,195.0,0.013
+Mouse_IgG_Cytoplasmic,IgG isotype controls (negative control),0.078,135.0,345.0,0.502
+Texture_SumAverage_3_03_256_Mouse_IgG,IgG isotype controls (negative control),0.078,285.0,195.0,0.038
+Texture_Entropy_3_01_256_Mouse_IgG,IgG isotype controls (negative control),0.078,225.0,195.0,-0.011
+Texture_SumAverage_3_02_256_Mouse_IgG,IgG isotype controls (negative control),0.078,285.0,195.0,0.033
+Texture_SumAverage_3_01_256_Mouse_IgG,IgG isotype controls (negative control),0.078,285.0,195.0,0.03
+Texture_SumAverage_3_00_256_Mouse_IgG,IgG isotype controls (negative control),0.078,285.0,195.0,0.039
+Texture_InfoMeas2_3_02_256_Mouse_IgG,IgG isotype controls (negative control),0.077,225.0,195.0,0.039
+Texture_Entropy_3_02_256_Mouse_IgG,IgG isotype controls (negative control),0.077,225.0,195.0,0.02
+Intensity_StdIntensityEdge_Mouse_IgG,IgG isotype controls (negative control),0.077,225.0,45.0,0.602
+Texture_InverseDifferenceMoment_3_00_256_Mouse_IgG,IgG isotype controls (negative control),0.076,285.0,195.0,0.003
+Texture_InverseDifferenceMoment_3_03_256_Mouse_IgG,IgG isotype controls (negative control),0.076,285.0,195.0,0.005
+Texture_InverseDifferenceMoment_3_02_256_Mouse_IgG,IgG isotype controls (negative control),0.075,285.0,195.0,0.022
+Texture_InfoMeas2_3_00_256_Mouse_IgG,IgG isotype controls (negative control),0.075,225.0,195.0,-0.001
+Texture_InverseDifferenceMoment_3_01_256_Mouse_IgG,IgG isotype controls (negative control),0.075,285.0,195.0,0.026
+Texture_Entropy_3_03_256_Rabbit_IgG,IgG isotype controls (negative control),0.075,195.0,165.0,-0.321
+Texture_Entropy_3_02_256_Rabbit_IgG,IgG isotype controls (negative control),0.074,195.0,165.0,-0.337
+Texture_DifferenceVariance_3_00_256_Mouse_IgG,IgG isotype controls (negative control),0.072,285.0,195.0,0.015
+Texture_InfoMeas1_3_00_256_Mouse_IgG,IgG isotype controls (negative control),0.072,195.0,225.0,-0.018
+Texture_DifferenceVariance_3_01_256_Mouse_IgG,IgG isotype controls (negative control),0.072,285.0,195.0,0.071
+Texture_Contrast_3_02_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.071,105.0,345.0,0.588
+Intensity_MaxIntensityEdge_Mouse_IgG,IgG isotype controls (negative control),0.071,225.0,45.0,0.214
+Texture_DifferenceVariance_3_02_256_Mouse_IgG,IgG isotype controls (negative control),0.071,285.0,195.0,0.06
+Texture_Entropy_3_00_256_Rabbit_IgG,IgG isotype controls (negative control),0.071,195.0,165.0,-0.32
+Texture_DifferenceVariance_3_03_256_Mouse_IgG,IgG isotype controls (negative control),0.07,285.0,195.0,0.007
+Intensity_MedianIntensity_Mouse_IgG,IgG isotype controls (negative control),0.069,135.0,345.0,0.475
+Texture_Entropy_3_01_256_Rabbit_IgG,IgG isotype controls (negative control),0.069,195.0,165.0,-0.334
+Texture_AngularSecondMoment_3_01_256_Mouse_IgG,IgG isotype controls (negative control),0.069,285.0,195.0,0.034
+Texture_AngularSecondMoment_3_02_256_Mouse_IgG,IgG isotype controls (negative control),0.068,285.0,195.0,0.022
+Texture_AngularSecondMoment_3_00_256_Mouse_IgG,IgG isotype controls (negative control),0.068,285.0,195.0,-0.002
+Texture_DifferenceEntropy_3_00_256_Mouse_IgG,IgG isotype controls (negative control),0.068,225.0,195.0,0.044
+Texture_SumEntropy_3_02_256_Rabbit_IgG,IgG isotype controls (negative control),0.068,195.0,165.0,-0.35
+Texture_AngularSecondMoment_3_03_256_Mouse_IgG,IgG isotype controls (negative control),0.067,285.0,195.0,-0.0
+Texture_DifferenceEntropy_3_00_256_Rabbit_IgG,IgG isotype controls (negative control),0.067,195.0,165.0,-0.32
+Texture_SumAverage_3_03_256_Rabbit_IgG,IgG isotype controls (negative control),0.067,195.0,255.0,-0.552
+Texture_DifferenceEntropy_3_03_256_Mouse_IgG,IgG isotype controls (negative control),0.066,225.0,195.0,-0.093
+Texture_Contrast_3_00_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.066,105.0,345.0,0.511
+Texture_DifferenceEntropy_3_01_256_Mouse_IgG,IgG isotype controls (negative control),0.066,225.0,195.0,-0.145
+Texture_DifferenceEntropy_3_01_256_Rabbit_IgG,IgG isotype controls (negative control),0.066,195.0,165.0,-0.332
+Texture_Contrast_3_03_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.066,105.0,345.0,0.502
+Texture_SumAverage_3_02_256_Rabbit_IgG,IgG isotype controls (negative control),0.066,195.0,255.0,-0.566
+Texture_DifferenceEntropy_3_03_256_Rabbit_IgG,IgG isotype controls (negative control),0.065,195.0,165.0,-0.319
+Texture_SumEntropy_3_03_256_Rabbit_IgG,IgG isotype controls (negative control),0.065,195.0,165.0,-0.334
+Texture_DifferenceEntropy_3_02_256_Rabbit_IgG,IgG isotype controls (negative control),0.064,195.0,165.0,-0.335
+Texture_SumEntropy_3_00_256_Rabbit_IgG,IgG isotype controls (negative control),0.064,195.0,165.0,-0.337
+Texture_SumAverage_3_00_256_Rabbit_IgG,IgG isotype controls (negative control),0.064,195.0,255.0,-0.57
+Texture_SumAverage_3_01_256_Rabbit_IgG,IgG isotype controls (negative control),0.063,195.0,255.0,-0.565
+Texture_DifferenceEntropy_3_02_256_Mouse_IgG,IgG isotype controls (negative control),0.061,225.0,195.0,-0.119
+RadialDistribution_RadialCV_3of4_Rabbit_IgG,IgG isotype controls (negative control),0.061,315.0,195.0,-0.197
+Texture_InfoMeas2_3_01_256_Rabbit_IgG,IgG isotype controls (negative control),0.06,195.0,165.0,-0.341
+AreaShape_EulerNumber,shape and size,0.059,195.0,135.0,0.112
+Texture_Contrast_3_01_256_Phospho-p38,"antibodies (ERK, pERK, pHSP27, p-p38)",0.059,105.0,345.0,0.387
+Intensity_StdIntensityEdge_Rabbit_IgG,IgG isotype controls (negative control),0.059,285.0,45.0,0.567
+Texture_SumEntropy_3_01_256_Rabbit_IgG,IgG isotype controls (negative control),0.059,195.0,165.0,-0.341
+Intensity_MaxIntensityEdge_Rabbit_IgG,IgG isotype controls (negative control),0.057,255.0,345.0,0.44
+Texture_Contrast_3_03_256_Rabbit_IgG,IgG isotype controls (negative control),0.056,225.0,165.0,-0.177
+Texture_Contrast_3_03_256_Mouse_IgG,IgG isotype controls (negative control),0.054,225.0,195.0,0.004
+Texture_Contrast_3_00_256_Rabbit_IgG,IgG isotype controls (negative control),0.053,225.0,165.0,-0.222
+Texture_Variance_3_03_256_Rabbit_IgG,IgG isotype controls (negative control),0.053,225.0,165.0,-0.157
+Texture_InfoMeas2_3_03_256_Rabbit_IgG,IgG isotype controls (negative control),0.052,195.0,165.0,-0.322
+Texture_Contrast_3_02_256_Rabbit_IgG,IgG isotype controls (negative control),0.052,225.0,165.0,-0.209
+Texture_InfoMeas2_3_00_256_Rabbit_IgG,IgG isotype controls (negative control),0.052,195.0,165.0,-0.383
+Intensity_LowerQuartileIntensity_Mouse_IgG,IgG isotype controls (negative control),0.052,195.0,15.0,0.359
+Texture_Variance_3_02_256_Rabbit_IgG,IgG isotype controls (negative control),0.052,225.0,165.0,-0.162
+Texture_SumVariance_3_01_256_Rabbit_IgG,IgG isotype controls (negative control),0.051,225.0,165.0,-0.131
+Texture_SumVariance_3_02_256_Rabbit_IgG,IgG isotype controls (negative control),0.051,225.0,165.0,-0.139
+Texture_Variance_3_00_256_Rabbit_IgG,IgG isotype controls (negative control),0.05,225.0,165.0,-0.17
+Texture_Variance_3_01_256_Rabbit_IgG,IgG isotype controls (negative control),0.05,225.0,165.0,-0.159
+Texture_SumVariance_3_03_256_Rabbit_IgG,IgG isotype controls (negative control),0.049,225.0,165.0,-0.137
+Texture_InfoMeas1_3_00_256_Rabbit_IgG,IgG isotype controls (negative control),0.049,165.0,45.0,-0.334
+Texture_Contrast_3_01_256_Rabbit_IgG,IgG isotype controls (negative control),0.049,225.0,165.0,-0.186
+Texture_SumVariance_3_00_256_Rabbit_IgG,IgG isotype controls (negative control),0.048,225.0,165.0,-0.14
+Texture_InfoMeas2_3_02_256_Rabbit_IgG,IgG isotype controls (negative control),0.047,195.0,165.0,-0.381
+Texture_InfoMeas1_3_02_256_Rabbit_IgG,IgG isotype controls (negative control),0.046,165.0,45.0,-0.371
+Texture_Contrast_3_01_256_Mouse_IgG,IgG isotype controls (negative control),0.046,225.0,195.0,-0.146
+Texture_InverseDifferenceMoment_3_02_256_Rabbit_IgG,IgG isotype controls (negative control),0.045,195.0,255.0,-0.727
+Texture_InverseDifferenceMoment_3_00_256_Rabbit_IgG,IgG isotype controls (negative control),0.045,195.0,255.0,-0.728
+Texture_InfoMeas1_3_03_256_Rabbit_IgG,IgG isotype controls (negative control),0.044,165.0,45.0,-0.291
+Texture_InverseDifferenceMoment_3_01_256_Rabbit_IgG,IgG isotype controls (negative control),0.043,195.0,255.0,-0.729
+Texture_InverseDifferenceMoment_3_03_256_Rabbit_IgG,IgG isotype controls (negative control),0.043,195.0,255.0,-0.737
+Texture_InfoMeas1_3_01_256_Rabbit_IgG,IgG isotype controls (negative control),0.041,165.0,45.0,-0.341
+Texture_Correlation_3_02_256_Rabbit_IgG,IgG isotype controls (negative control),0.04,195.0,255.0,-0.724
+Texture_AngularSecondMoment_3_00_256_Rabbit_IgG,IgG isotype controls (negative control),0.04,195.0,255.0,-0.74
+Texture_AngularSecondMoment_3_01_256_Rabbit_IgG,IgG isotype controls (negative control),0.04,195.0,255.0,-0.742
+Texture_AngularSecondMoment_3_02_256_Rabbit_IgG,IgG isotype controls (negative control),0.04,195.0,255.0,-0.743
+Texture_DifferenceVariance_3_02_256_Rabbit_IgG,IgG isotype controls (negative control),0.039,195.0,255.0,-0.744
+Texture_DifferenceVariance_3_00_256_Rabbit_IgG,IgG isotype controls (negative control),0.039,195.0,255.0,-0.74
+Texture_AngularSecondMoment_3_03_256_Rabbit_IgG,IgG isotype controls (negative control),0.039,195.0,255.0,-0.75
+Texture_DifferenceVariance_3_03_256_Rabbit_IgG,IgG isotype controls (negative control),0.039,195.0,255.0,-0.752
+Texture_DifferenceVariance_3_01_256_Rabbit_IgG,IgG isotype controls (negative control),0.039,195.0,255.0,-0.743
+Texture_Correlation_3_00_256_Rabbit_IgG,IgG isotype controls (negative control),0.038,195.0,255.0,-0.728
+Texture_Correlation_3_01_256_Rabbit_IgG,IgG isotype controls (negative control),0.037,285.0,255.0,-0.744
+Texture_Correlation_3_03_256_Rabbit_IgG,IgG isotype controls (negative control),0.037,285.0,255.0,-0.772
+Texture_Contrast_3_00_256_Mouse_IgG,IgG isotype controls (negative control),0.035,225.0,195.0,0.085
+Texture_Contrast_3_02_256_Mouse_IgG,IgG isotype controls (negative control),0.033,225.0,195.0,-0.162

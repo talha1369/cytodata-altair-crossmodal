@@ -1,0 +1,5 @@
+expected_arrest_phase,n,expected_4N_change,median_predicted_d_pct_4N,fraction_4N_up,n_significant_cycle_shift,p_vs_rest_of_library
+G1 Phase,26,down,-0.87,0.38,4,0.1
+S Phase,9,up,3.95,0.89,4,2.9e-05
+G2/M Phase,25,up,-0.8,0.36,2,0.13
+rest of the library,940,,-1.31,0.23,71,
