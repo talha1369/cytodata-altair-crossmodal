@@ -136,8 +136,12 @@ An arrest in G1 should lower the share of 4N cells; an arrest in S or G2/M shoul
   * CCNB1 (the mitotic cyclin) is listed under G1;
   * CDC45 (a replication helicase factor) is listed under G2/M.
 * **The mechanism text is identical within each phase group**, so the annotation looks rule-generated, not curated per gene.
-* **Open question:** most mitotic and ESCRT genes (CHMP*, CENP*, BUB1B) show no predicted 4N gain. Either the knockouts are weak in
-  these cells, or phase contrast does not see the arrest. Measured DNA content for these knockouts can settle it.""")
+* **Most mitotic and ESCRT genes (CHMP*, CENP*, BUB1B) show no predicted 4N gain, and measured DNA agrees** (section 2d, all 60
+  genes measured). The G2/M group's median measured change is -2.5 points of 4N cells and +3.2 points of 2N cells, the opposite of
+  a G2/M arrest; only CDC45 gains 4N cells, and the two significant G2/M-list shifts (ATRX, ASNS) are 2N gains. These knockouts do
+  not arrest in G2/M in this screen, so phase contrast was right not to see an arrest. They are not hidden as binucleate cells
+  either: the share of cells with more than one nucleus is 10.0% (median, G2/M list) vs 10.4% in NTC (NTC guides 5 to 18%); only
+  KIF23 (31%) is clearly above, with BUB1B and AURKB (17 to 19%) at the edge.""")
 
 code("""display(Image(filename=find('arrest_phase_test.png')))
 display(pd.read_csv(find('arrest_phase_test.csv')))
@@ -229,7 +233,7 @@ called G2/M by phase contrast?
 **Caveats.** The 81 shifters were chosen for having predicted shifts, which helps the correlation. With 2,000 draws the smallest p is
 about 0.0005, and some large shifts miss significance (GOLGA6L1 +8.8 points, q 0.08). Confirming on either % 2N or % 4N lets the
 combined FDR exceed 5% somewhat. The 4N cut (0.65 log2, about 3.1N) counts late-S cells as 4N, which matters for the replication
-genes. Only 5 G1-list knockouts are in this batch; the remaining 47 arrest-list genes are being measured.
+genes. Only 5 G1-list knockouts are in this batch; the second batch below adds the other 47 arrest-list genes.
 
 **Data.** Every phase-imaged cell of these 111 knockouts (53,471) with 4i, phase contrast and measured DNA where measured:
 `/srv/team/data/crossmodal/ops0077_ko/OPS0077_KOcyc_Multimodal_4i_Phase_DNA.h5ad` (same schema and NTC scaling as the NTC file).
@@ -242,6 +246,28 @@ M.sort_values('measured_d_pct_4N')[['gene', 'set', 'n_measured', 'measured_d_pct
 code("""display(Image(filename=find('g1_hypertrophy_check.png')))
 display(pd.read_csv(find('model_summary_ntc.csv')).round(3))
 pd.read_csv(find('model_vs_measured_across_knockouts.csv')).round(3)""")
+
+md("""**Second batch: the remaining 47 arrest-list genes (158 knockouts in all, 32,060 cells with measured DNA).**
+* **The new knockouts were not selected on a predicted shift, and the prediction still holds:** Spearman 0.64 for the 47 alone,
+  0.78 over all 158 (slope 1.02). With 158 tests, 41 of the 81 predicted shifters stay confirmed and 6 of the 30 calibration
+  knockouts.
+* **By expected arrest phase (all 60 arrest-list genes):**
+  * S group (9): median +4.7 points of 4N cells; MCM7 and POLA2 significant.
+  * G1 group (26): median +6.1 points of 2N cells and -2.5 of 4N, the direction of a G1 accumulation, but only RPTOR is
+    significant on its own. The replication genes on this list (RPA2 +11.5 points 4N, q 0.06; POLE) and CCNB1 gain 4N cells instead.
+  * G2/M group (25): median +3.2 points of 2N and -2.5 of 4N, the opposite of a G2/M arrest. Only CDC45 gains 4N cells; ATRX and
+    ASNS are significant 2N gains. Mitotic, ESCRT and centromere knockouts are not hidden as binucleate cells (see 2b).
+* **Hypertrophy, all 158:** measured-2N cells are larger than NTC 2N cells in 148 knockouts, the excess of false 4N calls has
+  median -1.0 point and does not rise with size (Spearman 0.09). The 26 G1-list knockouts range from -3.4 to +3.2 points (median
+  -1.0; APC highest). Agreement with measured DNA: standard 0.86, DNA floor 0.86, size-balanced 0.74, size-removed 0.67.""")
+
+code("""display(Image(filename=find('ko_measured_vs_predicted_dna_all.png')))
+M2 = pd.read_csv(find('ko_measured_vs_predicted_dna_all.csv'))
+display(M2.dropna(subset=['expected_arrest_phase']).groupby('expected_arrest_phase').agg(n=('gene', 'size'),
+        median_d_pct_2N=('measured_d_pct_2N', 'median'), median_d_pct_4N=('measured_d_pct_4N', 'median'), n_significant=('measured_significant', 'sum')).round(2))
+display(pd.read_csv(find('model_vs_measured_across_knockouts_all.csv')).round(3))
+mn = pd.read_csv(find('ko_multinucleate_by_gene.csv'), index_col=0)
+mn.sort_values('pct_multi', ascending=False).head(12).round(3)""")
 
 md("""## 3. Regressing the cycle out: does heterogeneity go down?
 

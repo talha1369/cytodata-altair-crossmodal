@@ -89,7 +89,14 @@ with a predicted cycle shift, 30 calibration; 22,152 usable cells), and four pha
 * The DNA floor changes no knockout by more than 0.63 points. Size corrections lower agreement with measured DNA.
 * **The predictions themselves hold:** predicted vs measured change in % 4N, Spearman 0.76, slope 1.01 (n = 111); 42 of 81 predicted
   shifts confirmed at FDR 5%, 41 with the predicted sign. The confirmed 4N gains are replication genes (MTBP, MCM7, CDC45, POLA2).
-* The remaining 47 arrest-list genes are being measured; only 5 G1-list genes are in this first batch.
+* **All 60 arrest-list genes measured** (158 knockouts, 32,060 cells). The 47 added knockouts were not selected on a predicted shift and
+  the prediction still holds (Spearman 0.64; 0.78 over all 158). Hypertrophy over all 158: 2N cells larger in 148, false-4N excess
+  median -1.0 point, no relation with size (Spearman 0.09); the 26 G1-list knockouts range from -3.4 to +3.2 points.
+* **What the arrest list does when measured:** S group median +4.7 points of 4N cells (MCM7, POLA2 significant); G1 group median
+  +6.1 points of 2N cells (only RPTOR significant alone); **G2/M group median -2.5 points of 4N, the opposite of a G2/M arrest**
+  (only CDC45 gains 4N). The mitotic, ESCRT and centromere knockouts are not hidden as binucleate cells: 10.0% of cells have more
+  than one nucleus (median, G2/M list) vs 10.4% in NTC (NTC guides 5 to 18%); only KIF23 (31%) is clearly above
+  (`reports/ko_cell_cycle/ko_measured_vs_predicted_dna_all.csv`, `ko_multinucleate_by_gene.csv`).
 
 Already measured: CCNB1 (on the G1/S list) gains 4N cells for real (+4.3 points by DAPI). CCNB1 is the mitotic cyclin.
 

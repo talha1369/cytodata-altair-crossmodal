@@ -1,0 +1,46 @@
+batches: ['dapi_kocyc', 'dapi_koarrest']
+knockout cells measured 38,335 | usable (nucleus in R2-4, single nucleus) 32,060
+NTC n=36,014: %2N 69.7  %S 11.0  %4N 19.4
+
+predicted vs measured change in % 4N across 158 knockouts: Spearman 0.78 (p 2e-33), Pearson 0.83
+cycle-shift knockouts confirmed by measured DNA (FDR 5% on %4N or %2N): 41 / 81 | calibration knockouts significant: 6 / 30
+sign agreement (predicted vs measured %4N) among confirmed: 98%
+slope measured on predicted (least squares): 1.02
+
+by expected arrest phase (arrest list): measured change in % 2N / % 4N, median and fraction significant
+                        n  median_d_pct_2N  median_d_pct_4N  n_significant
+expected_arrest_phase                                                     
+G1 Phase               26             6.09            -2.53              1
+G2/M Phase             25             3.24            -2.54              3
+S Phase                 9            -3.64             4.70              2
+
+largest measured 4N gains:
+     gene         set  n_measured  measured_d_pct_2N  measured_d_pct_S  measured_d_pct_4N  q_4N  predicted_d_pct_4N  measured_pRb_shift_log2
+   KIF11 calibration          67             -17.42             -2.03              19.45  0.03               13.18                    -0.47
+    MTBP cycle_shift         223             -19.88              2.92              16.97  0.03               14.34                    -0.23
+    MCM7 cycle_shift         219             -11.67             -0.48              12.15  0.03                7.62                    -0.12
+    RPA2 arrest_list         172              -8.61             -2.85              11.46  0.06                7.08                    -0.41
+GOLGA6L1 cycle_shift         160              -5.91             -2.86               8.77  0.09                8.26                    -0.46
+   CDC45 cycle_shift         216             -18.27              9.85               8.42  0.06               10.50                    -0.41
+   POLA2 cycle_shift         209             -11.29              3.37               7.92  0.08                9.24                    -0.11
+  RPL37A cycle_shift         166               2.63             -9.18               6.55  0.23               -2.48                    -0.51
+ GOLGA8K cycle_shift         132               0.04             -6.44               6.40  0.33                5.63                    -0.49
+   POLA1 cycle_shift         218              -6.81              0.94               5.87  0.23                8.64                    -0.06
+    MCM3 arrest_list         206              -3.64             -1.28               4.92  0.33                3.26                    -0.07
+   AURKB cycle_shift         199              -2.82             -1.94               4.76  0.35                6.69                    -0.44
+
+largest measured 4N losses:
+  gene         set  n_measured  measured_d_pct_2N  measured_d_pct_S  measured_d_pct_4N  q_4N  predicted_d_pct_4N  measured_pRb_shift_log2
+HSPA9 cycle_shift         194              19.00             -7.38             -11.62  0.03               -8.14                    -0.50
+ IMP4 cycle_shift         196              18.61             -7.41             -11.19  0.03               -7.54                    -0.48
+PSMD4 cycle_shift         207              20.20             -9.05             -11.14  0.03               -6.39                    -0.48
+SRSF3 cycle_shift         145              17.93             -6.85             -11.08  0.06               -3.65                    -0.44
+WDR12 cycle_shift         219              18.01             -7.79             -10.22  0.06               -4.61                    -0.51
+RPS16 cycle_shift         201              19.89             -9.99              -9.90  0.04               -7.72                    -0.48
+ MED6 calibration         211              17.54             -7.67              -9.88  0.04               -3.28                    -0.48
+ NOB1 cycle_shift         206              15.78             -6.13              -9.65  0.04               -5.05                    -0.44
+RPTOR cycle_shift         205              15.22             -6.11              -9.11  0.06               -4.40                    -0.36
+RPS28 cycle_shift         210              15.10             -6.22              -8.88  0.06               -6.57                    -0.51
+ LTV1 cycle_shift         200              16.84             -7.98              -8.86  0.06               -7.30                    -0.47
+DDX52 cycle_shift         208               9.67             -0.89              -8.78  0.06               -4.80                    -0.42
+DONE

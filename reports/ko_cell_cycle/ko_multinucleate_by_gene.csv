@@ -1,0 +1,159 @@
+gene,n,pct_multi,pct_nonuc,p,q,expected_arrest_phase,set
+AARS,250,10.4,4.8,1.0,1.0,,cycle_shift
+ADSS,250,12.0,8.8,0.4069,0.893,,calibration
+AP3M1,250,10.4,7.6,1.0,1.0,,calibration
+APC,250,15.2,7.2,0.017,0.1787,G1 Phase,arrest_list
+ARPP19,250,9.2,2.8,0.6048,0.9015,G2/M Phase,arrest_list
+ASNS,250,10.0,5.6,0.9176,1.0,G2/M Phase,arrest_list
+ATP6V1B2,250,9.2,6.8,0.6048,0.9015,,cycle_shift
+ATRX,250,9.6,4.0,0.7563,0.9715,G2/M Phase,arrest_list
+AURKB,250,17.2,3.2,0.0012,0.0314,G2/M Phase,cycle_shift
+B4GALT5,250,9.2,6.8,0.6048,0.9015,,calibration
+BRCA1,250,6.8,3.6,0.0621,0.4091,G2/M Phase,arrest_list
+BUB1B,250,18.8,6.8,0.0001,0.0027,G2/M Phase,arrest_list
+CCDC174,250,11.6,6.4,0.5339,0.9015,,cycle_shift
+CCDC59,250,9.6,6.4,0.7563,0.9715,,cycle_shift
+CCNB1,250,11.6,7.6,0.5339,0.9015,G1 Phase,arrest_list
+CCND3,250,10.4,6.8,1.0,1.0,G1 Phase,arrest_list
+CCNF,250,8.8,5.6,0.4684,0.9015,G1 Phase,arrest_list
+CCNG1,250,8.0,5.2,0.2538,0.7712,G1 Phase,arrest_list
+CCNH,250,10.8,4.0,0.8357,0.9781,G1 Phase,arrest_list
+CCT3,250,14.0,4.0,0.0772,0.4878,,cycle_shift
+CCT6A,250,11.6,8.8,0.5339,0.9015,,cycle_shift
+CCT7,250,12.4,4.4,0.3001,0.8466,,cycle_shift
+CDC27,250,8.8,3.6,0.4684,0.9015,G2/M Phase,arrest_list
+CDC45,250,9.2,4.4,0.6048,0.9015,G2/M Phase,cycle_shift
+CDK7,250,11.6,5.6,0.5339,0.9015,G1 Phase,arrest_list
+CENPA,250,10.8,3.2,0.8357,0.9781,G2/M Phase,arrest_list
+CENPC,250,8.8,4.4,0.4684,0.9015,G2/M Phase,arrest_list
+CENPH,250,13.6,4.0,0.1191,0.5702,G2/M Phase,arrest_list
+CENPW,250,11.6,3.6,0.5339,0.9015,G2/M Phase,arrest_list
+CEP55,250,9.2,5.2,0.6048,0.9015,G2/M Phase,arrest_list
+CEP85,250,11.6,6.0,0.5339,0.9015,G2/M Phase,arrest_list
+CFL1,250,7.6,4.4,0.1771,0.6824,G2/M Phase,arrest_list
+CHERP,250,12.8,6.4,0.2139,0.751,,cycle_shift
+CHMP1A,250,11.2,3.6,0.6783,0.9569,G2/M Phase,arrest_list
+CHMP2A,250,12.0,8.0,0.4069,0.893,G2/M Phase,arrest_list
+CHMP4B,250,11.2,7.6,0.6783,0.9569,G2/M Phase,arrest_list
+CHMP4C,250,10.4,6.0,1.0,1.0,G2/M Phase,arrest_list
+CHMP5,250,10.8,3.6,0.8357,0.9781,G2/M Phase,arrest_list
+CHMP6,250,9.6,5.6,0.7563,0.9715,G2/M Phase,calibration
+CHMP7,250,7.6,3.6,0.1771,0.6824,G2/M Phase,arrest_list
+CHTF8,250,9.2,4.0,0.6048,0.9015,G2/M Phase,calibration
+CIT,250,14.8,6.4,0.0291,0.2703,G2/M Phase,arrest_list
+CLASP1,250,8.0,7.6,0.2538,0.7712,G2/M Phase,arrest_list
+COX14,250,12.8,9.6,0.2139,0.751,,cycle_shift
+CPSF3,250,9.6,4.8,0.7563,0.9715,G1 Phase,arrest_list
+CUL1,250,12.4,6.0,0.3001,0.8466,G1 Phase,calibration
+CUL2,250,6.8,3.6,0.0621,0.4091,G1 Phase,arrest_list
+DDRGK1,250,11.6,6.4,0.5339,0.9015,G1 Phase,arrest_list
+DDX18,250,15.6,8.4,0.0124,0.178,,cycle_shift
+DDX52,250,8.0,8.8,0.2538,0.7712,,cycle_shift
+DLG4,250,8.4,2.0,0.3509,0.87,,calibration
+DPH2,250,7.6,7.6,0.1771,0.6824,,calibration
+EBF1,250,9.2,10.0,0.6048,0.9015,,calibration
+EFR3A,250,10.0,5.6,0.9176,1.0,,calibration
+EIF1AD,250,7.6,7.2,0.1771,0.6824,,cycle_shift
+EIF2AK3,250,8.4,5.2,0.3509,0.87,,calibration
+EIF2B2,250,10.8,4.4,0.8357,0.9781,,calibration
+EIF2B3,250,12.4,7.6,0.3001,0.8466,,cycle_shift
+EIF2S1,250,10.4,2.8,1.0,1.0,,cycle_shift
+EIF4G1,250,8.0,6.0,0.2538,0.7712,G1 Phase,arrest_list
+EXOSC5,250,8.8,6.4,0.4684,0.9015,,calibration
+EXOSC8,250,8.4,7.2,0.3509,0.87,,cycle_shift
+FARSA,250,15.2,6.4,0.017,0.1787,,cycle_shift
+FECH,250,10.8,5.2,0.8357,0.9781,,calibration
+FLII,250,9.2,4.8,0.6048,0.9015,,calibration
+GINS1,250,13.6,6.4,0.1191,0.5702,S Phase,arrest_list
+GINS2,250,6.8,5.2,0.0621,0.4091,S Phase,arrest_list
+GNL2,250,8.8,8.4,0.4684,0.9015,,cycle_shift
+GNL3,250,6.4,6.0,0.0378,0.3142,,cycle_shift
+GOLGA6L1,189,12.169,3.175,0.405,0.893,,cycle_shift
+GOLGA8K,151,11.921,0.662,0.5061,0.9015,,cycle_shift
+GRIA3,250,15.6,4.4,0.0124,0.178,,calibration
+HSPA14,250,8.8,5.6,0.4684,0.9015,,cycle_shift
+HSPA9,250,12.0,10.8,0.4069,0.893,,cycle_shift
+IMP4,250,15.6,6.8,0.0124,0.178,,cycle_shift
+INPPL1,250,10.4,5.2,1.0,1.0,,calibration
+INTS5,250,8.4,4.8,0.3509,0.87,,cycle_shift
+ITGB1,250,17.6,7.2,0.0006,0.0177,,cycle_shift
+KIF11,76,10.526,1.316,1.0,1.0,,calibration
+KIF14,250,12.8,5.6,0.2139,0.751,G1 Phase,arrest_list
+KIF23,234,31.197,1.709,0.0,0.0,,cycle_shift
+KRTAP2-3,250,9.2,3.2,0.6048,0.9015,,calibration
+LIMS1,250,12.0,8.0,0.4069,0.893,,cycle_shift
+LTB4R,250,10.4,3.2,1.0,1.0,,calibration
+LTV1,250,10.4,9.6,1.0,1.0,,cycle_shift
+MCM3,250,11.6,6.4,0.5339,0.9015,S Phase,arrest_list
+MCM5,250,8.8,5.2,0.4684,0.9015,S Phase,arrest_list
+MCM7,250,9.6,3.2,0.7563,0.9715,S Phase,cycle_shift
+MED6,250,8.4,7.2,0.3509,0.87,,calibration
+MGAM,250,9.2,5.2,0.6048,0.9015,,cycle_shift
+MTBP,250,7.2,4.0,0.0981,0.5168,,cycle_shift
+NLE1,250,7.2,5.6,0.0981,0.5168,,cycle_shift
+NOB1,250,12.0,5.6,0.4069,0.893,,cycle_shift
+NOL8,250,10.8,2.8,0.8357,0.9781,,calibration
+NOP16,250,11.2,3.2,0.6783,0.9569,,calibration
+NSA2,250,8.4,6.4,0.3509,0.87,,calibration
+NUDT21,250,9.6,5.2,0.7563,0.9715,,cycle_shift
+NUP98,250,10.8,5.6,0.8357,0.9781,,cycle_shift
+PHF23,250,10.0,6.4,0.9176,1.0,,calibration
+PIAS1,250,6.4,4.4,0.0378,0.3142,G1 Phase,arrest_list
+PIM2,250,11.2,3.6,0.6783,0.9569,G1 Phase,arrest_list
+POLA1,250,9.6,3.2,0.7563,0.9715,S Phase,cycle_shift
+POLA2,250,10.8,5.6,0.8357,0.9781,S Phase,cycle_shift
+POLE,250,7.2,5.2,0.0981,0.5168,G1 Phase,cycle_shift
+POLE2,250,10.4,4.8,1.0,1.0,S Phase,cycle_shift
+POLE4,250,9.6,4.0,0.7563,0.9715,S Phase,arrest_list
+POLR1B,250,9.2,4.0,0.6048,0.9015,,cycle_shift
+POLR2C,250,9.2,6.4,0.6048,0.9015,,cycle_shift
+POLR2D,250,9.2,9.2,0.6048,0.9015,,cycle_shift
+POLR3F,250,9.2,10.0,0.6048,0.9015,,cycle_shift
+PPP2CA,250,12.4,4.4,0.3001,0.8466,G1 Phase,arrest_list
+PSMB6,250,7.6,6.8,0.1771,0.6824,G1 Phase,cycle_shift
+PSMD4,250,12.0,5.2,0.4069,0.893,,cycle_shift
+PTEN,250,10.4,2.4,1.0,1.0,G1 Phase,arrest_list
+PXN,250,6.8,3.6,0.0621,0.4091,,calibration
+QARS,250,11.2,6.8,0.6783,0.9569,,cycle_shift
+RAB7A,250,11.6,4.4,0.5339,0.9015,,cycle_shift
+RAC1,250,13.6,8.4,0.1191,0.5702,,cycle_shift
+RFWD3,250,7.2,4.4,0.0981,0.5168,G1 Phase,arrest_list
+RHOA,250,12.8,8.0,0.2139,0.751,,cycle_shift
+RIOK2,250,10.0,9.6,0.9176,1.0,,calibration
+RPA2,207,10.628,6.28,0.9093,1.0,G1 Phase,arrest_list
+RPF2,250,6.0,5.2,0.0221,0.2178,,cycle_shift
+RPL23,250,9.2,6.0,0.6048,0.9015,,cycle_shift
+RPL26,182,9.89,3.846,0.9037,1.0,,cycle_shift
+RPL27A,158,10.759,7.595,0.8961,1.0,,cycle_shift
+RPL37A,200,10.0,7.0,1.0,1.0,,cycle_shift
+RPS10,151,12.583,3.311,0.3524,0.87,,cycle_shift
+RPS16,250,11.6,8.0,0.5339,0.9015,,cycle_shift
+RPS27A,173,10.983,4.046,0.803,0.9781,,cycle_shift
+RPS28,250,10.4,5.6,1.0,1.0,,cycle_shift
+RPS29,171,14.035,4.094,0.1316,0.6115,,cycle_shift
+RPS9,194,9.278,5.155,0.724,0.9715,,cycle_shift
+RPTOR,250,10.8,7.6,0.8357,0.9781,G1 Phase,cycle_shift
+RRM1,153,11.111,10.458,0.7906,0.9781,G1 Phase,cycle_shift
+RRP7A,250,15.2,7.2,0.017,0.1787,,cycle_shift
+RSL24D1,219,7.306,5.479,0.1499,0.6765,,cycle_shift
+SARS,250,8.0,7.2,0.2538,0.7712,,cycle_shift
+SCN8A,250,7.6,4.4,0.1771,0.6824,,calibration
+SEC61A1,250,22.0,6.0,0.0,0.0,,cycle_shift
+SEC61G,250,16.8,10.4,0.0018,0.0407,,cycle_shift
+SF3B5,250,15.2,6.4,0.017,0.1787,,cycle_shift
+SH3KBP1,250,9.6,5.6,0.7563,0.9715,,cycle_shift
+SKP2,250,10.4,4.4,1.0,1.0,G1 Phase,arrest_list
+SMARCC1,250,8.0,8.4,0.2538,0.7712,G1 Phase,arrest_list
+SMARCD1,250,10.8,5.2,0.8357,0.9781,G1 Phase,arrest_list
+SNRNP40,250,10.4,8.0,1.0,1.0,,cycle_shift
+SNRPG,229,10.917,2.183,0.7463,0.9715,,cycle_shift
+SRP54,250,15.6,9.6,0.0124,0.178,,cycle_shift
+SRPRA,250,12.0,8.8,0.4069,0.893,,cycle_shift
+SRSF3,181,14.917,4.972,0.0515,0.407,,cycle_shift
+TAF1B,250,11.2,6.4,0.6783,0.9569,,cycle_shift
+TCP1,250,19.2,6.0,0.0,0.0015,,cycle_shift
+TIMM17B,250,8.0,4.4,0.2538,0.7712,,calibration
+UBA52,217,10.599,6.452,0.9114,1.0,,cycle_shift
+UTP14A,250,8.4,7.2,0.3509,0.87,,cycle_shift
+WDR12,250,9.2,3.2,0.6048,0.9015,,cycle_shift
+ZFR,250,7.2,5.6,0.0981,0.5168,,calibration

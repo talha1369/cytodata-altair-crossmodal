@@ -42,7 +42,7 @@ Xn = np.asarray(ph.X, np.float32)[:, present]; tile = ph.obs["tile_pheno"].astyp
 area_col = list(var[present]).index("op_cell_area")
 dn = L.loc[ph.obs_names, "dna_rel_R234"].astype(float).values; y = (dn > .65).astype(int); two = dn < .25
 
-K = pd.read_csv("ko_dna/ko_measured_dna_percell.csv", index_col=0)
+K = pd.read_csv(os.environ.get("KO_DNA_DIR", "ko_dna") + "/ko_measured_dna_percell.csv", index_col=0)
 ko = ad.read_h5ad("OPS0077_allko_phase.h5ad", backed="r"); ob = ko.obs.copy(); ob["row"] = np.arange(len(ob)); ob = ob.drop_duplicates("cell_key").set_index("cell_key")
 K = K[K.index.isin(ob.index)]; rows = ob.loc[K.index, "row"].values; o = np.argsort(rows)
 f = h5py.File("OPS0077_allko_phase.h5ad", "r"); Xk = np.empty((len(rows), present.sum()), np.float32)

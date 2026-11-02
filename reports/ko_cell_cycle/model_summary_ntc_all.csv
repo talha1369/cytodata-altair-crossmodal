@@ -1,0 +1,5 @@
+model,NTC_AUC_4N,NTC_pred_pct_4N,NTC_measured_pct_4N,NTC_2N_false_4N_pct,NTC_largest_2N_false_4N_pct,AUC_of_cell_size_alone,NTC_measured_4N_called_4N_pct
+standard,0.919,16.0,19.4,3.44,15.62,0.709,63.2
+size-balanced,0.902,30.6,19.4,13.81,21.28,0.709,84.6
+size-removed,0.886,13.6,19.4,3.86,5.82,0.709,50.2
+DNA floor,0.92,16.0,19.4,3.43,15.62,0.709,63.2
