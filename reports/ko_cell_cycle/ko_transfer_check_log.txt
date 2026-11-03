@@ -1,0 +1,14 @@
+[   14s] NTC reliable-DNA cells used 10,000 (4N 0.196) | knockout cells 1,353 (4N 0.222) | features 1740
+[   29s] ridge done
+[  130s] hgb done
+model     population     n  auc_4N_vs_2N  measured_pct_4N  predicted_pct_4N  mean_prob  measured_shift_vs_NTC  predicted_shift_vs_NTC
+ridge NTC (held-out) 10000         0.934           19.600            19.600      0.196                  0.000                   0.000
+ridge  all knockouts  1353         0.927           22.173            20.399      0.207                  2.573                   0.799
+ridge          CCNB1   349         0.916           23.782            20.057      0.219                  4.182                   0.457
+ridge          CENPC   374         0.922           18.182            17.647      0.177                 -1.418                  -1.953
+ridge           MCM3   630         0.935           23.651            22.222      0.218                  4.051                   2.622
+  hgb NTC (held-out) 10000         0.968           19.600            19.600      0.181                  0.000                   0.000
+  hgb  all knockouts  1353         0.963           22.173            21.286      0.201                  2.573                   1.686
+  hgb          CCNB1   349         0.957           23.782            24.069      0.221                  4.182                   4.469
+  hgb          CENPC   374         0.966           18.182            18.449      0.171                 -1.418                  -1.151
+  hgb           MCM3   630         0.964           23.651            21.429      0.208                  4.051                   1.829

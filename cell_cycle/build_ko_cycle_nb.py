@@ -180,7 +180,8 @@ repeats, decomposition, heterogeneity, pRb validation) is unchanged.
   +10.3 points). CDK7 moves from null (q 0.50) to borderline (q 0.057). CCNB1 is not significant in either run (q 0.19 and 0.36).
 
 **Caveats.**
-* The extra hits come from a more sensitive model under the same null; the only independent support is the pRb correlation.
+* The extra hits come from a more sensitive model under the same null. Independent support: the pRb correlation, and measured
+  DNA (section 2e: HistGB tracks it better, but only 10 of the 121 HistGB-only hits are measured so far).
 * Some new hits are probably not expressed in A549 or belong to multi-copy families (for example OR2T5, TAS2R40, KRTAP2-3,
   SPRR2A, USP17L5, AGAP9). They may be false positives or guide-level effects.
 * The 8 ridge-only hits are borderline under HistGB (q 0.06 to 0.14). The smallest attainable q is 0.007 (HistGB) and 0.011
@@ -268,6 +269,46 @@ display(M2.dropna(subset=['expected_arrest_phase']).groupby('expected_arrest_pha
 display(pd.read_csv(find('model_vs_measured_across_knockouts_all.csv')).round(3))
 mn = pd.read_csv(find('ko_multinucleate_by_gene.csv'), index_col=0)
 mn.sort_values('pct_multi', ascending=False).head(12).round(3)""")
+
+md("""### 2e. Is the gradient-boosting model also better against measured DNA, and does it work on knockout cells?
+
+**What.** Section 2c recommends HistGB because it reads the clock of held-out NTC cells better. Two things were not yet tested:
+(1) does it also predict the measured knockout shifts better, and (2) does a model trained on NTC cells read knockout cells as
+accurately as it reads NTC cells? A model that only worked on NTC-like cells could invent or hide shifts in knockouts.
+
+**How.**
+* (1) For the 158 knockouts with measured DNA (section 2d), the predicted change in % 4N from each library run (ridge and
+  HistGB) is compared with the measured change (Spearman rho over knockouts), and confirmation is broken down by which model
+  calls the knockout.
+* (2) A 4N-vs-2N classifier (measured DNA: 2N < 0.25, 4N > 0.65) is trained on NTC phase-contrast features with each model
+  type and scored on held-out NTC tiles (5 folds by tile) and on the 1,353 CCNB1, MCM3 and CENPC cells with measured DNA (model
+  fit on all NTC). This ran on the laptop in a light setting (10,000 random NTC cells, the 1,740 features present in at least
+  85% of cells), so absolute numbers are a little below the full models; NTC and knockout cells are read by the same model.
+
+**Result.**
+* **HistGB tracks measured DNA better: rho 0.84 vs 0.78** over the 158 knockouts, and in every subset, including the two that
+  were not chosen from either model's predictions (47 arrest-list genes 0.70 vs 0.64; 30 random calibration knockouts 0.71 vs
+  0.63). Slopes are 1.00 and 1.02.
+* **Ridge-only hits do not hold up: 0 of 8 confirmed.** Hits in both runs: 41 of 73 confirmed. HistGB-only hits: 3 of the 10
+  that happen to be measured are confirmed, and all 10 move in the predicted direction. The other 111 HistGB-only hits are not
+  measured yet.
+* **Per-cell accuracy carries over to knockout cells.** AUC for 4N vs 2N: HistGB 0.968 on held-out NTC and 0.963 on the knockout
+  cells (0.957 to 0.966 per gene); ridge 0.934 and 0.927.
+* **HistGB also gets the size of the shift closer** in these three genes: measured change in % 4N vs NTC CCNB1 +4.2, MCM3 +4.1,
+  CENPC -1.4; HistGB predicts +4.5, +1.8, -1.2; ridge +0.5, +2.6, -2.0.
+
+**Caveats.**
+* The transfer test covers three knockouts and 1,353 cells, and the per-gene shifts have no confidence intervals; the 111-knockout
+  multimodal file (22,152 cells with DNA) is the larger test, on machine 1.
+* The 111 unmeasured HistGB-only hits are the open question for the model switch: if they confirm at about the rate of the
+  shared hits, notebook 18's main analysis should move to HistGB.""")
+
+code("""K = pd.read_csv(find('models_vs_measured_dna.csv'))
+from scipy.stats import spearmanr
+for m in ['ridge', 'hgb']:
+    print(m, 'rho vs measured change in % 4N:', round(spearmanr(K['d_pct_4N_pred_' + m], K.measured_d_pct_4N)[0], 3))
+display(K.groupby('called_by').agg(n=('gene', 'size'), confirmed=('measured_significant', 'sum')))
+display(pd.read_csv(find('ko_transfer_check.csv')).round(3))""")
 
 md("""## 3. Regressing the cycle out: does heterogeneity go down?
 
