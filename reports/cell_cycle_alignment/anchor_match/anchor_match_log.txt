@@ -1,0 +1,37 @@
+[heavy_slot] anchor_match: got slot0 after 0 s
+Element: 36,000 cells in 12 wells, 98 features
+OPS0077: 35,613 cells, 258 features
+cells per grid cell (DNA bin x area quartile), Element: [[2400, 1194, 676, 230], [1772, 1435, 882, 411], [1478, 1342, 1138, 542], [1178, 1369, 1180, 773], [903, 1286, 1308, 1003], [636, 1091, 1405, 1368], [456, 780, 1376, 1888], [180, 487, 1056, 2777]] OPS0077: [[1504, 1481, 1092, 375], [1430, 1419, 1122, 480], [1496, 1414, 1063, 479], [1610, 1347, 1009, 484], [1616, 1202, 1023, 612], [651, 952, 1435, 1414], [315, 574, 1132, 2430], [293, 502, 1022, 2635]]
+fingerprint grid cells with >= 30 cells in both datasets: 32 of 32; features with a full fingerprint: Element 98 of 98, OPS0077 255 of 258
+name-matched pairs: 88; with full fingerprints on both sides: 88
+
+1. 88 name-matched pairs among 258 OPS features: true partner is the best fingerprint match in 4 (5%), in the top 5 in 19%, same measurement family 6% (chance top-1 0.4%); median fingerprint corr of true pairs 0.94
+                                  n  top1  family    fp
+0                                                      
+Granularity                       8  0.12    0.12 -0.18
+Intensity                        15  0.07    0.07  0.88
+NuclearArea                       1  1.00    1.00  1.00
+RadialDistribution               12  0.00    0.00  0.73
+Texture_AngularSecondMoment       4  0.00    0.00  0.96
+Texture_Contrast                  4  0.00    0.00  0.98
+Texture_Correlation               4  0.00    0.00  0.65
+Texture_DifferenceEntropy         4  0.00    0.00  0.97
+Texture_DifferenceVariance        4  0.00    0.00  0.97
+Texture_Entropy                   4  0.00    0.00  0.96
+Texture_InfoMeas1                 4  0.00    0.00  0.72
+Texture_InfoMeas2                 4  0.00    0.00  0.86
+Texture_InverseDifferenceMoment   4  0.25    0.50  0.96
+Texture_SumAverage                4  0.00    0.00  0.98
+Texture_SumEntropy                4  0.00    0.00  0.96
+Texture_SumVariance               4  0.00    0.00  0.94
+Texture_Variance                  4  0.00    0.00  0.94
+
+2. Element RNA-clock model on OPS0077 cells, scored on the held-out half against the 4i clock (chance: 25% quarter, 8.3% bin, 90 deg):
+  name-matched: 88 features, same quarter 51.3%, same 30-degree bin 19.9%, median disagreement 40.3 deg
+  name-matched, fingerprint corr >= 0.8: 61 features, same quarter 52.2%, same 30-degree bin 20.3%, median disagreement 40.2 deg
+  anchor-matched (names unused), corr >= 0.8: 91 features, same quarter 55.4%, same 30-degree bin 23.5%, median disagreement 37.9 deg
+  nuclear area only: 1 features, same quarter 28.8%, same 30-degree bin 9.6%, median disagreement 81.7 deg
+  name-matched, fingerprint corr >= 0.8 minus name-matched: same quarter +0.9 [+0.4, +1.4] points, median disagreement -0.1 [-0.8, +0.5] deg (95% bootstrap over held-out cells)
+  anchor-matched (names unused), corr >= 0.8 minus name-matched: same quarter +4.1 [+3.4, +4.8] points, median disagreement -2.4 [-3.4, -1.5] deg (95% bootstrap over held-out cells)
+  nuclear area only minus name-matched: same quarter -22.4 [-23.5, -21.4] points, median disagreement +41.3 [+39.5, +42.8] deg (95% bootstrap over held-out cells)
+DONE

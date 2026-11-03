@@ -6,7 +6,7 @@ usage: python build_sbi_story.py REPORTS_DIR FIGS_DIR NEWBATCH_DIR OUT.html
 FIGS_DIR holds figures from the team document (brian_cdk7_panel.png, diego_*_pcs.png, tim_dapi_histogram.png);
 NEWBATCH_DIR holds the outputs of ko_dna_hgb_only_stats.py (optional; the section says so when it is missing)."""
 import sys, os, io, base64, html, math
-import pandas as pd
+import numpy as np, pandas as pd
 from PIL import Image
 
 REP, FIGS, NEW, OUT = sys.argv[1:5]
@@ -86,8 +86,23 @@ if gd_ok:
 # ---- Brian's V2 panels (numbers read from his figures) next to measured DNA
 BRIAN_V2 = [("AURKB", "cytokinesis failure: G2", "G2/M +7.1 (Z 3.2)"), ("POLA1", "fork stalling: S or G2/M", "G2/M +10.4 (Z 5.4)"),
             ("POLA2", "fork stalling: S or G2/M", "G2/M +14.7 (Z 6.0)"), ("CCNB1", "G2 block, back to G1", "no clear change (G2/M +2.1, Z 1.0)"),
-            ("BUB1B", "checkpoint loss, slippage: G1", "early G1 +6.3 (Z 2.1)")]
+            ("BUB1B", "checkpoint loss, slippage: G1", "early G1 +6.3 (Z 2.1)"),
+            ("CDK7", "G1 restriction point: G1", "early G1 +8.5 (Z 2.9)")]
+# all cells of Brian's and Louise's genes (lb_guides.py outputs, copied next to the new batch); else the ~200-cell sample
+lb_ok = os.path.exists(os.path.join(NEW, "gene_level_all_cells.csv"))
+if lb_ok:
+    LG = pd.read_csv(os.path.join(NEW, "gene_level_all_cells.csv")).set_index("gene"); LH = pd.read_csv(os.path.join(NEW, "guide_heterogeneity_two_nulls.csv")).set_index("gene")
+    LB = pd.read_csv(os.path.join(NEW, "per_guide_all_cells.csv")).set_index("short")
+    LCAL = 100 * np.mean(pd.read_csv(os.path.join(NEW, "permutation_test_on_ntc_guide_sets.csv")).iloc[:, 0].values < .05)
+    LL = pd.read_csv(os.path.join(NEW, "louise_guides_vs_measured_dna.csv"))
+    from scipy.stats import spearmanr as _sp
+    l_g1, l_g2m = _sp(LL["G1"], LL["d_pct_2N"])[0], _sp(LL["G2/M"], LL["d_pct_4N"])[0]
+    RND = T[T.set == "calibration"]; r2_, r4_ = RND.measured_d_pct_2N.median(), RND.measured_d_pct_4N.median()
+
+
 def dna_txt(g_):
+    if lb_ok and g_ in LG.index:
+        r = LG.loc[g_]; return f"4N {r.d_pct_4N:+.1f}, 2N {r.d_pct_2N:+.1f} (all {int(r.n)} cells; vs random knockouts 4N {r.d_pct_4N - r4_:+.1f}, 2N {r.d_pct_2N - r2_:+.1f})"
     if not nb_ok or g_ not in set(T.gene): return "not measured"
     r = T.set_index("gene").loc[g_]
     return f"4N {r.measured_d_pct_4N:+.1f}, 2N {r.measured_d_pct_2N:+.1f}" + (" (confirmed)" if r.confirmed else " (not significant)")
@@ -266,6 +281,7 @@ footer {{ margin-top: 80px; font-size: 14.5px; color: var(--muted); border-top: 
     <p><b>What we did.</b> We rotated and compared the clocks using features measured the same way in both datasets: DNA content, cell and nuclear size, and cell shape.</p>
     <p><b>What we found.</b> The DNA-based OPS0077 clocks agree within 4 to 6 degrees. Across datasets, DNA lines up the S to G2/M arc, but size and shape do not agree on the rotation, and no combination beats a random-rotation control. The G1 part cannot be aligned with what both datasets share.</p>
     <p><b>A second route: transfer a model.</b> A forest trained on Element DNA-stain features (DNA amount, nuclear size and texture) to predict the RNA clock reaches 53 degrees error on held-out Element wells. Applied to OPS0077 cells and compared with their 4i clock, it gets the same quarter for 34.6% of cells (25% by chance). Keeping only the 56 features whose distributions match between the datasets raises this to 49% and lowers the median disagreement from 53.6 to 41.6 degrees. The agreement is again strongest from S to G2.</p>
+    <p><b>Matching features without their names.</b> Daniel's next step was to match features through anchors rather than names. Two things help. First, ranking every feature within its own well removes the scale differences between instruments: the 88 name-matched features then reach 51.3% same quarter and 40.3 degrees, without any filter. Second, we described each feature by how it behaves across a grid of DNA content and nuclear size, ranked within each well; both datasets measure these the same way. We then paired each Element feature with the OPS0077 feature that behaves most alike, whatever its name. This anchor matching reaches 55.4% same quarter and 37.9 degrees (+4.1 points, 95% interval 3.4 to 4.8, on the same held-out cells). Same-named features do behave alike (median correlation 0.94), but so do many others, so behaviour confirms a match rather than finding a unique partner. The 91 anchor matches land on only 19 OPS0077 features, and only 4 keep their name. Texture measured at a fixed pixel distance on two microscopes with different pixel sizes is one likely reason names mislead.</p>
     <p><b>Why it matters.</b> To compare cell-cycle effects across platforms, use DNA-content classes (2N, S, 4N), which are measured identically, rather than clock angles.</p>
   </div>
   <div class="two">
@@ -288,30 +304,36 @@ footer {{ margin-top: 80px; font-size: 14.5px; color: var(--muted); border-top: 
 
 <section id="arrest">
   <h2><span class="n">7</span>Some expected arrests did not happen, and phase contrast was right about that</h2>
-  <p class="lede">The team listed 60 genes expected to stop cells in G1, S or G2/M. Measured DNA agrees with the S-phase group and contradicts the G2/M group.</p>
+  <p class="lede">The team listed 60 genes expected to stop cells in G1, S or G2/M. Measured DNA agrees with the S-phase group. The G1 and G2/M groups look no different from random knockouts.</p>
   <div class="wdw">
-    <p><b>What we found.</b> S-phase genes gain 4N cells (median +4.7 points). G1 genes gain 2N cells (+6.1 points), though few are significant one by one. The mitotic and checkpoint genes expected to pile up in G2/M lose 4N cells instead (median -2.5 points). They are not hiding as cells with two nuclei either (10.0% against 10.4% in controls); only KIF23 clearly is (31%).</p>
+    <p><b>The right reference.</b> Control cells carry guides that cut nowhere. Cutting itself shifts cells: 30 randomly chosen knockouts gain 2N cells (median +6.1 points) and lose 4N cells (-3.3 points), and 28 of the 30 gain 2N. In the CROP-seq RNA, p21 rises in 636 of 1,000 knockouts. A549 cells have working p53, so a mild stop after DNA cutting is the likely cause. An arrest call should therefore beat random knockouts, not only non-cutting controls.</p>
+    <p><b>What we found.</b> S-phase genes gain 4N cells (median +4.7 points, about 8 points above random knockouts). The G1 group gains 2N cells (21 of 26 genes, median +6.1 points), exactly as much as random knockouts; only RPTOR stands out on its own. The mitotic and checkpoint genes expected to pile up in G2/M lose 4N cells (median -2.5 points), close to random knockouts rather than above them. They are not hiding as cells with two nuclei either (10.0% against 10.4% in controls); only KIF23 clearly is (31%).</p>
     <p><b>A hypothesis we tested.</b> Brian proposed that G1-arrested cells keep growing until they look like G2 cells. Knockout cells with one genome copy are indeed larger than control cells in 148 of 158 knockouts, but they are not called 4N more often, and a DNA floor on the 4N call changes no knockout by more than 0.63 points.</p>
     <p><b>Why it matters.</b> Literature expectations for a gene do not always hold in a given cell line and time window (here about 89 hours of Cas9). A direct readout is needed to know.</p>
   </div>
+  {img(F("arrest_vs_random.png"), "Arrest lists against random knockouts", "Each dot is one knockout with measured DNA, as change against non-cutting control guides. Grey: 30 random knockouts; dashed line: their median, the fair reference. The S-phase list gains 4N cells; the G1 and G2/M lists look like random knockouts.")}
   {img(R("ko_cell_cycle", "g1_hypertrophy_check_all.png"), "Testing the cell-growth hypothesis", "Left: four versions of the phase model against measured DNA across knockouts. Middle: size of one-copy knockout cells against excess 4N calls, per knockout (red: the G1 list). Right: wrong 4N calls among control cells, by size.")}
   <h3>Brian's updated panels</h3>
   <div class="wdw">
-    <p><b>What we did.</b> Brian revised the expected outcome for each group of genes and redrew the knockout panels on the corrected clock labels (4N at 0.5 to 0.75, just-divided cells at 0.75 to 1), each against groups of control cells of the same size. We put the measured DNA of the same knockouts next to them (about 200 cells each).</p>
-    <p><b>What we found.</b> The replication and cytokinesis genes move as expected, and measured DNA moves the same way. CCNB1 shows no clear shift on the clock, and its guides disagree with each other (next part). BUB1B gains early-G1 cells as expected, but its DNA distribution does not change. Slippage out of mitosis would leave G1 cells with doubled DNA, so the gain more likely reflects a shorter mitosis once the checkpoint is gone.</p>
+    <p><b>What we did.</b> Brian revised the expected outcome for each group of genes and redrew the knockout panels on the corrected clock labels (4N at 0.5 to 0.75, just-divided cells at 0.75 to 1), each against groups of control cells of the same size. We put the measured DNA of the same knockouts next to them, from every cell of each knockout, with the change beyond random knockouts.</p>
+    <p><b>What we found.</b> The replication and cytokinesis genes move as expected, and measured DNA moves the same way. Brian's newest panel, CDK7 for the G1 restriction point, gains early-G1 cells, and measured DNA agrees: 2N +10.1 points, about 4 above random knockouts. CCNB1 shows no clear shift on the clock, and its guides disagree with each other (next part). BUB1B gains early-G1 cells as expected, but its DNA distribution does not change. Slippage out of mitosis would leave G1 cells with doubled DNA, so the gain more likely reflects a shorter mitosis once the checkpoint is gone.</p>
+  </div>
+  <div class="wdw">
+    <p><b>Brian's follow-up question, checked in the RNA.</b> Could CCNB2 make up for the loss of CCNB1? In the CROP-seq data, CCNB2 RNA in CCNB1-knockout cells changes no more than in a typical knockout (rank 387 of 997). This gives no RNA evidence for compensation, though compensation could still act at the protein level. CCNB1's own RNA is not lower either (log2 fold change +0.06), but Cas9 cuts often leave RNA levels intact, so this does not show whether the knockout worked. p21 RNA, a stress and arrest signal, rises in most knockouts (636 of 1,000), consistent with a general response to cutting. It rises more in CCNB1 (rank 77) and falls in CENPC.</p>
   </div>
   {table(["knockout", "Brian's expectation", "clock shift vs controls (points)", "measured DNA vs controls (points)"], [[g_, e_, c_, dna_txt(g_)] for g_, e_, c_ in BRIAN_V2])}
   <div class="two">
     {img(F("brian_v2_pola2.png"), "POLA2 knockout against controls", "POLA2 (replication fork stalling): stage percentages against the matched control null, the distribution along the clock and the polar clock. Cells pile up at 0.5 to 0.65, the doubled-DNA stretch.", 1100)}
-    {img(F("brian_v2_aurkb.png"), "AURKB knockout against controls", "AURKB (cytokinesis failure), same panels. More cells with doubled DNA and fewer early-G1 cells.", 1100)}
+    {img(F("brian_v2_cdk7.png"), "CDK7 knockout against controls", "CDK7 (G1 restriction point), same panels. More early-G1 cells and fewer G2/M cells on the clock; measured DNA agrees in direction (2N +10.1, 4N -6.3 points), about 4 points of 2N beyond random knockouts.", 1100)}
   </div>
   <h3>Guides of the same gene can disagree</h3>
   <div class="wdw">
     <p><b>What Louise found.</b> Each gene is targeted by four guide RNAs. In CCNB1, MCM3 and CENPC the expected arrest is not clear at the gene level, but the guides of each gene differ (p = 0.016, 0.046 and 0.027). Two CCNB1 guides add about 15 points of G2/M cells while another adds 12 points of G1 cells, so the gene average hides both. The guide ranking holds up in two separate sets of cells scored by different readouts (G1 fraction, rank correlation 0.82). All three genes also carry more just-divided cells than controls (20 to 26% against 13%). That shift is shared rather than gene-specific, and may be a general response to cutting.</p>
     {("<p><b>The same question on measured DNA.</b> For the " + f"{g_n}" + " newly measured knockouts (median " + f"{g_ng}" + " guides each, " + f"{g_min}" + " cells in the smallest), we compared the guides' 2N, S and 4N mix with control guides of the same sizes, so ordinary guide-to-guide variation is part of the reference. The guides differ more than control guides in " + f"{g_p05}" + " knockouts at p &lt; 0.05 (about " + f"{round(0.05 * g_n)}" + " expected by chance) and in " + f"{g_q05}" + " after correcting for testing many knockouts. Among the confirmed knockouts, " + f"{g_same} of {g_tot}" + " guides move 4N cells in the knockout's direction, and all guides agree in " + f"{g_allk} of {g_k}" + " knockouts. With about 50 cells per guide, this test only sees large differences between guides.</p>") if gd_ok else ""}
-    <p><b>Why it matters.</b> For most knockouts the guides agree, so gene-level calls are sound. Where a gene's expected arrest is missing, as for CCNB1, check its guides one by one: guide efficiency varies, and a gene average can hide guides that push in opposite directions.</p>
+    {("<p><b>Every cell of Louise's three genes, measured.</b> We measured DNA in all cells of CCNB1, MCM3, CENPC and Brian's panel genes (3,072 usable cells). Louise's per-guide clock shifts agree with measured DNA across her 12 guides (rank correlation " + f"{l_g1:.1f}" + " for G1 against 2N and " + f"{l_g2m:.1f}" + " for G2/M against 4N; her score uses DNA, so this shows consistency rather than independent proof). The CCNB1 split is real in DNA: the two guides that add G2/M cells on her clock gain 4N cells (ATATTTGC " + f"{LB.loc['ATATTTGC'].d_pct_4N:+.0f}" + " and GTCAGACC " + f"{LB.loc['GTCAGACC'].d_pct_4N:+.0f}" + " points), while TGAGGCCA gains 2N cells (" + f"{LB.loc['TGAGGCCA'].d_pct_2N:+.0f}" + "). CCNB1 likely has the classic G2/M phenotype, diluted in the gene average by guides that work less well. The same two MCM3 guides she flagged gain 4N cells (" + f"{LB.loc['CAGTATGA'].d_pct_4N:+.0f}" + " and " + f"{LB.loc['ATATCCAC'].d_pct_4N:+.0f}" + ").</p><p><b>A check on the guide test.</b> The usual test shuffles cells among a gene's guides. Applied to sets of four non-targeting control guides, where no difference is expected, it calls a difference in " + f"{LCAL:.0f}" + "% of sets instead of 5%, because control guides differ from each other too. Compared with control guides of the same size, the guides clearly differ only in AURKB (p " + f"{LH.loc['AURKB'].p_vs_ntc_guides:.3f}" + ") and POLA2 (p " + f"{LH.loc['POLA2'].p_vs_ntc_guides:.3f}" + "), two genes whose real phenotype some guides show strongly and others barely, as uneven knockout efficiency would.</p>") if lb_ok else ""}
+    <p><b>Why it matters.</b> For most knockouts the guides agree, so gene-level calls are sound. Where a gene's expected arrest is missing, as for CCNB1, check its guides one by one: guide efficiency varies, a gene average can dilute a real effect, and guide differences should be judged against control guides, not shuffled cells.</p>
   </div>
-  {img(F("louise_guide_forest.png"), "Per-guide shifts for CCNB1, MCM3 and CENPC", "Louise's per-guide change in G1, S and G2/M fractions against well-matched controls, with 95% bootstrap intervals (filled: cells with a stain score; open: all cells). The expected phase for each gene is in bold.")}
+  {img(F("louise_guide_density.png"), "Cells of each guide along the cycle, CCNB1, MCM3 and CENPC", "Louise's density of cells along the clock for each guide (coloured) and for control cells (thick grey), from the stain score (top, cells with all markers and DNA) and the phase-contrast score (bottom, all cells). In CCNB1, guide TGAGGCCA piles up just after division (near 1) while ATATTTGC and GTCAGACC peak in the doubled-DNA stretch (about 0.6). Shaded bands mark the clock sectors.")}
 </section>
 
 <section id="regress">
@@ -334,7 +356,7 @@ footer {{ margin-top: 80px; font-size: 14.5px; color: var(--muted); border-top: 
   <p class="lede">In the Element data, images predict the RNA-based clock to a typical error of 37.5 degrees in wells the model never saw (a shuffled clock gives 77.9).</p>
   <div class="wdw">
     <p><b>What we found.</b> The DNA stain carries most of the signal, and the phospho-antibodies add some. Images fail on one stretch, just after division: the DNA is back to one copy while the RNA still looks like G2/M. The largest image changes around the cycle are at division, where phospho-p38 and phospho-ERK rise and nuclei shrink.</p>
-    <p><b>Knockout-level RNA.</b> The CROP-seq data, averaged per knockout, carry little cell-cycle signal: 14 of 997 knockouts move a cell-cycle gene programme strongly, and agreement with the imaging readout is weak (rank correlation about 0.1).</p>
+    <p><b>Knockout-level RNA.</b> The CROP-seq data, averaged per knockout, carry little cell-cycle signal: 14 of 997 knockouts move a cell-cycle gene programme strongly, and agreement with the imaging readout is weak (rank correlation about 0.1). Against measured DNA in 269 knockouts the RNA cell-cycle programmes do no better (rank correlation at most 0.07; cross-validated R<sup>2</sup> -0.02 against 0.73 for phase contrast), and adding them to phase contrast does not help (0.73). Averaged per knockout, the RNA does not carry the cycle shift that the images and the DNA stain show.</p>
     <p><b>Why it matters.</b> RNA and images measure different moments of the same cycle. Single-cell paired data are what make a cell-level comparison possible.</p>
   </div>
   {img(R("element_cycle_morphology", "fig_A_error_by_arc.png"), "Imaging error along the RNA clock", "How far imaging misplaces cells, along the RNA clock. The error rises sharply for cells that have just divided.")}
@@ -347,23 +369,24 @@ footer {{ margin-top: 80px; font-size: 14.5px; color: var(--muted); border-top: 
     <li>The cell cycle is a small part of single-cell variation (3 to 9%). Removing it tightens a few main axes and leaves knockout phenotypes and field effects mostly in place.</li>
     <li>The cycle is more useful as a readout: which perturbations shift it, and what they change in cells at the same stage.</li>
     <li>Anchor any learned clock to measured DNA, and compare datasets through DNA-content classes rather than angles.</li>
+    <li>Judge knockouts against random knockouts as well as non-cutting controls: cutting alone moves about 6% of cells into 2N.</li>
   </ol>
   <div class="wdw">
     <p><b>Limits.</b> One cell line and one screen; a measured clock for about two thirds of control cells; predicted, not measured, clocks for most knockout cells; across datasets only the S to G2/M stretch aligns.</p>
-    <p><b>Next.</b> Every knockout either model flags now has measured DNA. Next: more cells per guide for the knockouts whose guides disagree, the 4i markers for knockout cells (Diego's questions 2 and 3), anchors beyond matching feature names for the cross-dataset transfer, and image embeddings (Cell-DINO) as the phase-contrast input.</p>
+    <p><b>Next.</b> Every knockout either model flags now has measured DNA. Next: more cells per guide for the knockouts whose guides disagree, the 4i markers for knockout cells (Diego's questions 2 and 3), more anchors for the cross-dataset transfer (cell shape, other stains) and a check on other random splits, and image embeddings (Cell-DINO) as the phase-contrast input.</p>
   </div>
 </section>
 
 <section id="team">
   <h2><span class="n">11</span>Team, data and code</h2>
   {table(["who", "contribution"], [
-      ["Louise Morlot", "the circular 4i cell-cycle score from DNA, pRb, Rb and p21, its phase-contrast prediction, and the per-guide knockout analysis (her repository, linked below)"],
+      ["Louise Morlot", "the circular 4i cell-cycle score from DNA, pRb, Rb and p21, its phase-contrast prediction, and the per-guide knockout analysis (ops0077_cell_cycle/ in the repository)"],
       ["Tim Treis", "the Element RNA cell-cycle clock (cycleVI) and the Element multiomics object"],
       ["Brian Feng", "per-knockout cycle panels (first and updated versions), the gradient-boosting phase model and the cell-growth hypothesis"],
       ["Diego Camacho", "the cycle-normalisation questions and the within-field variance analysis"],
       ["Daniel Siegismund", "aligning cell-cycle scores across datasets, with Tim, Louise and Talha; the Element-to-OPS0077 DNA-feature transfer"],
       ["Talha Rehman", "phase contrast to cell cycle, alignment, the knockout library and measured DNA, Element and CROP-seq mapping (notebooks 16 to 20)"]])}
-  <p class="note">Organisers and infrastructure: Loan Vulliard, Nikita Moshkov and the SBI2 CytoData hackathon team. Data: CZ Biohub OPS Explorer (OPS0077), Element Biosciences A549 multiomics, Altair CROP-seq. Code and notebooks: <a href="{GH}" target="_blank" rel="noopener">github.com/cytodata/2026_sbi2_hackathon_resources</a>; Louise's cell-cycle score and per-guide analysis: <a href="https://github.com/louisemorlot/cytodata-sbi2-hackathon-2026/tree/main/ops0077_cell_cycle_github" target="_blank" rel="noopener">github.com/louisemorlot/cytodata-sbi2-hackathon-2026</a>.</p>
+  <p class="note">Organisers and infrastructure: Loan Vulliard, Nikita Moshkov and the SBI2 CytoData hackathon team. Data: CZ Biohub OPS Explorer (OPS0077), Element Biosciences A549 multiomics, Altair CROP-seq. Code and notebooks: <a href="{GH}" target="_blank" rel="noopener">github.com/cytodata/2026_sbi2_hackathon_resources</a>; Louise's cell-cycle score and per-guide analysis are in <a href="{GH}/tree/main/ops0077_cell_cycle" target="_blank" rel="noopener">ops0077_cell_cycle/</a>.</p>
 </section>
 
 <section id="glossary">
@@ -394,9 +417,9 @@ footer {{ margin-top: 80px; font-size: 14.5px; color: var(--muted); border-top: 
       ["2", "Three datasets, three ground truths", "the data table", "Images plus a measured cycle in the same cells."],
       ["3", "Check what each part of a clock contains", "clock figure; CDK7 panel", "The first labels were a quarter off; that explained the G1 puzzle."],
       ["4", "Phase contrast reads the cycle", "score-quality bars", "0.92 vs 0.89; 22 degrees; works on knockout cells."],
-      ["5", "Clocks only partly align across datasets", "regime agreement; Element-to-OPS0077 transfer", "Transfer gets 49% of quarters (25% chance); compare platforms by DNA classes."],
+      ["5", "Clocks only partly align across datasets", "regime agreement; Element-to-OPS0077 transfer", "Transfer gets 49% of quarters (25% chance); anchor-matched features, names unused, 55%; compare platforms by DNA classes."],
       ["6", "Phase contrast finds cycle-shifting knockouts", "predicted vs measured DNA", f"rho {rho_h:.2f} over {n_all} knockouts; replication up, ribosome down." if nb_ok else "rho 0.84 over 158 knockouts; replication up, ribosome down."],
-      ["7", "Some expected arrests did not happen", "growth test; Brian's POLA2 and AURKB panels; Louise's guide plot", "G2/M list loses 4N; replication and cytokinesis genes behave; guides mostly agree, CCNB1's do not."],
+      ["7", "Some expected arrests did not happen", "growth test; Brian's POLA2 and AURKB panels; Louise's guide plot", "Cutting alone adds about 6 points of 2N, so compare with random knockouts; S-phase genes pass, G1 and G2/M lists do not; guides mostly agree, CCNB1's do not."],
       ["8", "Removing the cycle barely changes heterogeneity", "Diego's PC bars; decomposition", "Top axes tighten; populations 0.6 to 5.5% tighter; 790 of 1,000 change the cells."],
       ["9", "Imaging and RNA disagree just after division", "error along the RNA clock", "37.5 degrees; the gap is just-divided cells."],
       ["10", "Take-home", "none", "Use the cycle as a readout, anchored to DNA."],

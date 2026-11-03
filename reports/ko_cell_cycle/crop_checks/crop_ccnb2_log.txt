@@ -1,0 +1,36 @@
+1000 targeting knockouts x 9999 genes; n_cells per KO median 565
+
+knockdown of each gene by its own guides:
+knockout  n_cells  log2fc   stat     q  z_vs_other_kos
+   CCNB1      481   0.060  3.531 0.009          -0.164
+    MCM3      550   0.080  2.170 0.156          -0.126
+   CENPC      483   0.105  2.162 0.101           0.049
+   AURKB      357  -0.408 -7.134 0.000          -1.178
+   POLA1      520  -0.139 -2.073 0.127          -0.774
+   POLA2      378  -0.160 -3.860 0.001          -0.773
+   BUB1B      393   0.136  7.764 0.000          -0.006
+    CDK7      421   0.162  5.628 0.000           0.055
+
+CCNB1 knockout: mitotic cyclins and partners
+  gene  log2fc   stat     q  z_vs_other_kos
+ CCNB2   0.202  2.675 0.073           0.196
+ CCNA2   0.496  3.334 0.016           0.793
+  CDK1   0.300  3.993 0.002           0.383
+ CDC20  -0.109 -4.341 0.001          -0.495
+  PLK1  -0.447 -2.215 0.167          -1.537
+ CCNE1   0.102  1.629 0.371           0.034
+ CCNE2   0.147  0.821 0.734           0.364
+CDKN1A   1.021  5.250 0.000           1.704
+
+CCNB2 change in the CCNB1 knockout ranks 387 of 997 knockouts (1 = largest increase)
+CCNB1 knockout, largest increases: CPM +2.10, PPP2R1A +1.88, RHCG +1.81, CENPW +1.78, MTA1 +1.78, PIN4 +1.68, GBX2-AS1 +1.61, ARHGEF1 +1.59
+
+p21 (CDKN1A) up at q<0.05 in 636 of 1000 knockouts; median log2fc +0.210
+  CCNB1: log2fc +1.02 q 1.73e-05 rank 77 of 1000
+  MCM3: log2fc +0.43 q 3.07e-06 rank 263 of 1000
+  CENPC: log2fc -0.61 q 2.29e-21 rank 953 of 1000
+  AURKB: log2fc -0.27 q 1.61e-32 rank 829 of 1000
+  POLA1: log2fc +1.22 q 7.3e-22 rank 49 of 1000
+  POLA2: log2fc -0.25 q 1.75e-21 rank 810 of 1000
+  BUB1B: log2fc -0.56 q 1.34e-25 rank 941 of 1000
+  CDK7: log2fc -0.52 q 9.14e-27 rank 936 of 1000
