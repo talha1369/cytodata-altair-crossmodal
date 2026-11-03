@@ -290,8 +290,15 @@ accurately as it reads NTC cells? A model that only worked on NTC-like cells cou
   were not chosen from either model's predictions (47 arrest-list genes 0.70 vs 0.64; 30 random calibration knockouts 0.71 vs
   0.63). Slopes are 1.00 and 1.02.
 * **Ridge-only hits do not hold up: 0 of 8 confirmed.** Hits in both runs: 41 of 73 confirmed. HistGB-only hits: 3 of the 10
-  that happen to be measured are confirmed, and all 10 move in the predicted direction. The other 111 HistGB-only hits are not
-  measured yet.
+  that happen to be measured are confirmed, and all 10 move in the predicted direction. The other 111 are measured in the next
+  point.
+* **The 111 remaining HistGB-only hits, measured.** DNA was measured from the public OPS0077 zarr for up to 250 cells per
+  knockout (`scripts/ko_dna_light.py`: same nucleus, background and usability rules as `ko_dna_measure.py`; on 300 NTC cells
+  it reproduces the NTC table to 1e-7 per round). 22,778 of 27,094 cells are usable (median 204 per knockout, against 200 in the
+  first batch). With FDR pooled over all 269 measured knockouts, **HistGB-only hits confirm 33 of 121 (27%)**, against 41 of 73
+  (56%) for hits in both runs, 0 of 8 for ridge-only hits and 5 of 67 (7%) for knockouts neither run calls. 90% of the new
+  knockouts move in the predicted direction (all of the confirmed ones). Over all 269, rho is 0.80 for HistGB and 0.74 for
+  ridge (0.72 vs 0.65 in the 77 knockouts not chosen from either model).
 * **Per-cell accuracy carries over to knockout cells.** AUC for 4N vs 2N: HistGB 0.968 on held-out NTC and 0.963 on the knockout
   cells (0.957 to 0.966 per gene); ridge 0.934 and 0.927.
 * **HistGB also gets the size of the shift closer** in these three genes: measured change in % 4N vs NTC CCNB1 +4.2, MCM3 +4.1,
@@ -300,15 +307,21 @@ accurately as it reads NTC cells? A model that only worked on NTC-like cells cou
 **Caveats.**
 * The transfer test covers three knockouts and 1,353 cells, and the per-gene shifts have no confidence intervals; the 111-knockout
   multimodal file (22,152 cells with DNA) is the larger test, on machine 1.
-* The 111 unmeasured HistGB-only hits are the open question for the model switch: if they confirm at about the rate of the
-  shared hits, notebook 18's main analysis should move to HistGB.""")
+* HistGB-only hits confirm at half the rate of shared hits but nearly four times the rate of uncalled knockouts, and their
+  measured shifts are smaller (median |change in % 4N| 4.3 vs 6.2 points), so many unconfirmed ones may be real but too small
+  for about 200 cells. HistGB is the better caller; the 73 shared hits remain the most reliable list. The main analysis below
+  still uses the ridge run; the HistGB run gives the same heterogeneity result (section 2c).""")
 
 code("""K = pd.read_csv(find('models_vs_measured_dna.csv'))
 from scipy.stats import spearmanr
 for m in ['ridge', 'hgb']:
     print(m, 'rho vs measured change in % 4N:', round(spearmanr(K['d_pct_4N_pred_' + m], K.measured_d_pct_4N)[0], 3))
 display(K.groupby('called_by').agg(n=('gene', 'size'), confirmed=('measured_significant', 'sum')))
-display(pd.read_csv(find('ko_transfer_check.csv')).round(3))""")
+display(pd.read_csv(find('ko_transfer_check.csv')).round(3))
+T = pd.read_csv(find('ko_dna_hgb_only/all_measured_knockouts.csv'))
+for m in ['ridge', 'hgb']:
+    print(m, 'rho over all', len(T), 'measured knockouts:', round(spearmanr(T['d_pct_4N_pred_' + m], T.measured_d_pct_4N)[0], 3))
+display(pd.read_csv(find('ko_dna_hgb_only/confirmation_by_model_call.csv')).round(3))""")
 
 md("""## 3. Regressing the cycle out: does heterogeneity go down?
 

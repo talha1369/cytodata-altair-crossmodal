@@ -114,8 +114,12 @@ Already measured: CCNB1 (on the G1/S list) gains 4N cells for real (+4.3 points 
   (73 shared), with unchanged agreement with measured pRb (rho 0.38 vs 0.37) and an unchanged heterogeneity result (spread -2.75%,
   separation from NTC unchanged) (`reports/ko_cell_cycle/ko_library_cycle_hgb.csv`, `compare_ridge_vs_hgb.csv`). Against
   measured DNA for 158 knockouts it also tracks the measured change in % 4N better (rho 0.84 vs 0.78; better in the unselected
-  arrest-list and calibration subsets too); ridge-only hits confirm 0 of 8, and 3 of the 10 measured HistGB-only hits confirm (all
-  10 in the predicted direction), but 111 of its 121 extra hits are still unmeasured (`models_vs_measured_dna.csv`). An NTC-trained
+  arrest-list and calibration subsets too); ridge-only hits confirm 0 of 8. The other 111 HistGB-only hits were then measured
+  from the public zarr on a laptop (`scripts/ko_dna_light.py`, same rules as `ko_dna_measure.py`, identical per round to the
+  NTC table): over all 269 measured knockouts (pooled BH) HistGB-only hits confirm 33 of 121 (27%), hits in both runs 41 of 73
+  (56%), knockouts neither run calls 5 of 67 (7%); rho 0.80 vs 0.74 for ridge (0.72 vs 0.65 in the 77 unselected knockouts)
+  (`reports/ko_cell_cycle/ko_dna_hgb_only/`). The extra HistGB calls are real but weaker (median measured |change in % 4N|
+  4.3 vs 6.2 points), so HistGB is the better caller, with shared hits the most reliable. An NTC-trained
   4N classifier reads knockout cells as well as NTC cells (CCNB1/MCM3/CENPC, 1,353 cells: AUC 0.963 vs 0.968 held-out NTC;
   `ko_transfer_check.csv`). In that run, with all NTC cells as the reference
   and the guide-pooled null, CDK7 is borderline (q 0.057, +9.7 points in 0.75 to 1) and CCNB1 is not significant (q 0.19, every

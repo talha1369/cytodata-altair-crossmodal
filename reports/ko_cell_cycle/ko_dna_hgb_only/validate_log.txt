@@ -1,0 +1,7 @@
+[00:23:00] 200/300 cells | 1.7 min
+[00:23:50] 300/300 cells | 2.5 min
+[00:23:50] 300 cells in 2.6 min with 8 threads
+R2: n 300 max |diff| 1.38e-07  r 1.000000
+R3: n 300 max |diff| 1.43e-07  r 1.000000
+R4: n 300 max |diff| 1.63e-07  r 1.000000
+dna_rel_R234: n 300 median |diff| 8.82e-03 max 8.82e-03 | usable 300/300

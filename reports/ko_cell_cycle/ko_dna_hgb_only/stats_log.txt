@@ -1,0 +1,39 @@
+usable knockout cells 22,778 in 111 knockouts | NTC n=36,014: %2N 69.7 %S 11.0 %4N 19.4
+
+this batch (111 knockouts): confirmed within-batch FDR 27 | pooled FDR over 269 30
+sign agreement (HistGB predicted vs measured % 4N): all 90% | confirmed 100%
+within this batch: Spearman HistGB predicted vs measured d%4N 0.73, ridge 0.67
+
+confirmation by which library run calls the knockout (pooled FDR over all measured):
+               n  confirmed  sign_agrees_hgb  median_abs_measured_d4N  confirmed_pct
+called_by                                                                           
+HistGB only  121         33             0.91                     4.25          27.27
+both          73         41             0.93                     6.21          56.16
+neither       67          5             0.84                     2.99           7.46
+ridge only     8          0             0.88                     4.17           0.00
+all 269: Spearman vs measured d%4N  HistGB 0.80  ridge 0.74  n 269
+unselected (arrest list + calibration): Spearman vs measured d%4N  HistGB 0.72  ridge 0.65  n 77
+
+confirmed in this batch, largest |measured change in % 4N|:
+     gene  n_measured  measured_d_pct_2N  measured_d_pct_4N  d_pct_4N_pred_hgb  q_4N_pooled  q_2N_pooled
+    EIF6         224             20.966            -11.767             -8.524        0.030        0.004
+   NOL10         195             21.110            -11.151             -8.460        0.030        0.004
+    NOL6         217             16.516            -10.601             -5.955        0.030        0.004
+     MAX         207             12.467             -9.695             -3.535        0.052        0.034
+  POLR3E         203             16.055             -9.504             -5.342        0.060        0.004
+   HAUS4         206             15.292             -9.162             -7.936        0.060        0.004
+C12ORF45         207             15.365             -8.728             -5.435        0.062        0.004
+  ZNF574         207             12.950             -8.728             -4.391        0.062        0.034
+    RRS1         197             15.113             -8.696             -5.567        0.062        0.004
+     OGT         214             13.051             -8.609             -5.323        0.080        0.012
+    AATF         207             13.433             -8.245             -5.697        0.069        0.004
+ RANGAP1         195             11.367             -8.074             -5.143        0.088        0.036
+    SKA3         186             13.137             -8.066             -5.214        0.115        0.012
+   FTSJ3         217             16.977             -7.836             -7.175        0.100        0.004
+    RCL1         211             15.649             -7.508             -7.492        0.115        0.004
+    CARS         219             10.706             -7.484             -5.641        0.116        0.048
+    XPO1         202             16.975             -7.475             -3.436        0.115        0.004
+     PHB         209             15.030             -7.395             -5.492        0.115        0.004
+ PPIAL4D         216             13.674             -7.319             -3.087        0.130        0.004
+  PSMD14         213             14.848             -7.150             -3.382        0.143        0.004
+DONE

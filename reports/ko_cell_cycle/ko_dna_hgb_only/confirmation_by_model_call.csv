@@ -1,0 +1,5 @@
+called_by,n,confirmed,sign_agrees_hgb,median_abs_measured_d4N,confirmed_pct
+HistGB only,121,33,0.909,4.245,27.273
+both,73,41,0.932,6.211,56.164
+neither,67,5,0.836,2.993,7.463
+ridge only,8,0,0.875,4.17,0.0
